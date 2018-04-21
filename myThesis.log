@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 APR 2018 05:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 APR 2018 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1983,18 +1983,18 @@ Package microtype Info: Loading generic settings for font family
  [5
 
 ]
-<porcupine.png, id=290, 602.25pt x 196.735pt>
+<porcupine.png, id=280, 602.25pt x 196.735pt>
 File: porcupine.png Graphic file (type png)
  <use porcupine.png>
 Package pdftex.def Info: porcupine.png used on input line 222.
 (pdftex.def)             Requested size: 326.39433pt x 106.62555pt.
- [6 <./porcupine.png>] <kinshipFig.png, id=308, 452.892pt x 360.3864pt>
+ [6 <./porcupine.png>] <kinshipFig.png, id=298, 452.892pt x 360.3864pt>
 File: kinshipFig.png Graphic file (type png)
  <use kinshipFig.png>
 Package pdftex.def Info: kinshipFig.png used on input line 257.
 (pdftex.def)             Requested size: 265.1919pt x 211.0314pt.
 
-[7] <Graph.png, id=323, 520.8258pt x 337.26pt>
+[7] <Graph.png, id=313, 520.8258pt x 337.26pt>
 File: Graph.png Graphic file (type png)
  <use Graph.png>
 Package pdftex.def Info: Graph.png used on input line 270.
@@ -2049,7 +2049,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 451--451
 
  []
 
-[16] <pathTNZB.png, id=420, 636.9396pt x 398.9304pt>
+[16] <pathTNZB.png, id=410, 636.9396pt x 398.9304pt>
 File: pathTNZB.png Graphic file (type png)
  <use pathTNZB.png>
 Package pdftex.def Info: pathTNZB.png used on input line 462.
@@ -2070,7 +2070,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--507
 \T1/pcr/m/n/10.95 ggplot2::theme(axis.text = ggplot2::element_text(size = 12),
  []
 
-[18] <plotTNBin3.png, id=435, 693.59125pt x 405.515pt>
+[18] <plotTNBin3.png, id=425, 693.59125pt x 405.515pt>
 File: plotTNBin3.png Graphic file (type png)
  <use plotTNBin3.png>
 Package pdftex.def Info: plotTNBin3.png used on input line 512.
@@ -2086,7 +2086,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--532
 []\T1/pcr/m/n/10.95 R> plotPathOnAll(pathTN, sbGeneal, sbIG, binVector = 1:6,
  []
 
-[20] <plotTNBin6.png, id=455, 693.59125pt x 405.515pt>
+[20] <plotTNBin6.png, id=444, 693.59125pt x 405.515pt>
 File: plotTNBin6.png Graphic file (type png)
  <use plotTNBin6.png>
 Package pdftex.def Info: plotTNBin6.png used on input line 539.
@@ -2098,7 +2098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 558--558
 
 [21
 
- <./plotTNBin6.png>] <LeeAD3.png, id=466, 536.2434pt x 381.1038pt>
+ <./plotTNBin6.png>] <LeeAD3.png, id=456, 536.2434pt x 381.1038pt>
 File: LeeAD3.png Graphic file (type png)
 
 <use LeeAD3.png>
@@ -2132,7 +2132,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 582--582
 \T1/pcr/m/n/10.95 = ggplot2::element_text(size = 15), legend.text =
  []
 
-[23] <degMatrix.png, id=482, 349.305pt x 289.08pt>
+[23] <degMatrix.png, id=472, 349.305pt x 289.08pt>
 File: degMatrix.png Graphic file (type png)
  <use degMatrix.png>
 Package pdftex.def Info: degMatrix.png used on input line 589.
@@ -2149,7 +2149,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 637--637
 vCol
  []
 
-<dCox.png, id=495, 779.91376pt x 1187.43625pt>
+<dCox.png, id=485, 779.91376pt x 1187.43625pt>
 File: dCox.png Graphic file (type png)
  <use dCox.png>
 Package pdftex.def Info: dCox.png used on input line 642.
@@ -2179,7 +2179,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 672--672
 \T1/pcr/m/n/10.95 = ggplot2::element_text(size = 10), axis.title =
  []
 
-[27] <pathCB.png, id=512, 454.69875pt x 397.485pt>
+[27] <pathCB.png, id=502, 454.69875pt x 397.485pt>
 File: pathCB.png Graphic file (type png)
  <use pathCB.png>
 Package pdftex.def Info: pathCB.png used on input line 679.
@@ -2205,7 +2205,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 693--693
 \T1/pcr/m/n/10.95 = 8), axis.title = ggplot2::element_text(size = 8)) +
  []
 
-<plotCBText.png, id=524, 691.58376pt x 405.515pt>
+<plotCBText.png, id=514, 691.58376pt x 405.515pt>
 File: plotCBText.png Graphic file (type png)
  <use plotCBText.png>
 Package pdftex.def Info: plotCBText.png used on input line 698.
@@ -2235,7 +2235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 710--710
 \T1/pcr/m/n/10.95 = 8), axis.title = ggplot2::element_text(size = 8)) +
  []
 
-<plotCBNoText.png, id=534, 592.2125pt x 397.485pt>
+<plotCBNoText.png, id=524, 592.2125pt x 397.485pt>
 File: plotCBNoText.png Graphic file (type png)
  <use plotCBNoText.png>
 Package pdftex.def Info: plotCBNoText.png used on input line 715.
@@ -2252,7 +2252,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 729--729
 ",
  []
 
-[31] <./plotCBNoText.png, id=553, 592.2125pt x 397.485pt>
+[31] <./plotCBNoText.png, id=543, 592.2125pt x 397.485pt>
 File: ./plotCBNoText.png Graphic file (type png)
 
 <use ./plotCBNoText.png>
@@ -2269,78 +2269,170 @@ l
 [32
 
  <./plotCBNoText.png>] [33]
+
+Package natbib Warning: Citation `Robertson' on page 34 undefined on input line
+ 781.
+
+
+Package natbib Warning: Citation `Pan' on page 34 undefined on input line 781.
+
+
+Package natbib Warning: Citation `Wang' on page 34 undefined on input line 781.
+
+
+
+Package natbib Warning: Citation `Zhao' on page 34 undefined on input line 781.
+
+
+
+Package natbib Warning: Citation `Anders2010' on page 34 undefined on input lin
+e 783.
+
+
+Package natbib Warning: Citation `Trapnell2012' on page 34 undefined on input l
+ine 783.
+
+
+Package natbib Warning: Citation `Trapnell2013' on page 34 undefined on input l
+ine 783.
+
+
+Package natbib Warning: Citation `Robinson' on page 34 undefined on input line 
+783.
+
+
+Package natbib Warning: Citation `Law' on page 34 undefined on input line 783.
+
+
+Package natbib Warning: Citation `Wang' on page 34 undefined on input line 785.
+
+
+
+Package natbib Warning: Citation `Morin' on page 34 undefined on input line 785
+.
+
+
+Package natbib Warning: Citation `Marioni' on page 34 undefined on input line 7
+85.
+
+
+Package natbib Warning: Citation `Hansen' on page 34 undefined on input line 78
+5.
+
+
+Package natbib Warning: Citation `Oshlack' on page 34 undefined on input line 7
+85.
+
+
+Package natbib Warning: Citation `RobinsonOshlack' on page 34 undefined on inpu
+t line 785.
+
+
+Package natbib Warning: Citation `McIntyre' on page 34 undefined on input line 
+785.
+
+
+Package natbib Warning: Citation `Schurch' on page 34 undefined on input line 7
+85.
+
+
+Package natbib Warning: Citation `Trapnell2013' on page 34 undefined on input l
+ine 785.
+
+
+Package natbib Warning: Citation `Bullard' on page 34 undefined on input line 7
+85.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34
 
 ]
-[35]
+
+Package natbib Warning: Citation `Shneiderman' on page 35 undefined on input li
+ne 787.
+
+
+Package natbib Warning: Citation `Huber' on page 35 undefined on input line 795
+.
+
+
+Package natbib Warning: Citation `Love' on page 35 undefined on input line 795.
+
+
+
+Package natbib Warning: Citation `Risso' on page 35 undefined on input line 795
+.
+
+
+Package natbib Warning: Citation `Robinson' on page 35 undefined on input line 
+795.
+
+
+Package natbib Warning: Citation `Ritchie' on page 35 undefined on input line 7
+95.
+
+[35] <MakeFigures/simulatedData.jpg, id=594, 608.2725pt x 482.80376pt>
+File: MakeFigures/simulatedData.jpg Graphic file (type jpg)
+
+<use MakeFigures/simulatedData.jpg>
+Package pdftex.def Info: MakeFigures/simulatedData.jpg used on input line 800.
+(pdftex.def)             Requested size: 426.79135pt x 338.76332pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 830.
+(in both cases you will find help in the memoir manual). on input line 806.
 
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[36] <needNorm.png, id=642, 517.935pt x 502.9992pt>
-File: needNorm.png Graphic file (type png)
- <use needNorm.png>
-Package pdftex.def Info: needNorm.png used on input line 835.
-(pdftex.def)             Requested size: 407.99136pt x 396.24445pt.
- [37
+[36 <./MakeFigures/simulatedData.jpg>]
 
- <./needNorm.png>] <mdsGroups.png, id=654, 441.8106pt x 432.6564pt>
-File: mdsGroups.png Graphic file (type png)
-
-<use mdsGroups.png>
-Package pdftex.def Info: mdsGroups.png used on input line 848.
-(pdftex.def)             Requested size: 407.99136pt x 399.56053pt.
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+Package natbib Warning: Citation `Lauter16' on page 37 undefined on input line 
+807.
 
 
-[38
-
- <./mdsGroups.png>] <loessL120.png, id=663, 455.7025pt x 440.64626pt>
-File: loessL120.png Graphic file (type png)
-
-<use loessL120.png>
-Package pdftex.def Info: loessL120.png used on input line 863.
-(pdftex.def)             Requested size: 407.99136pt x 394.52051pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39 <./loessL120.png>] <L120scatter.png, id=671, 431.6125pt x 431.6125pt>
-File: L120scatter.png Graphic file (type png)
-
-<use L120scatter.png>
-Package pdftex.def Info: L120scatter.png used on input line 874.
-(pdftex.def)             Requested size: 407.99136pt x 408.00768pt.
- <dendL120.png, id=672, 479.391pt x 374.3586pt>
-File: dendL120.png Graphic file (type png)
-
-<use dendL120.png>
-Package pdftex.def Info: dendL120.png used on input line 885.
-(pdftex.def)             Requested size: 407.99136pt x 318.61188pt.
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+Package natbib Warning: Citation `Chandrasekhar' on page 37 undefined on input 
+line 807.
 
 
-[40 <./L120scatter.png>] [41 <./dendL120.png>]
-<pcp2L120.png, id=687, 586.19pt x 603.25375pt>
-File: pcp2L120.png Graphic file (type png)
- <use pcp2L120.png>
-Package pdftex.def Info: pcp2L120.png used on input line 900.
-(pdftex.def)             Requested size: 407.99136pt x 419.86305pt.
+Package natbib Warning: Citation `deSouto' on page 37 undefined on input line 8
+07.
 
-<scatterL120.png, id=691, 602.25pt x 573.14125pt>
-File: scatterL120.png Graphic file (type png)
- <use scatterL120.png>
-Package pdftex.def Info: scatterL120.png used on input line 911.
-(pdftex.def)             Requested size: 407.99136pt x 388.2879pt.
+<MakeFigures/sbIRClustersSig.jpg, id=602, 631.35875pt x 468.75125pt>
+File: MakeFigures/sbIRClustersSig.jpg Graphic file (type jpg)
+
+<use MakeFigures/sbIRClustersSig.jpg>
+Package pdftex.def Info: MakeFigures/sbIRClustersSig.jpg used on input line 812
+.
+(pdftex.def)             Requested size: 426.79135pt x 316.87265pt.
+
+
+Package natbib Warning: Citation `Brown' on page 37 undefined on input line 823
+.
+
+[37] <MakeFigures/sbCNSM.jpg, id=611, 538.01pt x 487.8225pt>
+File: MakeFigures/sbCNSM.jpg Graphic file (type jpg)
+
+<use MakeFigures/sbCNSM.jpg>
+Package pdftex.def Info: MakeFigures/sbCNSM.jpg used on input line 826.
+(pdftex.def)             Requested size: 426.79135pt x 386.98335pt.
+
+
+Package natbib Warning: Citation `Brown' on page 38 undefined on input line 828
+.
+
+
+Package natbib Warning: Citation `Brown' on page 38 undefined on input line 828
+.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2348,221 +2440,257 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[42
+[38 <./MakeFigures/sbIRClustersSig.jpg>] [39 <./MakeFigures/sbCNSM.jpg>]
 
- <./pcp2L120.png>] <pcp3L120.png, id=701, 592.2125pt x 599.23875pt>
-File: pcp3L120.png Graphic file (type png)
+Package natbib Warning: Citation `Risso' on page 40 undefined on input line 839
+.
 
-<use pcp3L120.png>
-Package pdftex.def Info: pcp3L120.png used on input line 924.
-(pdftex.def)             Requested size: 407.99136pt x 412.84427pt.
+
+Package natbib Warning: Citation `Ioannidis' on page 40 undefined on input line
+ 849.
+
+
+Package natbib Warning: Citation `Baggerly' on page 40 undefined on input line 
+849.
+
+
+Underfull \vbox (badness 3343) has occurred while \output is active []
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[40] <MakeFigures/yeastWithinBetween.jpg, id=632, 290.08376pt x 487.8225pt>
+File: MakeFigures/yeastWithinBetween.jpg Graphic file (type jpg)
+
+<use MakeFigures/yeastWithinBetween.jpg>
+Package pdftex.def Info: MakeFigures/yeastWithinBetween.jpg used on input line 
+852.
+(pdftex.def)             Requested size: 426.79135pt x 717.76782pt.
+
+
+Package natbib Warning: Citation `Risso' on page 41 undefined on input line 854
+.
+
+
+Package natbib Warning: Citation `Risso' on page 41 undefined on input line 854
+.
+
+
+LaTeX Warning: Float too large for page by 149.2639pt on input line 855.
+
+
+Package natbib Warning: Citation `Baggerly' on page 41 undefined on input line 
+857.
+
+
+Package natbib Warning: Citation `Baggerly' on page 41 undefined on input line 
+857.
+
+
+Package natbib Warning: Citation `Baggerly' on page 41 undefined on input line 
+857.
+
+
+Package natbib Warning: Citation `Lauter16' on page 41 undefined on input line 
+866.
+
+
+Underfull \vbox (badness 3291) has occurred while \output is active []
+
+ [41]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[42 <./MakeFigures/yeastWithinBetween.jpg>]
+<MakeFigures/sbCNSwitchedSM.jpg, id=649, 538.01pt x 487.8225pt>
+File: MakeFigures/sbCNSwitchedSM.jpg Graphic file (type jpg)
+
+<use MakeFigures/sbCNSwitchedSM.jpg>
+Package pdftex.def Info: MakeFigures/sbCNSwitchedSM.jpg used on input line 872.
+
+(pdftex.def)             Requested size: 426.79135pt x 386.98335pt.
+
+<MakeFigures/sbIRStreak.jpg, id=652, 388.45125pt x 444.66125pt>
+File: MakeFigures/sbIRStreak.jpg Graphic file (type jpg)
+
+<use MakeFigures/sbIRStreak.jpg>
+Package pdftex.def Info: MakeFigures/sbIRStreak.jpg used on input line 878.
+(pdftex.def)             Requested size: 426.79135pt x 488.55894pt.
+
+
+Package natbib Warning: Citation `Lauter16' on page 43 undefined on input line 
+880.
+
+
+Package natbib Warning: Citation `Lauter16' on page 43 undefined on input line 
+880.
+
+[43]
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[44 <./MakeFigures/sbCNSwitchedSM.jpg>] [45 <./MakeFigures/sbIRStreak.jpg>]
+
+Package natbib Warning: Citation `Cook' on page 46 undefined on input line 893.
+
+
+<MakeFigures/sbIRDEG.jpg, id=679, 387.4475pt x 487.8225pt>
+File: MakeFigures/sbIRDEG.jpg Graphic file (type jpg)
+
+<use MakeFigures/sbIRDEG.jpg>
+Package pdftex.def Info: MakeFigures/sbIRDEG.jpg used on input line 900.
+(pdftex.def)             Requested size: 426.79135pt x 537.36565pt.
+
+<MakeFigures/litre6LB.png, id=680, 791.5974pt x 1297.4874pt>
+File: MakeFigures/litre6LB.png Graphic file (type png)
+
+<use MakeFigures/litre6LB.png>
+Package pdftex.def Info: MakeFigures/litre6LB.png used on input line 906.
+(pdftex.def)             Requested size: 426.79135pt x 699.54388pt.
+
+
+LaTeX Warning: Float too large for page by 131.03996pt on input line 909.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43 <./scatterL120.png>] <3scatterL120.png, id=713, 502.87875pt x 562.1pt>
-File: 3scatterL120.png Graphic file (type png)
-
-<use 3scatterL120.png>
-Package pdftex.def Info: 3scatterL120.png used on input line 935.
-(pdftex.def)             Requested size: 407.99136pt x 456.03613pt.
-
-Underfull \vbox (badness 5681) has occurred while \output is active []
-
 
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[44 <./pcp3L120.png>] <indSBGenes1.png, id=725, 467.8278pt x 640.794pt>
-File: indSBGenes1.png Graphic file (type png)
-
-<use indSBGenes1.png>
-Package pdftex.def Info: indSBGenes1.png used on input line 947.
-(pdftex.def)             Requested size: 426.79135pt x 584.59988pt.
-
-Underfull \vbox (badness 7851) has occurred while \output is active []
-
- [45 <./3scatterL120.png>]
-Overfull \vbox (2.49596pt too high) has occurred while \output is active []
-
-
+[46] [47 <./MakeFigures/sbIRDEG.jpg>]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[46 <./indSBGenes1.png>] <indSBGenes2.png, id=742, 467.346pt x 641.7576pt>
-File: indSBGenes2.png Graphic file (type png)
-
-<use indSBGenes2.png>
-Package pdftex.def Info: indSBGenes2.png used on input line 954.
-(pdftex.def)             Requested size: 426.79135pt x 586.06653pt.
-
-Overfull \vbox (3.9626pt too high) has occurred while \output is active []
-
-
-[47 <./indSBGenes2.png>]
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[48] <L120_15.jpg, id=759, 481.8pt x 481.8pt>
-File: L120_15.jpg Graphic file (type jpg)
- <use L120_15.jpg>
-Package pdftex.def Info: L120_15.jpg used on input line 985.
-(pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
-
-Underfull \vbox (badness 2088) has occurred while \output is active []
-
- [49 <./L120_15.jpg>] <L120_15_5.jpg, id=767, 481.8pt x 481.8pt>
-File: L120_15_5.jpg Graphic file (type jpg)
- <use L120_15_5.jpg>
-Package pdftex.def Info: L120_15_5.jpg used on input line 998.
-(pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
-
-<L120_15_6.jpg, id=768, 481.8pt x 481.8pt>
-File: L120_15_6.jpg Graphic file (type jpg)
- <use L120_15_6.jpg>
-Package pdftex.def Info: L120_15_6.jpg used on input line 1007.
-(pdftex.def)             Requested size: 407.99136pt x 408.00278pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[50 <./L120_15_5.jpg>] [51 <./L120_15_6.jpg>]
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[52
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53
-
-]
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[54]
-Overfull \hbox (6.30173pt too wide) in paragraph at lines 1067--1080
-[][] 
+[48 <./MakeFigures/litre6LB.png>]
+Underfull \hbox (badness 1783) in paragraph at lines 915--916
+\T1/cmr/m/n/10.95 (+20) plot for the Clus-ter 4 sig-nif-i-cant genes (Fig-ure [
+][]3.8[][] E and F) is avail-able at
  []
 
-<boxplotPW.png, id=870, 606.265pt x 605.26125pt>
-File: boxplotPW.png Graphic file (type png)
- <use boxplotPW.png>
-Package pdftex.def Info: boxplotPW.png used on input line 1100.
-(pdftex.def)             Requested size: 407.99136pt x 407.32385pt.
 
-Underfull \vbox (badness 2343) has occurred while \output is active []
+Package natbib Warning: Citation `Marioni' on page 49 undefined on input line 9
+19.
 
- [55]
+<MakeFigures/lkSM.jpg, id=708, 496.85625pt x 446.66875pt>
+File: MakeFigures/lkSM.jpg Graphic file (type jpg)
+
+<use MakeFigures/lkSM.jpg>
+Package pdftex.def Info: MakeFigures/lkSM.jpg used on input line 924.
+(pdftex.def)             Requested size: 426.79135pt x 383.68462pt.
+
+<MakeFigures/lkClusters.jpg, id=709, 460.72125pt x 377.41pt>
+File: MakeFigures/lkClusters.jpg Graphic file (type jpg)
+
+<use MakeFigures/lkClusters.jpg>
+Package pdftex.def Info: MakeFigures/lkClusters.jpg used on input line 930.
+(pdftex.def)             Requested size: 426.79135pt x 349.61131pt.
+
+
+Package natbib Warning: Citation `RobinsonOshlack' on page 49 undefined on inpu
+t line 935.
+
+
+Underfull \vbox (badness 3803) has occurred while \output is active []
+
+ [49]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[56 <./boxplotPW.png>] <mdsPW.png, id=887, 592.2125pt x 525.965pt>
-File: mdsPW.png Graphic file (type png)
-
-<use mdsPW.png>
-Package pdftex.def Info: mdsPW.png used on input line 1113.
-(pdftex.def)             Requested size: 407.99136pt x 362.36246pt.
- [57
-
- <./mdsPW.png>]
-<scatMatPW.png, id=896, 702.625pt x 702.625pt>
-File: scatMatPW.png Graphic file (type png)
- <use scatMatPW.png>
-Package pdftex.def Info: scatMatPW.png used on input line 1130.
-(pdftex.def)             Requested size: 407.99136pt x 408.00523pt.
-
+[50 <./MakeFigures/lkSM.jpg>] [51 <./MakeFigures/lkClusters.jpg>]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[58 <./scatMatPW.png>] [59] <degPW.png, id=912, 512.6352pt x 869.1672pt>
-File: degPW.png Graphic file (type png)
+[52] [53] [54
 
-<use degPW.png>
-Package pdftex.def Info: degPW.png used on input line 1144.
-(pdftex.def)             Requested size: 341.43437pt x 578.90404pt.
+]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `fig:degPW' on page 55 undefined on input line 988.
 
 
+LaTeX Warning: Reference `fig:degPW' on page 55 undefined on input line 988.
+
+
+LaTeX Warning: Reference `fig:degPW' on page 55 undefined on input line 996.
+
+[55]
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[60
-
- <./degPW.png>] [61]
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[62]
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 1179--1190
+[56]
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 1003--1014
 [] 
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 1197--1197
+Underfull \hbox (badness 1430) in paragraph at lines 1021--1021
 \T1/cmr/m/n/10.95 (+20) pro-vides vi-su-al-iza-tion tools for ge-nealog-i-cal
  []
 
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 1193--1208
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 1017--1032
 [] 
  []
 
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 1211--1218
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 1035--1042
 [] 
  []
 
-(./myThesis.bbl [63
+(./myThesis.bbl [57
 
-] [64
+] [58
 
-] [65] [66] [67]
+]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 339.
-)
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 106.
+ [59])
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1221.
+(in both cases you will find help in the memoir manual). on input line 1045.
 
-[68]
+
+Package natbib Warning: There were undefined citations.
+
+[60]
 \tf@toc=\write8
 \openout8 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1221.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1221.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1045.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1045.
  (./myThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1221.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1045.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1045.
 
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 07786EE71BD3EF3D435F7B1904B754BC;3232.
+(rerunfilecheck)             Checksum: 8F7C58D283A50C00D81D5336626D5607;3210.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 38778 strings out of 492995
- 736020 string characters out of 6132704
- 1014175 words of memory out of 5000000
- 41412 multiletter control sequences out of 15000+600000
- 556702 words of font info for 126 fonts, out of 8000000 for 9000
+ 38629 strings out of 492995
+ 734576 string characters out of 6132704
+ 1007511 words of memory out of 5000000
+ 41309 multiletter control sequences out of 15000+600000
+ 557916 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,11n,85p,10368b,890s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,12n,85p,10368b,890s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
-exlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/tex
-live/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2017/texmf-d
+exlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fo
@@ -2571,10 +2699,10 @@ s/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/ur
 w/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courie
 r/ucrro8a.pfb>
-Output written on myThesis.pdf (68 pages, 18868764 bytes).
+Output written on myThesis.pdf (60 pages, 18130673 bytes).
 PDF statistics:
- 1107 PDF objects out of 1200 (max. 8388607)
- 943 compressed objects within 10 object streams
- 229 named destinations out of 1000 (max. 500000)
- 21604 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 926 PDF objects out of 1000 (max. 8388607)
+ 783 compressed objects within 8 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 23084 words of extra memory for PDF output out of 24883 (max. 10000000)
 

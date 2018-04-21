@@ -22,24 +22,22 @@
 \contentsline {section}{\numberline {2.10}Future avenues}{32}{section.2.10}
 \contentsline {section}{\numberline {2.11}Conclusions}{33}{section.2.11}
 \contentsline {section}{\numberline {2.12}Acknowledgments}{33}{section.2.12}
-\contentsline {chapter}{\chapternumberline {3}Visualization methods for clustering analysis of RNA-sequencing data}{34}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}The case for visualization methods in RNA-sequencing data analysis}{34}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{34}{section.3.1}
-\contentsline {section}{\numberline {3.2}Example dataset}{35}{section.3.2}
-\contentsline {section}{\numberline {3.3}Pre-processing}{36}{section.3.3}
-\contentsline {section}{\numberline {3.4}Highest quality replicates (Leaves at 120 minutes)}{38}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Two clusters}{41}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Three clusters}{43}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Many clusters}{48}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Future avenues}{52}{section.3.5}
-\contentsline {chapter}{\chapternumberline {4}Visualization methods for significance testing of RNA-sequencing data}{53}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}
-\contentsline {section}{\numberline {4.2}Example dataset}{54}{section.4.2}
-\contentsline {section}{\numberline {4.3}Pre-processing}{55}{section.4.3}
-\contentsline {section}{\numberline {4.4}Highest quality replicates (Artificial drumming groups)}{57}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Differential expression analysis}{59}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Future avenues}{61}{section.4.5}
-\contentsline {chapter}{\chapternumberline {5}Timeline}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Completed}{63}{section.5.1}
-\contentsline {section}{\numberline {5.2}Scheduled deliverables}{63}{section.5.2}
-\contentsline {section}{\numberline {5.3}Other work}{63}{section.5.3}
-\contentsline {chapter}{Bibliography}{64}{section*.34}
+\contentsline {section}{\numberline {3.2}Parallel Coordinate Plots}{35}{section.3.2}
+\contentsline {section}{\numberline {3.3}Scatterplot matrices}{37}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Overview of scatterplot matrices}{37}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Assessing normalization with scatterplot matrices}{40}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Checking for common errors with scatterplot matrices}{41}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Finding unexpected patterns in scatterplot matrices}{41}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Assessing differential expression calls in scatterplot matrices}{43}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Litre plots}{43}{section.3.4}
+\contentsline {section}{\numberline {3.5}Closing case study}{49}{section.3.5}
+\contentsline {section}{\numberline {3.6}Discussion}{52}{section.3.6}
+\contentsline {chapter}{\chapternumberline {4}Visualization methods for significance testing of RNA-sequencing data}{54}{chapter.4}
+\contentsline {section}{\numberline {4.1}Future avenues}{54}{section.4.1}
+\contentsline {chapter}{\chapternumberline {5}Timeline}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Completed}{57}{section.5.1}
+\contentsline {section}{\numberline {5.2}Scheduled deliverables}{57}{section.5.2}
+\contentsline {section}{\numberline {5.3}Other work}{57}{section.5.3}
+\contentsline {chapter}{Bibliography}{58}{section*.28}
