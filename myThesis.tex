@@ -162,7 +162,7 @@
 
 \vspace{2.5cm}
 
-{\centerline{\large May 16, 2016}}
+{\centerline{\large May 1, 2018}}
 }
 
 \clearpage
@@ -1226,9 +1226,10 @@ However, we have preliminary plotting tools for RNA-sequencing significance test
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliography{Supplementary material for Chapter 2}
+\chapter{Supplementary material for Chapter 2}
+\label{sec:suppchapter2}
 
-This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in the paper. We include additional examples of how parallel coordinate plots, scatterplots matrices, and litre plots can be used to assess normalization and DEG calls. Below we provide a brief description of the first seven figures in this supplementary file:
+This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 2. We include additional examples of how parallel coordinate plots, scatterplots matrices, and litre plots can be used to assess normalization and DEG calls. Below we provide a brief description of the first seven figures in this supplementary file:
 
 \begin{itemize}
 
@@ -1487,6 +1488,13 @@ More importantly, while Figures~\ref{litreClusterKeep} through~\ref{litreCluster
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Supplementary material for Chapter 3}
+\label{sec:suppchapter3}
+
+This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 3.
 
 
 
@@ -1495,27 +1503,145 @@ More importantly, while Figures~\ref{litreClusterKeep} through~\ref{litreCluster
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\chapter{Supplementary material for Chapter 4}
+\label{sec:suppchapter4}
 
+This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 4.
 
+\begin{table}[H]
+  \includegraphics[width=0.65\textwidth]{Images/mainEffectDEGs}
+  \caption{Number of DEGs across three analysis pipelines for (A) the diet effect in our study, (B) the virus main effect in our study, and (C) the virus main effect in the Galbraith study. For the diet effects, ``C'' represents Chestnut diet and ``R'' represents Rockrose diet. For the virus effects, ``V'' represents virus-innoculated and ``C'' represents control non-innoculated. Green cells represent the level that showed a larger number of DEGs.}
+  \label{tbl:mainEffectDEGs}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=\textwidth]{Images/ChestnutPathways}
+  \caption{Pathways related to diet main effect Chestnut-upregulated DEGs.}
+  \label{tbl:ChestnutPathways}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=\textwidth]{Images/ChestnutPathways}
+  \caption{Pathways related to diet main effect Rockrose-upregulated DEGs.}
+  \label{tbl:RockrosePathways}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=\textwidth]{Images/NCNRNCPathways}
+  \caption{GO analysis results for the 601 DEGs that were upregulated in the NC treatment in the NC versus NR treatment pair analysis. These DEGs represent genes that are upregulated when non-infected honeybees are given high quality Chestnut pollen compared to being given low quality Rockrose pollen.}
+  \label{tbl:NCNRNCPathways}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=\textwidth]{Images/NCNRNRPathways}
+  \caption{GO analysis results for the 340 DEGs that were upregulated in the NR treatment in the NC versus NR treatment pair analysis. These DEGs represent genes that are upregulated when non-infected honeybees are given low quality Rockrose pollen compared to being given high quality Chestnut pollen.}
+  \label{tbl:NCNRNRPathways}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=\textwidth]{Images/VCVRVCPathways}
+  \caption{GO analysis results for the 247 DEGs that were upregulated in the VC treatment in the VC versus VR treatment pair analysis. These DEGs represent genes that are upregulated when infected honeybees are given high quality Chestnut pollen compared to being given low quality Rockrose pollen.}
+  \label{tbl:VCVRVCPathways}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=\textwidth]{Images/VCVRVRPathways}
+  \caption{GO analysis results for the 129 DEGs that were upregulated in the VR treatment in the VC versus VR treatment pair analysis. These DEGs represent genes that are upregulated when infected honeybees are given low quality Rockrose pollen compared to being given high quality Chestnut pollen.}
+  \label{tbl:VCVRVRPathways}
+\end{table}
 
+\begin{table}[H]
+  \includegraphics[width=0.65\textwidth]{Images/pairDEGs}
+  \caption{Number of DEGs across three analysis pipelines for all six treatment pair combinations between the diet and virus factor. ``C'' represents Chestnut diet, ``R'' represents Rockrose diet, ``V'' represents virus-innoculated, and ``N'' represents control non-innoculated. Green cells represent the level that showed a larger number of DEGs.}
+  \label{tbl:pairDEGs}
+\end{table}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/mdsPlots}
+  \caption{MDS plots constructed from DESeq2 package for the Galbraith dataset for non-infected control ``C'' and virus treated ``T'' samples (A) and our dataset for the non-infected control ``N'' and virus treated ``V'' samples (B). the x-axis represents the principal component with the most variation and the y-axis repesents the principal component with the second-most variation.}
+  \label{fig:mdsPlots}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/C_R_6.jpg}
+  \caption{Parallel coordinate plots of the 1,914 DEGs after hiearchical clustering of size six between the Chestnut and Rockrose groups of our study. Here ``N'' represents non-infected control group, and ``V'' represents treatment of virus. We see from this plot that the DEG designations for this dataset do not appear as clean compared to what we saw in the Galbraith dataset in Figure \ref{fig:pcpGalbraith}.}
+  \label{fig:pcpRutterDiet}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/litreClusterRutter}
+  \caption{Example litre plots of the nine DEGs with the lowest FDR values from the 43 DEGs of our dataset. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. Most of the magenta points (representing the 144 combinations of samples between treatment groups for a given DEG) do not reflect the expected pattern as clearly compared to what we saw in the litre plots of the Galbraith data. They are not as clustered together (representing replicate inconsistency) and they sometimes overlap the \textit{x=y} line (representing lack of difference between treatment groups). This finding reflects what we saw in the messy looking parallel coordinate lines of Figure \ref{fig:pcpGalbraith.}}
+  \label{fig:litreClusterRutter}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/litreCluster1}
+  \caption{Example litre plots of the nine DEGs with the lowest FDR values from Cluster 1 (originally shown in Figure \ref{fig:pcpGalbraith}) of the Galbraith dataset. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. Most of the light orange points (representing the nine combinations of samples between treatment groups for a given DEG) deviate from the \textit{x=y} line in a cluster as expected.}
+  \label{fig:litreCluster1}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/litreCluster2}
+  \caption{Example litre plots of the nine DEGs with the lowest FDR values from Cluster 2 (originally shown in Figure \ref{fig:pcpGalbraith}) of the Galbraith dataset. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. Most of the dark orange points (representing all combinations of samples between treatment groups for a given DEG) deviate from the \textit{x=y} line in a cluster as expected. However, they are not as tightly clustered together compared to what we saw in the example litre plots of Cluster 1 (shown in Supplementary figure \ref{fig:litreCluster1}). As a result, what we see in these litre plots reflects what we saw in the parallel coordinate lines of Figure \ref{fig:pcpGalbraith}: The replicate consistency in the Cluster 2 DEGs is not as clean as that in the Cluster 1 DEGs, but is still relatively clean.}
+  \label{fig:litreCluster2}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/GalbraithClust1SM}
+  \caption{The 327 DEGs from the first cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as light orange dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots.}
+  \label{fig:GalbraithClust1SM}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/GalbraithClust2SM}
+  \caption{The 365 DEGs from the second cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as dark orange dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots. We also see again that the first replicate from the virus-treated sample (``T.1'') may be somewhat inconsistent in these DEGs, as its presence in the replicate scatterplots results in the DEGs unexpectedly deviating from the \textit{x=y} line and its presence in the treatment scatterplots results in the DEGs unexpectedly adhering to the \textit{x=y} line.}
+  \label{fig:GalbraithClust2SM}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/GalbraithClust3SM}
+  \caption{The 224 DEGs from the third cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as turquoise dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots.}
+  \label{fig:GalbraithClust3SM}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/GalbraithClust4SM}
+  \caption{The 103 DEGs from the fourth cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as pink dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots. We also see that the second replicate from the virus-treated sample (``T.2'') may be somewhat inconsistent in these DEGs, as its presence in the replicate scatterplots results in the DEGs unexpectedly deviating from the \textit{x=y} line and its presence in the treatment scatterplots results in the DEGs unexpectedly adhering to the \textit{x=y} line.}
+  \label{fig:GalbraithClust4SM}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/RutterSM1}
+  \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 1, 2, and 3 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
+  \label{fig:RutterSM1}
+\end{figure}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/RutterSM2}
+  \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 4, 5, and 6 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
+  \label{fig:RutterSM2}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/RutterSM3}
+  \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 7, 8, and 9 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
+  \label{fig:RutterSM3}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/RutterSM4}
+  \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 10, 11, and 12 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
+  \label{fig:RutterSM4}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Images/GRVenn}
+  \caption{Venn diagrams comparing the virus-related DEG overlaps between the Galbraith study (labeled as ``G'') and our study (labeled as ``R''). From left to right: Total virus-related DEGs (subplot A), virus-upregulated DEGs (subplot B), control-upregulated DEGs (subplot C). Both the total virus-related and virus-upregulated DEGs showed significant overlap between the studies (p-value < 2.2e-16) as per Fisher's Exact Test for Count Data. There was one gene that was virus-upregulated in the Galbraith study but control-upregulated in our study.}
+  \label{fig:GRVenn}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
