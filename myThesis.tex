@@ -983,13 +983,53 @@ Research of Graham and Moran Lauter was financed by the United States Department
 
 \section{Introduction}
 
-As was discussed in chapter ~\ref{sec:chapter2}, high-throughput sequencing methods produce large amounts of sequence data that have become more attainable and affordable in recent years. While this technology grants scientists with access to more information about their transcriptomes of interest, it also presents a challenge for them in terms of requiring robust computational tools for the analysis of such unprecedented amounts of sequencing data. The typical analysis pipeline for RNA-sequencing data, for instance, identifies differentially expressed genes that are up and/or down regulated based on fold-changes when comparing between treatments of interest (such as healthy versus unhealthy tissues). Normalization is used within and/or between samples and statistical models are used to investigate the reliability of fold-change calculations for each gene by taking into account variation across genes and samples. Any genes that are identified as differentially expressed subsequently undergo functional enrichment to identify the involved gene ontological biological processeses, molecular functions, and cellular components. 
+As was discussed in chapter~\ref{sec:chapter2}, high-throughput sequencing methods produce large amounts of sequence data that have become more attainable and affordable in recent years. While this technology grants scientists with access to more information about their transcriptomes of interest, it also presents a challenge for them in terms of requiring robust computational tools for the analysis of such unprecedented amounts of sequencing data. The typical analysis pipeline for RNA-sequencing data, for instance, identifies differentially expressed genes that are up and/or down regulated based on fold-changes when comparing between treatments of interest (such as healthy versus unhealthy tissues). Normalization is used within and/or between samples and statistical models are used to investigate the reliability of fold-change calculations for each gene by taking into account variation across genes and samples. Any genes that are identified as differentially expressed subsequently undergo functional enrichment to identify the involved gene ontological biological processeses, molecular functions, and cellular components. 
 
-Chapter ~\ref{sec:chapter2} showed several examples of why implementation of visualization methods that allow users to confirm the known and reveal the unknown in their RNA-sequencing data is an important procedure in the analysis, inference, and conclusions on their studies. In particular, visualizations that allow for users to assess the DEG calls from their RNA-sequencing studies is crucial to ensure that the subsequential functional enrichment analyses are provided reliable inputs. Most of the popular and free software packages that provide analysis pipelines for RNA-sequencing data do not use effective visualization tools, and if they do, they are often limited by their static nature (\citealt{deseq2}, \citealt{edger}, \citealt{limma}).
+Chapter~\ref{sec:chapter2} showed several examples of why implementation of visualization methods that allow users to confirm the known and reveal the unknown in their RNA-sequencing data is an important procedure in the analysis, inference, and conclusions on their studies. In particular, visualizations that allow for users to assess the DEG calls from their RNA-sequencing studies is crucial to ensure that the subsequential functional enrichment analyses are provided reliable inputs. Most of the popular and free software packages that provide analysis pipelines for RNA-sequencing data do not use effective visualization tools, and if they do, they are often limited by their static nature (\citealt{deseq2}, \citealt{edger}, \citealt{limma}). In the past several years, new visualization approaches toward RNA-sequencing anaysis have incorporated interactive capabilities, and it is believed interaction trends will continue to enable enhanced visualization exploration of genomic datasets in the future (\citealt{vizReview}). Despite the growing appreciation of the inherent value of interactive graphics, the availability of easy-to-use and effective interactive exploratory visualization tools for RNA-sequencing data remains limited. To address this need, we are developing \pkg{bigPint}, an \pkg{R} software package that provides users with several new plotting techniques (introduced in chapter ~\ref{sec:chapter2}) in both static and interactive formats, as well as interactive versions of other popular plotting methods in RNA-sequencing analysis.
 
+\section{Implementation}
 
-- To address this need, we developed Millstone, a web-based software platform that supports an iterative process of multiplex mutation analysis and genome engineering
+Most interactive graphics in \pkg{bigPint} are constructed using \pkg{R} \citep{R} software, along with packages \pkg{ggplot2} (\citealt{ggplot2}), \pkg{Shiny} (\citealt{shiny}), \pkg{plotly} (\citealt{plotly}), and \pkg{htmlwidgets} (\citealt{htmlwidgets}). In many cases, \pkg{ggplot2} is used to create the main grammar of graphics of plots, while the ggplotly method from the \pkg{plotly} package is used to convert the ggplot object into a plotly object.
 
+We also developed a collection of interactive graphics that share a rather unique feature: The background displays all genes in the dataset and the foreground displays a gene of interest (typically a DEG). Such functionality allows users to assess how the gene of interest in the foreground compares to the whole dataset, especially in terms of variability. As the number of genes in RNA-sequencing datasets is large and unchanging, the background plot should ideally remain static. However, the foreground plot of the gene of interest is small in size and can change depending on what specific gene the user wishes to examine. As a result, the foreground plot should ideally have interactive capabilities.
+ 
+In order to acheive interactive functionality superimposed onto a static background, we could not simply rely on the onRender() method of the \pkg{plotly} package, because this would require the large background plot to be redrawn everytime a user interacts with any aspect of the graphic, causing unnecessary and substantial delays. Instead, we used the onRender() method from the \pkg{htmlwidgets} package. This method allows for the foreground data to be overlaid via plotly traces while the plotly background scatterplot matrix does not need to be redrawn. Specifically, it contains three input parameters, an HTML Widget object, a character vector containing JavaScript code, and a list of R objects that can be serialized to JSON format. In our case, we used a plotly object as the HTML Widget object, which allowed for a background that is static by default but can be changed if deliberately done so by the user. We used the JavaScript code parameter to allow for interactive manipulation of the overlaid gene of interest, and we used the R object list to transfer the count table and DEG list into the functionality.
+
+In some our our graphics, users can link between interactive plots. This functoinality was achieved by sending custom messages between \pkg{Shiny} software and the JavaScript code from \pkg{htmlwidgets}.
+
+\section{Supported data types}
+
+Our software methods support the main types of input and output data structures from popular RNA-sequencing analysis software (\citealt{deseq2}, \citealt{edger}, \citealt{limma}). For many of our plotting methods, the input parameters include a count table of the entire dataset (can be raw, normalized, or standardized) and a list of a subset of this dataset (usually the DEGs) that came also come along with certain metrics of interest (such as fold-change and FDR). These input parameters are intended to allow our software tools to be easily incorporable into popular RNA-sequencing analysis software (\citealt{deseq2}, \citealt{edger}, \citealt{limma}), which often require the same count table as input and generate the subset of interest (usually the DEGs) along with metrics as output. 
+
+\section{Examples Methods}
+
+In chapter~\ref{sec:chapter2}, we provided users with access to an interactive scatterplot matrix from our software for them to explore (https://rnaseqvisualization.shinyapps.io/scatmat). We now also include a pre-made video to ensure users can understand some of the features available in our interactive graphics. The video in Figure~\ref{fig:scatMatPi} demonstrates a special variant of the interactive scatterplot matrix in which the user can select a prediction interval threshold to be applied to each scatterplot. In the video, the user can select individual genes of interest outside the prediction interval to highlight them across all scatterplots, while also superimposing them as parallel coordinate lines in a separate plot below. The user can also hover over genes of interest to elicit information about them. Although it is not shown in the video below, there are also several additional interactive features available through the Plotly Modebar, including zooming in an dout, reseting axes, autoscaling, and panning. The package also offers additional variations of the interactive scatterplot matrix, which are demonstrated in the supplemental information for this chapter (Section~\ref{sec:suppchapter3}). 
+
+\begin{figure}[H]
+    \begin{framed}
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=scatMatPi.mov, deactivate=onclick, flashvars={source=scatMatPi.mov}]{\includegraphics{./scatMatPi.jpg}}{VPlayer.swf}
+    \end{framed}
+    \caption{This video demonstrates an interactive scatterplot matrix that can be thresholded based on prediction interval. Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:scatMatPi}
+\end{figure}
+
+We demonstrate another example of a visualization method in RNA-sequencing analysis called the volcano plot (Video in figure~\ref{fig:volcano}). This plot is a type of scatterplot that draws significance versus fold-change on the axes. It usually offered in a static format. Here, we allow interactive features so the user can threshold based on either of the axes metrics, select genes of interest and simultaneously plot them in a linked parallel coordinate plot, and switch between treatment pairs within the dataset effortlessly.
+
+\begin{figure}[H]
+    \begin{framed}
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=volcano.mov, deactivate=onclick, flashvars={source=volcano.mov}]{\includegraphics{./volcano.jpg}}{VPlayer.swf}
+    \end{framed}
+    \caption{This video demonstrates an interactive volcano plot. Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:volcano}
+\end{figure}
+
+\section{Discussion}
+
+The plotting methods we offer in \pkg{bigPint} allow users to quickly and interactively examine genes of interest across the entire dataset. We integrate several technologies to achieve the useful and efficient functionality that allows for an interactive foreground and a static background. Some of the graphics we offer in this package are not used in popular RNA-sequencing packages, such as scatterplot matrics, parallel coordinate plots, and litre plots. See chapter~\ref{sec:chapter2} for a review of these visualization tools. We also offer interactive versions of graphics that are already popular in RNA-sequencing packages, such as the volcano plot.
+
+We plan to publish our software freely on Bioconductor, which provides open source software for bioinformatics. Our software can be used on Windows, MacOS, and Linux operating systems and will integrate neatly into popular RNA-sequencing analysis tools. The current version of our reference manual is posted as supplementary information in Section~\ref{sec:suppchapter3}. Analysis of large genomics data is relying more on sophisticated and interactive visualization techniques (\citealt{vizReview}) and we believe we will contribute to that promising trend by publishing our software.
 
 %%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1127,7 +1167,7 @@ The number of DEGs across the six treatment pairings between the diet and virus 
 
 We wished to explore the signal:to:noise ratio between the Galbraith dataset and our dataset. Basic MDS plots were constructed with the DESeq2 analysis pipeline, and we could immediately determine that the Galbraith dataset may better separate the infected and uninfected honeybees better than our dataset (Supplementary figure \ref{fig:mdsPlots}). We also noted that the first replicate of both treatment groups in the Galbraith data did not cluster as cleanly in the MDS plots. However, through this automatically-generated plot, we can only visualize information at the sample level. Wanting to learn more about the data at the gene level, we continued with additional visualization techniques.
 
-We used parallel coordinate lines superimposed onto boxplots to visualize the DEGs associated with virus infection in the two studies. The background boxplot represents the distribution of all genes in the data, and each parallel coordinate line represents one DEG. To reduce overlapping of parallel coordinate lines, we often use hierarchical clustering techniques to separate DEGs into common patterns. See more information about this plotting method and the ideal visual structure of DEGs in our earlier chapter @@@.
+We used parallel coordinate lines superimposed onto boxplots to visualize the DEGs associated with virus infection in the two studies. The background boxplot represents the distribution of all genes in the data, and each parallel coordinate line represents one DEG. To reduce overlapping of parallel coordinate lines, we often use hierarchical clustering techniques to separate DEGs into common patterns. See more information about this plotting method and the ideal visual structure of DEGs from chapter~\ref{sec:chapter2}.
 
 We see that the 1,019 DEGs from the Galbraith dataset form relatively clean-looking visual displays (Figure \ref{fig:pcpGalbraith}). We do see that the first replicate of the virus group appears somewhat inconsistent with the other virus replicates in Cluster 2, confirming that this trend in the data that we saw in the MDS plot carried through into the DEG results. In contrast, we see that the 43 virus-related DEGs from our dataset do not look as clean in their visual displays (Figure \ref{fig:pcpRutterVirus}). The replicates appear somewhat inconsistent in their esimated expression levels and there is not always such a large difference between treatment groups. We see a similar finding when we also examine a larger subset of 1,914 diet-related DEGs from our study (Supplementary figure \ref{fig:pcpRutterDiet}). 
 
@@ -1578,25 +1618,46 @@ More importantly, while Figures~\ref{litreClusterKeep} through~\ref{litreCluster
 \chapter{Supplementary material for Chapter 4}
 \label{sec:suppchapter3}
 
-This section contains additional example videos of the interactive capabilities of visualization methods from our work-in-progress \pkg{R} package \pkg{bigPint}. It also includes the software reference manual for the software package.
-
-
-
-
+This section contains additional example video demonstrations of the interactive visualization methods from our work-in-progress \pkg{R} package \pkg{bigPint}. It also includes the software reference manual for the software package.
 
 \begin{figure}[H]
     \begin{framed}
     \centering
-    \includemedia[width=1.0\textwidth, addresource=scatMatPi.mov, deactivate=onclick, flashvars={source=scatMatPi.mov}]{\includegraphics{./plotCBNoText.png}}{VPlayer.swf}
+    \includemedia[width=1.0\textwidth, addresource=scatMatOrth.mov, deactivate=onclick, flashvars={source=scatMatOrth.mov}]{\includegraphics{./scatMatOrth.jpg}}{VPlayer.swf}
     \end{framed}
-    \caption{Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
-    \label{fig:scatMatPi}
+    \caption{This video demonstrates an interactive scatterplot matrix that allows users to threshold based on orthogonal distance from the \text{x=y} line. Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:scatMatOrth}
 \end{figure}
 
+\begin{figure}[H]
+    \begin{framed}
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=scatMatFC.mov, deactivate=onclick, flashvars={source=scatMatFC.mov}]{\includegraphics{./scatMatFC.jpg}}{VPlayer.swf}
+    \end{framed}
+    \caption{This video demonstrates an interactive scatterplot matrix that allows users to threshold based on fold change. Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:scatMatFC}
+\end{figure}
 
+\begin{figure}[H]
+    \begin{framed}
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=pcpPlotlyMarkers.mov, deactivate=onclick, flashvars={source=scatMatFC.mov}]{\includegraphics{./pcpPlotlyMarkers.jpg}}{VPlayer.swf}
+    \end{framed}
+    \caption{This video demonstrates an interactive parallel coordinate plot from the Plotly package. While it allows for the full capabilities in the Plotly Modebar (such as panning, zooming, and hovering), it does not allow the user to select lines unless the selection overlaps at an integer value on the x axis. It also does not allow users to print the names of any lines selected and possibly delete them. When working with a large number of parallel coordinate lines (say as genes), these interactive functionalities can be severaly limited. We improve upon this basic functionality in our software, as is demonstrated in the video of Figure~\ref{fig:pcpSeqSel}. Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:pcpPlotlyMarkers}
+\end{figure}
 
+\begin{figure}[H]
+    \begin{framed}
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=pcpSeqSel.mov, deactivate=onclick, flashvars={source=scatMatFC.mov}]{\includegraphics{./pcpSeqSel.jpg}}{VPlayer.swf}
+    \end{framed}
+    \caption{This video demonstrates improvements we made based upon basic functionality for parallel coordinate plots in Plotly, as was demonstrated in the video of Figure~\ref{fig:pcpPlotlyMarkers}. The user can now select a subset of lines (genes) from a dense parallel coordinate plot. In this example, the user selects lines (genes) that have low expression in the first three replicates, but high expression in the last three replicates. Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:pcpSeqSel}
+\end{figure}
 
-%\includepdf[pages={1}]{Manual/bigPintManual0.pdf}
+Below we include the current reference manual of the \pkg{bigPint} package.
+
 \includepdf[pages=-]{bigPintManual.pdf}
 
 

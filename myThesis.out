@@ -1,0 +1,54 @@
+\BOOKMARK [0][-]{section*.1}{Contents}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Background to data visualization}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Problems to be addressed}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Literature review}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.3.1}{Visualization methods for genealogical data}{section.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.3.2}{Visualization methods for RNA-sequencing data}{section.1.3}% 7
+\BOOKMARK [1][-]{section.1.4}{Overview of thesis research}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Visualization methods for genealogical datasets}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Example datasets}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Soybean genealogy}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{Academic genealogy of statisticians}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Genealogical input format}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.4}{Generating a graphical object}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.5}{Plotting a shortest path}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.6}{Superimposing shortest path on tree}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.7}{Plotting ancestors and descendants by generation}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.8}{Plotting distance matrix}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.9}{Academic genealogy of statisticians}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.9.1}{Interactive visualization of genealogical structure}{section.2.9}% 21
+\BOOKMARK [1][-]{section.2.10}{Future avenues}{chapter.2}% 22
+\BOOKMARK [1][-]{section.2.11}{Conclusions}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.12}{Acknowledgments}{chapter.2}% 24
+\BOOKMARK [0][-]{chapter.3}{The case for visualization methods in RNA-sequencing data analysis}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.2}{Parallel Coordinate Plots}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.3}{Scatterplot matrices}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.1}{Overview of scatterplot matrices}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.2}{Assessing normalization with scatterplot matrices}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.3}{Checking for common errors with scatterplot matrices}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.4}{Finding unexpected patterns in scatterplot matrices}{section.3.3}% 32
+\BOOKMARK [2][-]{subsection.3.3.5}{Assessing differential expression calls in scatterplot matrices}{section.3.3}% 33
+\BOOKMARK [1][-]{section.3.4}{Litre plots}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.5}{Closing case study}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.6}{Discussion}{chapter.3}% 36
+\BOOKMARK [0][-]{chapter.4}{Software for visualization methods in RNA-sequencing data analysis}{}% 37
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.2}{Implementation}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.3}{Supported data types}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.4}{Examples Methods}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 42
+\BOOKMARK [0][-]{chapter.5}{Gene expression responses to diet quality and viral infection in Apis mellifera}{}% 43
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.2}{Methods}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.2.1}{Design of two-factor experiment}{section.5.2}% 46
+\BOOKMARK [2][-]{subsection.5.2.2}{RNA extraction}{section.5.2}% 47
+\BOOKMARK [2][-]{subsection.5.2.3}{Gene expression}{section.5.2}% 48
+\BOOKMARK [2][-]{subsection.5.2.4}{Comparison to previous studies on transcriptomic response to viral infection}{section.5.2}% 49
+\BOOKMARK [2][-]{subsection.5.2.5}{Visualization}{section.5.2}% 50
+\BOOKMARK [2][-]{subsection.5.2.6}{Gene Ontology}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.7}{Probing resilience versus resistance}{section.5.2}% 52
+\BOOKMARK [1][-]{section.5.3}{Results}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.3.1}{Phenotypic results}{sectio
