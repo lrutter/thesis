@@ -6,6 +6,7 @@
 \usepackage[breakable, theorems, skins]{tcolorbox}
 \usepackage[]{media9}
 \usepackage{lipsum}
+\usepackage{pdfpages}
 \tcbset{enhanced}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
@@ -208,7 +209,7 @@ The tools currently available for constructing parallel coordinate plots to asse
 
 \item \textbf{Pairwise scatterplots}:
 
-We aim to develop visuals that can effectively plot replicates against each other. We can do this by generating pairwise scatterplots for replicates, using the \code{scatmat()} function of the \code{GGally} package (\citealt{ggally}). If the data is high quality, then we would expect negligent differences between read counts across replicates. This would result in a scatterplot where the read counts from the two replicates fall along the x=y relationship. Deviations from this expectation would indicate a quality problem with the data.
+We aim to develop visuals that can effectively plot replicates against each other. We can do this by generating pairwise scatterplots for replicates, using the \code{scatmat()} function of the \code{GGally} package (\citealt{ggally}). If the data is clean, then we would expect negligent differences between read counts across replicates. This would result in a scatterplot where the read counts from the two replicates fall along the x=y relationship. Deviations from this expectation would indicate a quality problem with the data.
 
 With this second goal we face the same challenges that we did with the first goal: We have a plotting algorithm that is not tailored to deal with the vastly sized datasets like RNA-sequencing data. As a result, we again face space (overplotting) and time (computational speed) constraints, and our goal would be to tailor the scatterplot matrix to adapt to large amounts of data. In addition, we must now recognize that the few data points along the perimeter of the x=y relationship that we can see may be misleading. Hence, we would want to develop guidelines in terms of what denotes a high-quality dataset where read counts are similar between replicates and different between treatments. 
 
@@ -980,6 +981,15 @@ Research of Graham and Moran Lauter was financed by the United States Department
 \chapter{Software for visualization methods in RNA-sequencing data analysis}
 \label{sec:chapter3}
 
+\section{Introduction}
+
+As was discussed in chapter ~\ref{sec:chapter2}, high-throughput sequencing methods produce large amounts of sequence data that have become more attainable and affordable in recent years. While this technology grants scientists with access to more information about their transcriptomes of interest, it also presents a challenge for them in terms of requiring robust computational tools for the analysis of such unprecedented amounts of sequencing data. The typical analysis pipeline for RNA-sequencing data, for instance, identifies differentially expressed genes that are up and/or down regulated based on fold-changes when comparing between treatments of interest (such as healthy versus unhealthy tissues). Normalization is used within and/or between samples and statistical models are used to investigate the reliability of fold-change calculations for each gene by taking into account variation across genes and samples. Any genes that are identified as differentially expressed subsequently undergo functional enrichment to identify the involved gene ontological biological processeses, molecular functions, and cellular components. 
+
+Chapter ~\ref{sec:chapter2} showed several examples of why implementation of visualization methods that allow users to confirm the known and reveal the unknown in their RNA-sequencing data is an important procedure in the analysis, inference, and conclusions on their studies. In particular, visualizations that allow for users to assess the DEG calls from their RNA-sequencing studies is crucial to ensure that the subsequential functional enrichment analyses are provided reliable inputs. Most of the popular and free software packages that provide analysis pipelines for RNA-sequencing data do not use effective visualization tools, and if they do, they are often limited by their static nature (\citealt{deseq2}, \citealt{edger}, \citealt{limma}).
+
+
+- To address this need, we developed Millstone, a web-based software platform that supports an iterative process of multiplex mutation analysis and genome engineering
+
 
 %%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1253,24 +1263,24 @@ However, we have preliminary plotting tools for RNA-sequencing significance test
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Supplementary material for Chapter 2}
+\chapter{Supplementary material for Chapter 3}
 \label{sec:suppchapter2}
 
-This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 2. We include additional examples of how parallel coordinate plots, scatterplots matrices, and litre plots can be used to assess normalization and DEG calls. Below we provide a brief description of the first seven figures in this supplementary file:
+This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter \ref{sec:chapter2}. We include additional examples of how parallel coordinate plots, scatterplots matrices, and litre plots can be used to assess normalization and DEG calls. Below we provide a brief description of the first seven figures in this supplementary section:
 
 \begin{itemize}
 
-\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure~\ref{sbIRClustersSig} in the main paper. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure \ref{fig:sbIRClustersSig} in the main paper only showing significant genes, Figure~\ref{sbIRClusters} here shows all genes.
+\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure \ref{fig:sbIRClustersSig} in chapter \ref{sec:chapter2} only showing significant genes, Figure~\ref{sbIRClusters} here shows all genes.
 
 \item Figures~\ref{sbIRClusterSigSM1} through~\ref{sbIRClusterSigSM4} show scatterplot matrices of the significant genes in the iron-metabolism soybean dataset for each of the four clusters that resulted from hiearchical clustering analysis. They provide an additional and complementary perspective on these DEG calls from what we saw with the parallel coordinate plots in Figure~\ref{sbIRClusters}. 
 
-\item Figure~\ref{mdsSwitch} shows that some of the most popular RNA-seq visualization tools cannot always detect common errors, such as sample switching. Side-by-side boxplots and MDS plots are shown for the soybean cotyledon dataset after deliberately switching samples between treatment groups. For the most part, they are unable to detect the error. In contrast, the less-popular method of scatterplot matrices can quickly detect the possibility of the error (see Figure~\ref{sbCNSwitchedSM} from the main paper).
+\item Figure~\ref{mdsSwitch} shows that some of the most popular RNA-seq visualization tools cannot always detect common errors, such as sample switching. Side-by-side boxplots and MDS plots are shown for the soybean cotyledon dataset after deliberately switching samples between treatment groups. For the most part, they are unable to detect the error. In contrast, the less-popular method of scatterplot matrices can quickly detect the possibility of the error (see Figure~\ref{sbCNSwitchedSM} from chapter \ref{sec:chapter2}).
 
-\item Figure~\ref{litreCluster1} shows example litre plots for two significant genes from Cluster 1. The reader may wish to view it alongside Figure~\ref{repDot} from the main paper, which contains example litre plots for significant genes from Clusters 2, 3, and 4.
+\item Figure~\ref{litreCluster1} shows example litre plots for two significant genes from Cluster 1. The reader may wish to view it alongside Figure~\ref{repDot} from chapter \ref{sec:chapter2}, which contains example litre plots for significant genes from Clusters 2, 3, and 4.
 
 \end{itemize}
 
-The last twenty figures in the supplementary file are all related to the application of normalization techniques to the liver and kidney technical replicate data that were introduced in Section 5 of the main paper. These figures also introduce examples that demonstrate the effect of standardizing data before viewing them. A brief description of these twenty figures starts on Page 9.
+The last twenty figures in the supplementary section are all related to the application of normalization techniques to the liver and kidney technical replicate data that were introduced in chapter \ref{sec:chapter2}. These figures also introduce examples that demonstrate the effect of standardizing data before viewing them. A brief description of these twenty figures starts on Page 9.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1290,7 +1300,7 @@ The last twenty figures in the supplementary file are all related to the applica
 \begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM1.jpg}}
 \end{framed}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,751 significant genes in Cluster 1 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in green on the scatterplot matrix. They follow the expected patterns of differential expression with most green points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the P group than in the N group. Hence, these green points seem to represent genes that were significantly overexpressed in the P group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the main paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Supplementary Figure~\ref{litreCluster1}).
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,751 significant genes in Cluster 1 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}). These significant genes are overlaid in green on the scatterplot matrix. They follow the expected patterns of differential expression with most green points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the P group than in the N group. Hence, these green points seem to represent genes that were significantly overexpressed in the P group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure~\ref{sbIRClustersSig} of chapter \ref{sec:chapter2}. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Supplementary Figure~\ref{litreCluster1}).
 \label{sbIRClusterSigSM1}}
 \end{figure}
 
@@ -1298,7 +1308,7 @@ The last twenty figures in the supplementary file are all related to the applica
 \begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM2.jpg}}
 \end{framed}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,009 significant genes in Cluster 2 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in mustard on the scatterplot matrix. They follow the expected patterns of differential expression with most mustard points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. Hence, these mustard points seem to represent genes that were significantly overexpressed in the N group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure~\ref{repDot} A and B in the main paper).
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,009 significant genes in Cluster 2 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}). These significant genes are overlaid in mustard on the scatterplot matrix. They follow the expected patterns of differential expression with most mustard points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. Hence, these mustard points seem to represent genes that were significantly overexpressed in the N group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure~\ref{repDot} A and B in chapter \ref{sec:chapter2}).
 \label{sbIRClusterSigSM2}}
 \end{figure}
   
@@ -1307,7 +1317,7 @@ The last twenty figures in the supplementary file are all related to the applica
 \begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM3.jpg}}
 \end{framed}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 861 significant genes in Cluster 3 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in pink on the scatterplot matrix. For the most part, they follow the expected patterns of differential expression with pink points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. However, the scatterplot between replicates P.1 and P.3 shows slightly higher expression in P.3, and the scatterplot between replicates P.2 and P.3 also shows slightly higher expression in P.3. Hence, these pink points seem to represent genes that were significantly overexpressed in the N group, but with slight inconstencies in the replicates in the P group. The parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the paper showed this same conclusion and perhaps more clearly. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure~\ref{repDot} C and D in the main paper).
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 861 significant genes in Cluster 3 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}). These significant genes are overlaid in pink on the scatterplot matrix. For the most part, they follow the expected patterns of differential expression with pink points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. However, the scatterplot between replicates P.1 and P.3 shows slightly higher expression in P.3, and the scatterplot between replicates P.2 and P.3 also shows slightly higher expression in P.3. Hence, these pink points seem to represent genes that were significantly overexpressed in the N group, but with slight inconstencies in the replicates in the P group. The parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the paper showed this same conclusion and perhaps more clearly. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure~\ref{repDot} C and D in chapter \ref{sec:chapter2}).
 \label{sbIRClusterSigSM3}}
 \end{figure}  
 
@@ -1317,7 +1327,7 @@ The last twenty figures in the supplementary file are all related to the applica
 \begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM4.jpg}}
 \end{framed}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 17 significant genes in Cluster 4 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in coral on the scatterplot matrix. For the most part, they do not seem to follow the expected patterns of differential expression: In many of the scatterplots between treatments, the coral points do not seem to deviate much from the \textit{x=y} line. Moreover, in the scatterplots between P.1 and P.2 as well as P.1 and P.3, the coral points seems to indicate an underexpression of the P.1 replicate. We similarly saw somewhat messy looking DEG calls in Cluster 4 in the form of parallel coordinate plots (Figure~\ref{sbIRClustersSig} of the main paper) and litre plots (Figure~\ref{repDot} E and F of the main paper).
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 17 significant genes in Cluster 4 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}). These significant genes are overlaid in coral on the scatterplot matrix. For the most part, they do not seem to follow the expected patterns of differential expression: In many of the scatterplots between treatments, the coral points do not seem to deviate much from the \textit{x=y} line. Moreover, in the scatterplots between P.1 and P.2 as well as P.1 and P.3, the coral points seems to indicate an underexpression of the P.1 replicate. We similarly saw somewhat messy looking DEG calls in Cluster 4 in the form of parallel coordinate plots (Figure~\ref{sbIRClustersSig} of chapter \ref{sec:chapter2}) and litre plots (Figure~\ref{repDot} E and F of chapter \ref{sec:chapter2}).
 \label{sbIRClusterSigSM4}}
 \end{figure}  
 
@@ -1325,7 +1335,7 @@ The last twenty figures in the supplementary file are all related to the applica
 \null
 \begin{figure}[!t]
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/mdsSwitch.png}}
-\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional visualization methods applied to the soybean cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using less-popular plots that provide gene-level resolution like with the scatterplot matrix from Figure~\ref{structure} in the main paper.
+\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional visualization methods applied to the soybean cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using less-popular plots that provide gene-level resolution like with the scatterplot matrix from Figure~\ref{structure} in chapter \ref{sec:chapter2}.
 \label{mdsSwitch}}
 \end{figure}
 
@@ -1335,14 +1345,14 @@ The last twenty figures in the supplementary file are all related to the applica
 \begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg}}
 \end{framed}
-\caption{Litre plots for significant genes inside Cluster 1 from Figure~\ref{sbIRClustersSig} of the paper. Subplots A and B each overlay an example significant gene as nine green points. The genes show patterns expected of differentially-expressed ones, by clumping together and deviating from the \textit{x=y} line. Moreover, the genes appear over-expressed in the P group. This is consistent with what we saw in the parallel coordinate plots of Figure~\ref{sbIRClustersSig} from the main paper. To interactively view the litre plot for all significant genes within Cluster 1, please visit https://rnaseqvisualization.shinyapps.io/litreCluster1.
+\caption{Litre plots for significant genes inside Cluster 1 from Figure~\ref{sbIRClustersSig} of the paper. Subplots A and B each overlay an example significant gene as nine green points. The genes show patterns expected of differentially-expressed ones, by clumping together and deviating from the \textit{x=y} line. Moreover, the genes appear over-expressed in the P group. This is consistent with what we saw in the parallel coordinate plots of Figure~\ref{sbIRClustersSig} from chapter \ref{sec:chapter2}. To interactively view the litre plot for all significant genes within Cluster 1, please visit https://rnaseqvisualization.shinyapps.io/litreCluster1.
 \label{litreCluster1}}
 \end{figure}   
 
 \clearpage
-The rest of this supplementary file (Figures~\ref{lkClustersKeep} through~\ref{litreClusterAdd-St}) provides additional examples related to the closing case study introduced in Section 5 of the main paper. In this case study, technical replicates of kidney and liver RNA-seq data was initially analyzed using library scale normalization. This process lead to 7,050 kidney DEGs and 1,968 liver DEGs, but subsequent visualization analysis suggested that a subset of the kidney DEGs may be unreliable (Figure~\ref{lkClusters}A from the main paper). Upon reviewing the geometrical structure of the data in the form of a scatterplot matrix, a subset of overexpressed liver genes was discovered, implicating the need for a more rigorous form of normalization (Figure~\ref{lkSM} from the main paper). As a result, TMM normalization was then applied to the data, which lead to 3,974 kidney DEGs and 3,546 liver DEGs. Ensuing visualization analysis verified that these DEGs now appeared more reliable (Figure~\ref{lkClusters}B from the main paper). \\
+The rest of the figures in this supplementary section (Figures~\ref{lkClustersKeep} through~\ref{litreClusterAdd-St}) provide additional examples related to the closing case study introduced in chapter ~\ref{sec:chapter2}. In this case study, technical replicates of kidney and liver RNA-seq data was initially analyzed using library scale normalization. This process lead to 7,050 kidney DEGs and 1,968 liver DEGs, but subsequent visualization analysis suggested that a subset of the kidney DEGs may be unreliable (Figure~\ref{lkClusters}A from chapter \ref{sec:chapter2}). Upon reviewing the geometrical structure of the data in the form of a scatterplot matrix, a subset of overexpressed liver genes was discovered, implicating the need for a more rigorous form of normalization (Figure~\ref{lkSM} from chapter \ref{sec:chapter2}). As a result, TMM normalization was then applied to the data, which lead to 3,974 kidney DEGs and 3,546 liver DEGs. Ensuing visualization analysis verified that these DEGs now appeared more reliable (Figure~\ref{lkClusters}B from chapter \ref{sec:chapter2}). \\
 
-In the remaining figures of this supplementary file, we thoroughly explore four subsets of genes from this case study in the form of parallel coordinate plots, scatterplot matrices, and litre plots. We also use variants of some of the techniques introduced in the main paper. Namely, we demonstrate the use of data standardization for scatterplot matrices and litre plots as a means to magnify certain informative patterns at the expense of losing geometrical structure. Throughout the figures below, we use consistent color-coding while plotting example genes from each of the four gene subsets. The four gene subsets and their color-codes are as follows:
+In the remaining figures of this supplementary file, we thoroughly explore four subsets of genes from this case study in the form of parallel coordinate plots, scatterplot matrices, and litre plots. We also use variants of some of the techniques introduced in chapter \ref{sec:chapter2}. Namely, we demonstrate the use of data standardization for scatterplot matrices and litre plots as a means to magnify certain informative patterns at the expense of losing geometrical structure. Throughout the figures below, we use consistent color-coding while plotting example genes from each of the four gene subsets. The four gene subsets and their color-codes are as follows:
 
 \begin{enumerate}
 
@@ -1565,25 +1575,38 @@ More importantly, while Figures~\ref{litreClusterKeep} through~\ref{litreCluster
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Supplementary material for Chapter 3}
+\chapter{Supplementary material for Chapter 4}
 \label{sec:suppchapter3}
 
-This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 3.
+This section contains additional example videos of the interactive capabilities of visualization methods from our work-in-progress \pkg{R} package \pkg{bigPint}. It also includes the software reference manual for the software package.
 
 
 
 
 
+\begin{figure}[H]
+    \begin{framed}
+    \centering
+    \includemedia[width=1.0\textwidth, addresource=scatMatPi.mov, deactivate=onclick, flashvars={source=scatMatPi.mov}]{\includegraphics{./plotCBNoText.png}}{VPlayer.swf}
+    \end{framed}
+    \caption{Upon clicking on this figure twice, a short video demonstrating the animation features for this function can be viewed. Please note that to properly view this video, the PDF version of this paper must be opened in Adobe Acrobat Reader DC (Version >=9), which can be downloaded free of charge.}
+    \label{fig:scatMatPi}
+\end{figure}
 
+
+
+
+%\includepdf[pages={1}]{Manual/bigPintManual0.pdf}
+\includepdf[pages=-]{bigPintManual.pdf}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Supplementary material for Chapter 4}
+\chapter{Supplementary material for Chapter 5}
 \label{sec:suppchapter4}
 
-This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 4.
+This section contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter \ref{sec:chapter4}.
 
 \begin{table}
   \centering
