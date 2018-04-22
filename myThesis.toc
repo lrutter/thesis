@@ -25,39 +25,39 @@
 \contentsline {chapter}{\chapternumberline {3}The case for visualization methods in RNA-sequencing data analysis}{34}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{34}{section.3.1}
 \contentsline {section}{\numberline {3.2}Parallel Coordinate Plots}{35}{section.3.2}
-\contentsline {section}{\numberline {3.3}Scatterplot matrices}{37}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Overview of scatterplot matrices}{37}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Assessing normalization with scatterplot matrices}{40}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.3}Scatterplot matrices}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Overview of scatterplot matrices}{38}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Assessing normalization with scatterplot matrices}{39}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Checking for common errors with scatterplot matrices}{41}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Finding unexpected patterns in scatterplot matrices}{43}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Assessing differential expression calls in scatterplot matrices}{43}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.5}Assessing differential expression calls in scatterplot matrices}{46}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Litre plots}{46}{section.3.4}
-\contentsline {section}{\numberline {3.5}Closing case study}{49}{section.3.5}
-\contentsline {section}{\numberline {3.6}Discussion}{52}{section.3.6}
-\contentsline {chapter}{\chapternumberline {4}Software for visualization methods in RNA-sequencing data analysis}{54}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Gene expression responses to diet quality and viral infection in \textit {Apis mellifera}}{55}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{55}{section.5.1}
-\contentsline {section}{\numberline {5.2}Methods}{57}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Design of two-factor experiment}{58}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}RNA extraction}{58}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Gene expression}{59}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Comparison to previous studies on transcriptomic response to viral infection}{59}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Visualization}{60}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Gene Ontology}{60}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Probing resilience versus resistance}{62}{subsection.5.2.7}
-\contentsline {section}{\numberline {5.3}Results}{62}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{62}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{64}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison DEG results}{65}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{66}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{69}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Discussion}{69}{section.5.4}
-\contentsline {section}{\numberline {5.5}Future avenues}{71}{section.5.5}
-\contentsline {chapter}{\chapternumberline {6}Timeline}{74}{chapter.6}
-\contentsline {section}{\numberline {6.1}Completed}{74}{section.6.1}
-\contentsline {section}{\numberline {6.2}Scheduled deliverables}{74}{section.6.2}
-\contentsline {section}{\numberline {6.3}Other work}{74}{section.6.3}
-\contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 2}{75}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 3}{110}{chapter.8}
-\contentsline {chapter}{\chapternumberline {9}Supplementary material for Chapter 4}{111}{chapter.9}
-\contentsline {chapter}{Bibliography}{130}{section*.83}
+\contentsline {section}{\numberline {3.5}Closing case study}{50}{section.3.5}
+\contentsline {section}{\numberline {3.6}Discussion}{53}{section.3.6}
+\contentsline {chapter}{\chapternumberline {4}Software for visualization methods in RNA-sequencing data analysis}{55}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Gene expression responses to diet quality and viral infection in \textit {Apis mellifera}}{56}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{56}{section.5.1}
+\contentsline {section}{\numberline {5.2}Methods}{58}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Design of two-factor experiment}{59}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}RNA extraction}{59}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Gene expression}{60}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Comparison to previous studies on transcriptomic response to viral infection}{60}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Visualization}{61}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Gene Ontology}{61}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Probing resilience versus resistance}{63}{subsection.5.2.7}
+\contentsline {section}{\numberline {5.3}Results}{63}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{63}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{65}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison DEG results}{66}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{67}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{70}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Discussion}{70}{section.5.4}
+\contentsline {section}{\numberline {5.5}Future avenues}{72}{section.5.5}
+\contentsline {chapter}{\chapternumberline {6}Timeline}{75}{chapter.6}
+\contentsline {section}{\numberline {6.1}Completed}{75}{section.6.1}
+\contentsline {section}{\numberline {6.2}Scheduled deliverables}{75}{section.6.2}
+\contentsline {section}{\numberline {6.3}Other work}{75}{section.6.3}
+\contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 2}{76}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 3}{108}{chapter.8}
+\contentsline {chapter}{\chapternumberline {9}Supplementary material for Chapter 4}{109}{chapter.9}
+\contentsline {chapter}{Bibliography}{128}{section*.83}

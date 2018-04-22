@@ -797,19 +797,23 @@ There are several packages within the Bioconductor software that provide graphic
 Figure~\ref{simulatedData} exemplifies this problem for two simulated datasets, one displayed on the left half and the other displayed on the right half of the figure. Each dataset contains two treatment groups (A and B) with three replicates. We cannot detect any notable differences between the left and right datasets from the side-by-side boxplots (subplots A) as they both show fairly consistent five number summaries across their six samples. Likewise, we cannot detect notable differences between the datasets from the MDS plots (subplots B) as they both suggest that the datasets are clustered by the two treatment groups, although the first replicate from treatment A appears as an outlier in the right MDS plot.
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/simulatedData.jpg}}
+\end{framed}
 \caption{One simulated dataset is shown on the left half and another simulated dataset is shown on the right half of the figure. We do not see crucial distinctions between the left and right datasets when we compare their boxplots (A subplots) and MDS plots (B subplots). However, their parallel coordinate plots (C subplots) show a critical difference between their structures. Namely, the left dataset is composed of genes with small replicate variation and large treatment group variation (suggesting DEGs), while the right dataset is composed of genes with similar variation between replicates and treatment groups (not suggesting DEGs). 
 \label{simulatedData}}
 \end{figure}
 
 Despite this, we immediately see from the parallel coordinate plots (subplots C) that the left and right datasets have an important difference. The left dataset has consistent (level) lines between replicates and inconsistent (crossed) lines between treatment groups. This suggests that some of the genes (lines) have consistently low values for treatment group A and consistently high values for treatment group B, while some genes have the opposite phenomenon. As a result, these plotted genes are likely candidates for differential expression. In contrast, the right dataset does not possess this ideal structure and suggests that the genes may not be candidates for differential expression. We could not see this important distinction using the side-by-side boxplots or the MDS plots because they only provide data summarization at the sample resolution, while the parallel coordinate plots show the sample connections for each of the 50 genes.
 
-We will now examine the application of parallel coordinate plots to data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) and iron-deficient (group N) soil conditions \citep{Lauter16}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, retained only significant genes, and visualized the results using parallel coordinate lines (Figure~\ref{sbIRClustersSig}). To view the results before the non-significant genes were removed, see Supplementary Figure 1. For these visualizations, we standardized each gene to have a mean of zero and standard deviation of unity \citep{Chandrasekhar, deSouto}.
+We will now examine the application of parallel coordinate plots to data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) and iron-deficient (group N) soil conditions \citep{Lauter16}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, retained only significant genes, and visualized the results using parallel coordinate lines (Figure~\ref{sbIRClustersSig}). To view the results before the non-significant genes were removed, see Supplementary Figure~\ref{sbIRClusters}. For these visualizations, we standardized each gene to have a mean of zero and standard deviation of unity \citep{Chandrasekhar, deSouto}.
 
 The majority of significant genes were in Clusters 1 and 2, which for the most part captured the expected patterns of differential expression (consistent replicates and inconsistent treatments) in mirroring ways. Only 17 significant genes belonged to Cluster 4 and they mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 had a fairly large number of significant genes (n=861). These genes mostly showed clean differential expression profiles similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P. The reasons for a different response by these genes on this replicate is unclear, but warrants further study.
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClustersSig.jpg}}
+\end{framed}
 \caption{Using parallel coordinate plots to visualize significant genes after hierarchical clustering. We can quickly confirm that Clusters 1 and 2 show the typical pattern for significant genes. Cluster 4 does not distinctively show the usual profile for significant genes. Cluster 3 looks similar to Cluster 2, except for unexpectedly large P.3 values.
 \label{sbIRClustersSig}}
 \end{figure}
@@ -823,7 +827,9 @@ A scatterplot matrix is another effective multivariate visualization tool that p
 Clean data would be expected to have larger variability between treatment groups than between replicates. As Figure~\ref{sbIRClustersSig} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of them to show differential expression between samples. However, a fraction of the genes should have lower variability between replicates than between treatments, and so we should expect the spread of the scatterplot points to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{sbIRClustersSig}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2) \citep{Brown}. We can immediately verify that the nine scatterplots between treatment pairs (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicate pairs.
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbCNSM.jpg}}
+\end{framed}
 \caption{Example of the expected structure of an RNA-seq dataset, using soybean cotyledon data from \cite{Brown}. Within a given scatterplot, most genes (points) should fall along the \textit{x=y} line. We should see genes deviate more strongly from the \textit{x=y} line in treatment scatterplots than in replicate scatterplots. 
 \label{sbCNSM}}
 \end{figure}
@@ -832,7 +838,7 @@ After confirming this expected trend, users can use the scatterplot matrix to fo
 
 Notice that each gene in our data is plotted once in each of the 15 scatterplots. With 73,320 genes in our data, more than one million points must be plotted. Rendering all points interactive would slow down the interactive capabilities of the plot. To solve this, we can tailor the geometric object of the scatterplots to be hexagon bins rather than points. This dramatically reduces the number of geometric objects to be plotted, and increases the interactivity speed.
 
-The reader can visit https://rnaseqvisualization.shinyapps.io/scatmat to access the interactive version of Figure~\ref{sbIRClustersSig}. Readers can read the ``About" Tab to fully understand how to use the application. Essentially, the user can hover over a hexagon bin to see how many genes it contains. When the user clicks on a hexagon bin, the names of the genes are listed and superimposed as orange points across all scatterplots. The genes are also linked to a second plot that superimposes them as parallel coordinate lines on a side-by-side boxplot of all gene counts. This interactivity and linking allows users to quickly examine genes of interest from multiple perspectives superimposed onto the summary of all genes in the dataset. 
+The reader can visit https://rnaseqvisualization.shinyapps.io/scatmat to access the interactive version of Figure~\ref{sbCNSM}. Readers can read the ``About" Tab to fully understand how to use the application. Essentially, the user can hover over a hexagon bin to see how many genes it contains. When the user clicks on a hexagon bin, the names of the genes are listed and superimposed as orange points across all scatterplots. The genes are also linked to a second plot that superimposes them as parallel coordinate lines on a side-by-side boxplot of all gene counts. This interactivity and linking allows users to quickly examine genes of interest from multiple perspectives superimposed onto the summary of all genes in the dataset. 
 
 \subsection{Assessing normalization with scatterplot matrices}
 
@@ -849,14 +855,16 @@ Additionally, we can also confirm from Figure~\ref{yeastWithinBetween}B that the
 Irreproducibility is prevalent in high-throughput biological studies. A study in Nature Genetics surveyed eighteen published microarray expression analyses and reported that only two were exactly reproducible \citep{Ioannidis}. The extent of the problem has spawned a field called ``forensic bioinformatics" whereby researchers attempt to reverse-engineer reported results back into the raw datasets simply to derive the methodologies used in published studies \citep{Baggerly}.
 
 \begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{MakeFigures/yeastWithinBetween.jpg}}
+\begin{framed}
+\centerline{\includegraphics[width=0.8\columnwidth]{MakeFigures/yeastWithinBetween.jpg}}
+\end{framed}
 \caption{Illustrating normalization checks with data from  \cite{Risso}. The collective deviation of genes from the \textit{x=y} line instantly reveals that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset.
 \label{yeastWithinBetween}}
 \end{figure}
 
 Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. With regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients \citep{Baggerly}. Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder our ability to detect errors \citep{Baggerly}. They also discovered that the most common errors are simple errors, such as mixing up sample labels \citep{Baggerly}. Collectively, these findings suggest that simple errors can be difficult to detect using common practices in high-throughput studies.
 
-Fortunately, scatterplot matrices are a simple tool to check for common errors like sample mislabeling. Figure~\ref{sbCNSwitchedSM} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that, as expected, there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. However, we notice that a subset of these thick and thin scatterplots appear outside of their expected locations given the expected variability between treatments versus replicates. Rearranging the columns of the two samples that appear suspicious in Figure~\ref{sbCNSwitchedSM} would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{sbIRClustersSig}. We cannot detect this mislabeling problem as convincingly with traditional plots, as can be verified with this dataset by comparing the boxplots and MDS plots before sample switching (left side of Supplementary Figure 6) and after sample switching (right side of Supplementary Figure 6). 
+Fortunately, scatterplot matrices are a simple tool to check for common errors like sample mislabeling. Figure~\ref{sbCNSwitchedSM} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that, as expected, there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. However, we notice that a subset of these thick and thin scatterplots appear outside of their expected locations given the expected variability between treatments versus replicates. Rearranging the columns of the two samples that appear suspicious in Figure~\ref{sbCNSwitchedSM} would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{sbIRClustersSig}. We cannot detect this mislabeling problem as convincingly with traditional plots, as can be verified with this dataset by comparing the boxplots and MDS plots before sample switching (left side of Supplementary Figure~\ref{mdsSwitch}) and after sample switching (right side of Supplementary Figure~\ref{mdsSwitch}). 
 
 
 \subsection{Finding unexpected patterns in scatterplot matrices}
@@ -869,13 +877,17 @@ An example of how geometric shapes in the scatterplot matrix can provide applica
 However, one streak structure in the bottom right scatterplot stands out. A small subset of transcripts between replicates of the iron-sufficient group sharply deviates from the \textit{x=y} line. By interacting with the plot, we determined the identification of the five transcripts that deviated the most from the expected pattern, and searched for their putative functions. We discovered that these transcripts are reportedly involved in biotic and abiotic stress responses as well as the production of superoxides to combat microbial infections. This is the same group of genes discussed in Figure~\ref{sbIRClustersSig}. It should be noted that these five transcripts did not reach significance unless the third replicate of the P group was removed. In any case, we would not have observed this interesting structure from any models.
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbCNSwitchedSM.jpg}}
+\end{framed}
 \caption{As expected, this scatterplot matrix contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, two samples appear to cause a subset of scatterplots to unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of these two suspicious samples (S1.3 and S2.1), the scatterplot matrix then displays the anticipated structure we saw in Figure~\ref{sbCNSM}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis.
 \label{sbCNSwitchedSM}}
 \end{figure}
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRStreak.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions~\citep{Lauter16}. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. Through contacting the authors of this dataset, we discovered that a leaf on one of these samples was inadvertently torn and then documented as such during the experiment. Hence, the genes within this streak structure might represent those that responded to this leaf-tearing event, an observation discovered through the scatterplot matrix that could solidify into a post-hoc hypothesis.
 \label{structure}}
 \end{figure}
@@ -884,7 +896,7 @@ However, one streak structure in the bottom right scatterplot stands out. A smal
 
 The scatterplot matrix can also be used to quickly examine the DEGs returned from a given model. Figure~\ref{sbIRDEG} shows the DEGs from the soybean cotyledon dataset superimposed as orange points onto the scatterplot matrix. We expect for DEGs to fall along the \textit{x=y} line for scatterplots between replicates and deviate from the \textit{x=y} line for scatterplots between treatment groups, as is confirmed in Figure~\ref{sbIRDEG}. As a side note, we can also link these DEGs as parallel coordinate lines on a side-by-side boxplot like in Figure~\ref{sbIRDEG} to confirm the expected pattern of differential expression from a second viewpoint. If we do not observe what should be expected of DEGs, then the DEG calls from the model may need to be scrutinized further.
 
-As an additional example, we overlaid the significant genes from the four clusters of the iron-metabolism soybean dataset (originally shown in Figure~\ref{sbIRClustersSig}) onto the scatterplot matrix. The results are shown and briefly discussed in Supplementary Figures 2-5. 
+As an additional example, we overlaid the significant genes from the four clusters of the iron-metabolism soybean dataset (originally shown in Figure~\ref{sbIRClustersSig}) onto the scatterplot matrix. The results are shown and briefly discussed in Supplementary Figures~\ref{sbIRClusterSigSM1}-\ref{sbIRClusterSigSM1}. 
 
 \section{Litre plots}
 
@@ -894,23 +906,27 @@ The ``replicate line plot" was developed by a group of researchers who demonstra
 
 In the litre plot, each gene is plotted once for each possible combination of replicates between treatment groups. For example, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatment group in the soybean iron-metabolism dataset (N.1 and P.1, N.1 and P.2, N.1 and P.3, N.2 and P.1, N.2. and P.2, N.2 and P.3, N.3 and P.1, N.3 and P.2, and N.3 and P.3). Hence, a given gene from this dataset is plotted as nine points in the litre plot. With 56,044 genes in this dataset, we would need to plot 504,396 points. This would reduce the speed of interactive functionality as well as cause overplotting problems. As a result, we again use hexagon bins to summarize this massive information (Figure~\ref{repDot} shows four example litre plots).
 
-Once the background of hexagons has been drawn to give us a sense of the distribution of all treatment pair combinations for all genes, the user can superimpose the nine points of one gene of interest. We can examine and compare litre plots using the clusters we created in Figure~\ref{sbIRClustersSig}. Subplots A and B of Figure~\ref{repDot} each show a significant gene from Cluster 2 plotted as nine mustard points, subplots C and D each show a significant gene from Cluster 3 plotted as nine pink points, and subplots E and F each show a significant genes from Cluster 4 plotted as nine coral points. Note that, in the examples in Figure~\ref{repDot}, the read counts of treatment pair combinations sometimes overlap, resulting in the appearance of less than nine points being overlaid. Example litre plots from Cluster 1 are shown in Supplementary Figure 7.
+Once the background of hexagons has been drawn to give us a sense of the distribution of all treatment pair combinations for all genes, the user can superimpose the nine points of one gene of interest. We can examine and compare litre plots using the clusters we created in Figure~\ref{sbIRClustersSig}. Subplots A and B of Figure~\ref{repDot} each show a significant gene from Cluster 2 plotted as nine mustard points, subplots C and D each show a significant gene from Cluster 3 plotted as nine pink points, and subplots E and F each show a significant genes from Cluster 4 plotted as nine coral points. Note that, in the examples in Figure~\ref{repDot}, the read counts of treatment pair combinations sometimes overlap, resulting in the appearance of less than nine points being overlaid. Example litre plots from Cluster 1 are shown in Supplementary Figure~\ref{litreCluster1}.
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRDEG.jpg}}
+\end{framed}
 \caption{Example of the expected structure of DEG calls (in orange) from an RNA-seq dataset. In the scatterplot matrix (subplot A), DEGs should fall along the \textit{x=y} line for replicates and deviate from it for treatments. In the parallel coordinate plot (subplot B), DEGs should show levelness between replicates and crosses between treatments. These two plotting types can be linked to quickly provide users multiple perspectives of their DEG calls.
 \label{sbIRDEG}}
 \end{figure}
 
 \begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{MakeFigures/litre6LB.png}}
+\begin{framed}
+\centerline{\includegraphics[width=0.85\columnwidth]{MakeFigures/litre6LB.png}}
+\end{framed}
 \caption{Litre plots for representative genes from clusters created in Figure~\ref{sbIRClustersSig}. Subplots A and B each show a gene from Cluster 2 overlaid as nine mustard points. Subplots C and D each show a gene from Cluster 3 overlaid as nine pink points. Subplots E and F each show a gene from Cluster 4 overlaid as nine coral points. Litre plots allow us to quickly flip through genes and search for (possibly odd) patterns that may not be detected numerically.
 \label{repDot}}
 \end{figure}
 
 For the case of Figures~\ref{repDot} A and B, the nine overlaid points are superimposed in a manner we would expect from a differently expressed gene: They are located far from the \textit{x=y} line (difference between treatments) and are close to each other (similarity between replicates). In fact, the replicates in subplot B are so precise that the overlaid points almost entirely overlap each other. In contrast, Figures~\ref{repDot} C and D do not seem to show as much replicate consistency. Now, there seems to be a pattern in which one replicate from the P group is larger than (and visually distanced from) the other two replicates. In other words, litre plots are able to capture the pattern differences in the significant genes from Cluster 2 and 3 that we saw back in Figure~\ref{sbIRClustersSig}.
 
-Moreover, in the case of Figures~\ref{repDot} E and F, the nine overlaid points are not clearly superimposed in the distinct pattern we expect of significant genes. While subplot E shows a gene that has consistent replications, the difference between the treatment groups is so small that the overlaid points cluster around the \textit{x=y} line. Additionally, the gene displayed in subplot F shows inconsistent replications and consistent treatment groups, as the spread-out overlaid points center on the \textit{x=y} line. Despite these genes being deemed significant by the model, the litre plots call into question whether the genes from this cluster show an expected profile of differential expression. This is similar to the messy-looking parallel coordinate plots we saw from these genes in Cluster 4 back in Figure~\ref{sbIRClustersSig} and the messy-looking superimposition we saw from these genes in Cluster 4 onto the scatterplot matrix in Supplementary Figure 5. As a result, litre plots can detect odd and questionable patterns in individual ``significant genes" that cannot be detected numerically through models. If this happens, the user may wish to further investigate these DEG calls.
+Moreover, in the case of Figures~\ref{repDot} E and F, the nine overlaid points are not clearly superimposed in the distinct pattern we expect of significant genes. While subplot E shows a gene that has consistent replications, the difference between the treatment groups is so small that the overlaid points cluster around the \textit{x=y} line. Additionally, the gene displayed in subplot F shows inconsistent replications and consistent treatment groups, as the spread-out overlaid points center on the \textit{x=y} line. Despite these genes being deemed significant by the model, the litre plots call into question whether the genes from this cluster show an expected profile of differential expression. This is similar to the messy-looking parallel coordinate plots we saw from these genes in Cluster 4 back in Figure~\ref{sbIRClustersSig} and the messy-looking superimposition we saw from these genes in Cluster 4 onto the scatterplot matrix in Supplementary Figure \ref{fig:sbCNSwitchedSM}. As a result, litre plots can detect odd and questionable patterns in individual ``significant genes" that cannot be detected numerically through models. If this happens, the user may wish to further investigate these DEG calls.
 
 The interactive litre plot for the Cluster 2 significant genes (Figure~\ref{repDot} A and B) is available at https://rnaseqvisualization.shinyapps.io/litreCluster2, the interactive litre plot for the Cluster 3 significant genes (Figure~\ref{repDot} C and D) is available at https://rnaseqvisualization.shinyapps.io/litreCluster3, and the interactive litre plot for the Cluster 4 significant genes (Figure~\ref{repDot} E and F) is available at https://rnaseqvisualization.shinyapps.io/litreCluster4. As can be verified in the interactive version of the litre plot, users are provided several input fields that tailor the plot functionality. For instance, the user may wish to quickly scroll through significant genes one by one in the order of lowest to highest FDR values. Please read the ``About" tab in the interactive links for more information.
 
@@ -921,13 +937,17 @@ We briefly discuss an additional example that merges many of the topics addresse
 Although we could finish our analysis at this point and draw conclusions based on this list of DEGs that came from the model, it would be wise to also view this dataset visually. Viewing this data as a scatterplot matrix confirms the expected pattern with treatment scatterplots showing larger variation than technical replicate scatterplots. However, it also uncovers a hidden pattern in the treatment plots: There is a pronounced streak of genes with higher expressions in the liver group (Figure~\ref{lkSM}). We should also view the DEGs from the model using parallel coordinate plots: Upon doing so, we notice that while the 1,968 liver-specific DEGs follow the expected pattern of significant calls, a substantial fraction of the 7,050 kidney-specific DEGs appear comparatively noisy (Figure~\ref{lkClusters}A).
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkSM.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of liver and kidney technical replicates. The technical replicate scatterplots look precise as is expected, with little variability around the \textit{x=y} line. The treatment group scatterplots have much more variability around the \textit{x=y} line, as we would expect. However, each treatment group scatterplot contains a pronounced streak of highly-expressed liver-specific genes, which deviates from the expected distribution. Some researchers have suggested that differences in the distribution of reads between groups may require particularly stringent normalization.
 \label{lkSM}}
 \end{figure}
 
 \begin{figure}[!tpb]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClusters.jpg}}
+\end{framed}
 \caption{Subplot A shows parallel coordinate plots of the DEGs from liver and kidney technical replicates after standard library scale normalization. The division of DEGs between the two groups was rather disparate, with ~78\% of the DEGs being kidney-specific and only ~22\% of the DEGs being liver-specific. Also of note, while the parallel coordinate patterns of the liver-specific DEGs appear as expected, the patterns of the kidney-specific DEGs seem to show comparatively larger variability between the replicates. Subplot B shows parallel coordinate plots of the DEGs from liver and kidney technical replicates after TMM normalization. The division of DEGs between the two groups is more balanced than in Subplot A, with ~53\% of the DEGs being kidney-specific and ~47\% of the DEGs being liver-specific. Additionally, the parallel coordinate patterns of both the liver-specific and kidney-specific DEGs appear as expected and more consistent with each other.
 \label{lkClusters}}
 \end{figure} 
@@ -1021,7 +1041,10 @@ We used visualization tools from the DESeq2 package, visualization tools from ou
 DEGs were uploaded as a background list to DAVID Bioinformatics Resources 6.7 (\citealt{davidBio}, \citealt{davidBio2}). The overrepresented gene ontology (GO) terms of DEGs were identified using the BEEBASE\_ID identifier. To fine-tune the GO term list, only terms correlating to Biological Processes were considered. The refined GO term list was then imported into REVIGO (\citealt{revigo}), which uses semantic similarity measures to cluster long lists of GO terms.
 
 \begin{figure}[H]
+  \centering
+  \begin{framed}
   \includegraphics[width=0.8\textwidth]{Images/revigo}
+  \end{framed}
   \caption{GO analysis results for the 122 DEGs related to our ``resilience" hypothesis (A) and for the 125 DEGs related to our ``resistance" hypothesis (B).}
   \label{fig:revigo}
 \end{figure}
@@ -1101,7 +1124,9 @@ We see that the 1,019 DEGs from the Galbraith dataset form relatively clean-look
 \begin{figure}[H]
 \centering
 % ../VirusHoneyBee/DESeq2/ClusterStandard/Clustering_data_FDR_05/
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/C_T_4.jpg}
+  \end{framed}
   \caption{Parallel coordinate plots of the 1,019 DEGs after hiearchical clustering of size four between the virus-infected and control groups of the Galbraith study. Here ``C'' represents control, and ``T'' represents treatment of virus. Clusters 1, 3, and 4 seem to represent DEGs that were overexpressed in the virus innoculated group, and Cluster 2 seems to represent DEGs that were overexpressed in the control group. In general, the DEGs appeared as expected, but there is rather noticeable deviation of the first replicate from the virus-treated sample (``T.1'') from the other virus-treated replicates in Cluster 2. Cluster 4 also has some inconsistent replicates across the virus-treated replicates.}
   \label{fig:pcpGalbraith}
 \end{figure}
@@ -1109,7 +1134,9 @@ We see that the 1,019 DEGs from the Galbraith dataset form relatively clean-look
 \begin{figure}[H]
 \centering
 % /../N_V/DESeq2/ClusterStandard/Clustering_data_FDR_05
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/N_V_4.jpg}
+  \end{framed}
   \caption{Parallel coordinate plots of the 43 DEGs after hiearchical clustering of size four between the virus-infected and control groups of our study. Here ``N'' represents non-infected control group, and ``V'' represents treatment of virus. We see from this plot that the DEG designations for this dataset do not appear as clean compared to what we saw in the Galbraith dataset in Figure \ref{fig:pcpGalbraith}.}
   \label{fig:pcpRutterVirus}
 \end{figure}
@@ -1233,13 +1260,13 @@ This file contains supplementary analyses that the reader might find useful, and
 
 \begin{itemize}
 
-\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure 2 in the main paper. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure 2 in the main paper only showing significant genes, Figure~\ref{sbIRClusters} in this supplementary file shows all genes.
+\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure~\ref{sbIRClustersSig} in the main paper. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure \ref{fig:sbIRClustersSig} in the main paper only showing significant genes, Figure~\ref{sbIRClusters} here shows all genes.
 
 \item Figures~\ref{sbIRClusterSigSM1} through~\ref{sbIRClusterSigSM4} show scatterplot matrices of the significant genes in the iron-metabolism soybean dataset for each of the four clusters that resulted from hiearchical clustering analysis. They provide an additional and complementary perspective on these DEG calls from what we saw with the parallel coordinate plots in Figure~\ref{sbIRClusters}. 
 
-\item Figure~\ref{mdsSwitch} shows that some of the most popular RNA-seq visualization tools cannot always detect common errors, such as sample switching. Side-by-side boxplots and MDS plots are shown for the soybean cotyledon dataset after deliberately switching samples between treatment groups. For the most part, they are unable to detect the error. In contrast, the less-popular method of scatterplot matrices can quickly detect the possibility of the error (see Figure 5 from the main paper).
+\item Figure~\ref{mdsSwitch} shows that some of the most popular RNA-seq visualization tools cannot always detect common errors, such as sample switching. Side-by-side boxplots and MDS plots are shown for the soybean cotyledon dataset after deliberately switching samples between treatment groups. For the most part, they are unable to detect the error. In contrast, the less-popular method of scatterplot matrices can quickly detect the possibility of the error (see Figure~\ref{sbCNSwitchedSM} from the main paper).
 
-\item Figure~\ref{litreCluster1} shows example litre plots for two significant genes from Cluster 1. The reader may wish to view it alongside Figure 8 from the main paper, which contains example litre plots for significant genes from Clusters 2, 3, and 4.
+\item Figure~\ref{litreCluster1} shows example litre plots for two significant genes from Cluster 1. The reader may wish to view it alongside Figure~\ref{repDot} from the main paper, which contains example litre plots for significant genes from Clusters 2, 3, and 4.
 
 \end{itemize}
 
@@ -1248,11 +1275,11 @@ The last twenty figures in the supplementary file are all related to the applica
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Begin Figures %%%%%%% 
-
-\clearpage
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusters.jpg}}
+\end{framed}
 \caption{Example application of parallel coordinate plots using the iron-metabolism soybean dataset. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, and visualized the results using parallel coordinate lines. Most non-filtered genes were in Clusters 1 and 2, which both showed overexpression in one treatment and underexpression in the other treatment. The genes in Cluster 4 mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 looked similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P.
 \label{sbIRClusters}}
 \end{figure}
@@ -1260,30 +1287,37 @@ The last twenty figures in the supplementary file are all related to the applica
 \clearpage
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM1.jpg}}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,751 significant genes in Cluster 1 after performing a hierarchical clustering analysis with a cluster size of four (Figure 2 in the main paper). These significant genes are overlaid in green on the scatterplot matrix. They follow the expected patterns of differential expression with most green points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the P group than in the N group. Hence, these green points seem to represent genes that were significantly overexpressed in the P group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure 2 of the main paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Supplementary Figure 7).
+\end{framed}
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,751 significant genes in Cluster 1 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in green on the scatterplot matrix. They follow the expected patterns of differential expression with most green points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the P group than in the N group. Hence, these green points seem to represent genes that were significantly overexpressed in the P group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the main paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Supplementary Figure~\ref{litreCluster1}).
 \label{sbIRClusterSigSM1}}
 \end{figure}
 
-%\null
-\begin{figure}[h!]
+\begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM2.jpg}}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,009 significant genes in Cluster 2 after performing a hierarchical clustering analysis with a cluster size of four (Figure 2 in the main paper). These significant genes are overlaid in mustard on the scatterplot matrix. They follow the expected patterns of differential expression with most mustard points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. Hence, these mustard points seem to represent genes that were significantly overexpressed in the N group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure 2 of the paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure 8 A and B in the main paper).
+\end{framed}
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 2,009 significant genes in Cluster 2 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in mustard on the scatterplot matrix. They follow the expected patterns of differential expression with most mustard points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. Hence, these mustard points seem to represent genes that were significantly overexpressed in the N group, which draws the same conclusion with what we derived using the parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the paper. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure~\ref{repDot} A and B in the main paper).
 \label{sbIRClusterSigSM2}}
 \end{figure}
   
-\null
-\begin{figure}[t!]
+
+\begin{figure}
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM3.jpg}}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 861 significant genes in Cluster 3 after performing a hierarchical clustering analysis with a cluster size of four (Figure 2 in the main paper). These significant genes are overlaid in pink on the scatterplot matrix. For the most part, they follow the expected patterns of differential expression with pink points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. However, the scatterplot between replicates P.1 and P.3 shows slightly higher expression in P.3, and the scatterplot between replicates P.2 and P.3 also shows slightly higher expression in P.3. Hence, these pink points seem to represent genes that were significantly overexpressed in the N group, but with slight inconstencies in the replicates in the P group. The parallel coordinate plots in Figure 2 of the paper showed this same conclusion and perhaps more clearly. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure 8 C and D in the main paper).
+\end{framed}
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 861 significant genes in Cluster 3 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in pink on the scatterplot matrix. For the most part, they follow the expected patterns of differential expression with pink points falling along the \textit{x=y} line in the scatterplots between replicates, but deviating from the \textit{x=y} line in the scatterplots between treatments. The deviation consistently demonstrates higher expression in the N group than in the P group. However, the scatterplot between replicates P.1 and P.3 shows slightly higher expression in P.3, and the scatterplot between replicates P.2 and P.3 also shows slightly higher expression in P.3. Hence, these pink points seem to represent genes that were significantly overexpressed in the N group, but with slight inconstencies in the replicates in the P group. The parallel coordinate plots in Figure~\ref{sbIRClustersSig} of the paper showed this same conclusion and perhaps more clearly. One difficulty with plotting such a large number of DEGs onto the scatterplot matrix is that overplotting can obscure our inability to determine how many DEGs are in a given location. This is why we might also view these genes individually in litre plots (Figure~\ref{repDot} C and D in the main paper).
 \label{sbIRClusterSigSM3}}
 \end{figure}  
 
 \clearpage
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/sbIRClusterSigSM4.jpg}}
-\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 17 significant genes in Cluster 4 after performing a hierarchical clustering analysis with a cluster size of four (Figure 2 in the main paper). These significant genes are overlaid in coral on the scatterplot matrix. For the most part, they do not seem to follow the expected patterns of differential expression: In many of the scatterplots between treatments, the coral points do not seem to deviate much from the \textit{x=y} line. Moreover, in the scatterplots between P.1 and P.2 as well as P.1 and P.3, the coral points seems to indicate an underexpression of the P.1 replicate. We similarly saw somewhat messy looking DEG calls in Cluster 4 in the form of parallel coordinate plots (Figure 2 of the main paper) and litre plots (Figure 8 E and F of the main paper).
+\end{framed}
+\caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 17 significant genes in Cluster 4 after performing a hierarchical clustering analysis with a cluster size of four (Figure~\ref{sbIRClustersSig} in the main paper). These significant genes are overlaid in coral on the scatterplot matrix. For the most part, they do not seem to follow the expected patterns of differential expression: In many of the scatterplots between treatments, the coral points do not seem to deviate much from the \textit{x=y} line. Moreover, in the scatterplots between P.1 and P.2 as well as P.1 and P.3, the coral points seems to indicate an underexpression of the P.1 replicate. We similarly saw somewhat messy looking DEG calls in Cluster 4 in the form of parallel coordinate plots (Figure~\ref{sbIRClustersSig} of the main paper) and litre plots (Figure~\ref{repDot} E and F of the main paper).
 \label{sbIRClusterSigSM4}}
 \end{figure}  
 
@@ -1291,20 +1325,22 @@ The last twenty figures in the supplementary file are all related to the applica
 \null
 \begin{figure}[!t]
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/mdsSwitch.png}}
-\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional visualization methods applied to the soybean cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using less-popular plots that provide gene-level resolution like with the scatterplot matrix from Figure 6 in the main paper.
+\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional visualization methods applied to the soybean cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using less-popular plots that provide gene-level resolution like with the scatterplot matrix from Figure~\ref{structure} in the main paper.
 \label{mdsSwitch}}
 \end{figure}
 
 \clearpage
 \null 
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg}}
-\caption{Litre plots for significant genes inside Cluster 1 from Figure 2 of the paper. Subplots A and B each overlay an example significant gene as nine green points. The genes show patterns expected of differentially-expressed ones, by clumping together and deviating from the \textit{x=y} line. Moreover, the genes appear over-expressed in the P group. This is consistent with what we saw in the parallel coordinate plots of Figure 2 from the main paper. To interactively view the litre plot for all significant genes within Cluster 1, please visit https://rnaseqvisualization.shinyapps.io/litreCluster1.
+\end{framed}
+\caption{Litre plots for significant genes inside Cluster 1 from Figure~\ref{sbIRClustersSig} of the paper. Subplots A and B each overlay an example significant gene as nine green points. The genes show patterns expected of differentially-expressed ones, by clumping together and deviating from the \textit{x=y} line. Moreover, the genes appear over-expressed in the P group. This is consistent with what we saw in the parallel coordinate plots of Figure~\ref{sbIRClustersSig} from the main paper. To interactively view the litre plot for all significant genes within Cluster 1, please visit https://rnaseqvisualization.shinyapps.io/litreCluster1.
 \label{litreCluster1}}
 \end{figure}   
 
 \clearpage
-The rest of this supplementary file (Figures~\ref{lkClustersKeep} through~\ref{litreClusterAdd-St}) provides additional examples related to the closing case study introduced in Section 5 of the main paper. In this case study, technical replicates of kidney and liver RNA-seq data was initially analyzed using library scale normalization. This process lead to 7,050 kidney DEGs and 1,968 liver DEGs, but subsequent visualization analysis suggested that a subset of the kidney DEGs may be unreliable (Figure 10A from the main paper). Upon reviewing the geometrical structure of the data in the form of a scatterplot matrix, a subset of overexpressed liver genes was discovered, implicating the need for a more rigorous form of normalization (Figure 9 from the main paper). As a result, TMM normalization was then applied to the data, which lead to 3,974 kidney DEGs and 3,546 liver DEGs. Ensuing visualization analysis verified that these DEGs now appeared more reliable (Figure 10B from the main paper). \\
+The rest of this supplementary file (Figures~\ref{lkClustersKeep} through~\ref{litreClusterAdd-St}) provides additional examples related to the closing case study introduced in Section 5 of the main paper. In this case study, technical replicates of kidney and liver RNA-seq data was initially analyzed using library scale normalization. This process lead to 7,050 kidney DEGs and 1,968 liver DEGs, but subsequent visualization analysis suggested that a subset of the kidney DEGs may be unreliable (Figure~\ref{lkClusters}A from the main paper). Upon reviewing the geometrical structure of the data in the form of a scatterplot matrix, a subset of overexpressed liver genes was discovered, implicating the need for a more rigorous form of normalization (Figure~\ref{lkSM} from the main paper). As a result, TMM normalization was then applied to the data, which lead to 3,974 kidney DEGs and 3,546 liver DEGs. Ensuing visualization analysis verified that these DEGs now appeared more reliable (Figure~\ref{lkClusters}B from the main paper). \\
 
 In the remaining figures of this supplementary file, we thoroughly explore four subsets of genes from this case study in the form of parallel coordinate plots, scatterplot matrices, and litre plots. We also use variants of some of the techniques introduced in the main paper. Namely, we demonstrate the use of data standardization for scatterplot matrices and litre plots as a means to magnify certain informative patterns at the expense of losing geometrical structure. Throughout the figures below, we use consistent color-coding while plotting example genes from each of the four gene subsets. The four gene subsets and their color-codes are as follows:
 
@@ -1339,64 +1375,78 @@ More importantly, while Figures~\ref{lkClustersKeepSM} through~\ref{lkClustersAd
 
 \item Figures~\ref{litreClusterKeep-St} through~\ref{litreClusterAdd-St} are the same as Figures~\ref{litreClusterKeep} through~\ref{litreClusterAdd}, only now we \textit{standardized} the data. With standardization, we immediately note that the original geometric structure in the hexagonal binning that elicited meaningful information about the problematic streak of over-expressed liver genes is now gone. Instead, the dataset appears as an oval-shape in the hexagonal binning. Just as we saw in Figures~\ref{litreClusterKeep} through~\ref{litreClusterAdd}, the genes that were called DEGs in both forms of normalization (purple and orange) have the expected profiles.
 
-\clearpage
-
 More importantly, while Figures~\ref{litreClusterKeep} through~\ref{litreClusterAdd} showed similar profiles for the example genes that were added with TMM normalization (pink) and the example genes that were removed with TMM normalization (red), standardization amplifies the differences between the pink and red gene profiles in a manner we would expect. For example, we provide standardized litre plots for the nine genes with the lowest FDR values for both the pink (Figure~\ref{litreClusterAdd-St}) and red (Figure~\ref{litreClusterRemove-St}) groups, and we can quickly determine that the pink profiles show patterns more akin to differential expression than the red groups. Namely, the overlaid pink points deviate more from the \textit{x=y} line in a tight cluster than the overlaid red points. At the same time, the overlaid pink points show patterns less akin to differential expression than the purple and orange points. All together, the pink gene profiles appear as an intermediate between the clean-looking purple and orange genes and the messy-looking red genes in the standardized litre plots, which is to be expected if TMM normalization is the more appropriate technique.
 
 \end{enumerate}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.65\columnwidth]{MakeFigures/lkClustersKeep.jpg}}
+\end{framed}
 \caption{Parallel coordinate plots showing eight hiearchical clusters from the 3,974 genes that remained in the kidney-specific DEGs after TMM normalization. We see that, for the most part, the parallel coordinate patterns follow the expected patterns across the clusters. The ideal pattern of DEGs is especially captured in the first cluster (the largest one with 1,136 genes). We applied ombre coloring across the clusters in order of cluster size. We used hierarchical clustering to tease apart subtle pattern differences and to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
 \label{lkClustersKeep}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.65\columnwidth]{MakeFigures/lkClustersOrig.jpg}}
+\end{framed}
 \caption{Parallel coordinate plots showing eight hiearchical clusters from the 1,968 genes that remained in the liver-specific DEGs after TMM normalization. We see that, for the most part, the parallel coordinate patterns follow the expected patterns across the clusters. The ideal pattern of DEGs is especially captured in the first cluster (the largest one with 933 genes). We applied ombre coloring across the clusters in order of cluster size. We used hierarchical clustering to tease apart subtle pattern differences and to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
 \label{lkClustersOrig}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.65\columnwidth]{MakeFigures/lkClustersRemove.jpg}}
+\end{framed}
 \caption{Parallel coordinate plots showing eight hiearchical clusters from the 3,076 genes that were removed from the kidney-specific DEGs after TMM normalization. The patterns in almost all clusters do not resemble the expected DEG format; instead, they show large variability between replicates and small variability between treatments. In some clusters, it is difficult to even determine which group would be the overexpressed one if its genes were in fact DEGs. Taken together, this plot provides additional statistical evidence that the application of TMM normalization successfully removed genes that were previously mislabeled as kidney-specific DEGs with library scaling normalization. We applied ombre coloring across the clusters in order of cluster size. We used hierarchical clustering to tease apart subtle pattern differences and to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
 \label{lkClustersRemove}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.65\columnwidth]{MakeFigures/lkClustersAdd.jpg}}
+\end{framed}
 \caption{Parallel coordinate plots showing eight hiearchical clusters from the 1,578 genes that were \textit{added} as liver-specific DEGs after TMM normalization. We see that, for the most part, the parallel coordinate lines follow the expected patterns across the clusters, but not as precisely as we saw with the purple (Figure~\ref{lkClustersKeep}) and orange (Figure~\ref{lkClustersOrig}) gene subsets. We applied ombre coloring across the clusters in order of cluster size. We used hierarchical clustering to tease apart subtle pattern differences and to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
 \label{lkClustersAdd}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersKeepSM.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the 1,136 genes that were in the first cluster (of Figure~\ref{lkClustersKeep}) from genes that remained as kidney-specific DEGs even after TMM normalization. With this scatterplot matrix, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
 \label{lkClustersKeepSM}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersOrigSM.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the 933 genes that were in the first cluster (of Figure~\ref{lkClustersOrig}) from genes that remained as liver-specific DEGs even after TMM normalization. With this scatterplot matrix, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
 \label{lkClustersOrigSM}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersRemoveSM.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the 529 genes that were in the first cluster (of Figure~\ref{lkClustersRemove}) from genes that no longer remained as kidney-specific DEGs after TMM normalization. With this scatterplot matrix, we verify from an additional perspective that these genes do \textit{not} demonstrate the expected patterns of DEGs too strongly (they do not deviate much from the \textit{x=y} line in the treatment scatterplots). This provides additional evidence that TMM normalization removing these genes from DEG status may be valid.
 \label{lkClustersRemoveSM}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersAddSM.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the 317 genes that were in the first cluster (of Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With this scatterplot matrix, we see that the genes do \textit{not} demonstrate the expected patterns of DEGs too strongly (they do not deviate much from the \textit{x=y} line in the treatment scatterplots). In fact, these pink genes appear similarly to what we saw from the scatterplot matrix of the red genes (Figure~\ref{lkClustersRemoveSM}). This is somewhat of a surprise, given that the pink genes were \textit{added} by TMM  normalization, while the red genes were \textit{removed} by TMM normalization. Stated differently, we would expect the pink genes to appear more like differentially expressed genes if TMM normalization is appropriate, but we could not confirm this expectation. We will return to this problem later in the supplementary file.
 \label{lkClustersAddSM}}
 \end{figure}
@@ -1404,84 +1454,108 @@ More importantly, while Figures~\ref{litreClusterKeep} through~\ref{litreCluster
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg}}
+\end{framed}
 \caption{Example litre plots from the 1,136 genes that were in the first cluster (Figure~\ref{lkClustersKeep}) of genes that remained as kidney-specific DEGs even after TMM normalization. With these litre plots, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
 \label{litreClusterKeep}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg}}
+\end{framed}
 \caption{Example litre plots from the 933 genes that were in the first cluster (Figure~\ref{lkClustersOrig}) from genes that remained as liver-specific DEGs even after TMM normalization. With these litre plots, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
 \label{litreClusterOrig}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg}}
+\end{framed}
 \caption{Example litre plots from the 529 genes that were in the first cluster (Figure~\ref{lkClustersRemove}) of genes that no longer remained as kidney-specific DEGs after TMM normalization. With these litre plots, we verify from an additional perspective that these genes do not demonstrate the expected patterns of DEGs. This provides additional evidence that TMM normalization removing these genes from DEG status may be valid.
 \label{litreClusterRemove}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg}}
+\end{framed}
 \caption{Example litre plots from the 317 genes that were in the first cluster (Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With these litre plots, we see that the genes do \textit{not} demonstrate the expected patterns of DEGs in a trustworthy manner. In fact, these pink genes appear similarly to what we saw from the example litre plots of the red genes (Figure~\ref{litreClusterRemove}). This is somewhat of a surprise, given that the pink genes were \textit{added} by TMM  normalization, while the red genes were \textit{removed} by TMM normalization. Stated differently, we would expect the pink genes to appear more like differentially expressed genes if TMM normalization is appropriate, but we could not confirm this expectation. We will return to this problem later in the supplementary file.
 \label{litreClusterAdd}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersKeepSM-St.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the \textit{standardized} 1,136 genes that were in the first cluster (Figure~\ref{lkClustersKeep}) from genes that remained as kidney-specific DEGs even after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersKeepSM} regarding the streak of overexpressed liver genes, it amplifies other patterns in meaningful ways. For instance, compared to Figure~\ref{lkClustersKeepSM}, the highlighted genes here appear more clustered and separated from the \textit{x=y} line in the treatment scatterplots, and more clustered and connected to the \textit{x=y} line in the replicate scatterplots. We can also now see more clearly in the replicate scatterplots that the kidney expression is higher than the liver expression.
 \label{lkClustersKeepSM-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersOrigSM-St.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the \textit{standardized} 933 genes that were in the first cluster (Figure~\ref{lkClustersOrig}) from genes that remained as liver-specific DEGs even after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersOrigSM} regarding the streak of overexpressed liver genes, it amplifies other patterns in meaningful ways. For instance, compared to Figure~\ref{lkClustersOrigSM}, the highlighted genes here appear more clustered and separated from the \textit{x=y} line in the treatment scatterplots, and more clustered and connected to the \textit{x=y} line in the replicate scatterplots. We can also now see more clearly in the replicate scatterplots that the liver expression is higher than the kidney expression. 
 \label{lkClustersOrigSM-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersRemoveSM-St.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the \textit{standardized} 529 genes that were in the first cluster (Figure~\ref{lkClustersRemove}) from genes that no longer remained as kidney-specific DEGs after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersRemoveSM} regarding the streak of overexpressed liver genes, it allows us to view the DEG patterns in a different meaningful fashion. Namely, the genes of interest are now spread out more, and the replicate and treatment scatterplots are almost indistinguishable from each other, with both of them showing genes of interest crossing both sides of the \textit{x=y} line. In other words, standardization of the data provides additional visualization evidence that TMM normalization was justified in removing these genes from DEG designation. 
 \label{lkClustersRemoveSM-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=1\columnwidth]{MakeFigures/lkClustersAddSM-St.jpg}}
+\end{framed}
 \caption{Scatterplot matrix of the \textit{standardized} 317 genes that were in the first cluster (Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersAddSM} regarding the streak of overexpressed liver genes, it allows us to view the DEG patterns in a different meaningful fashion. Namely, the genes of interest are now spread out more, and we can now distinguish the replicate and treatment scatterplots more clearly. For the most part, the genes of interest deviate from the \textit{x=y} line in the treatment scatterplots more so than in the replicate scatterplots, and hence display somewhat of the pattern of differential expression. In fact, the pink genes again appear as an intermediate between the purple and orange genes that clearly display differential expression (Figures~\ref{lkClustersKeepSM-St} and~\ref{lkClustersOrigSM-St}) and the red genes that clearly do \textit{not} display differential expression (Figure~\ref{lkClustersRemoveSM-St}). In other words, standardized scatterplot matrices provide additional visualization evidence that TMM normalization was justified in removing the red genes from and adding the pink genes to DEG designation.
 \label{lkClustersAddSM-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg}}
+\end{framed}
 \caption{Example \textit{standardized} litre plots from the 1,136 genes that were in the first cluster (Figure~\ref{lkClustersKeep}) of genes that remained as kidney-specific DEGs even after TMM normalization. With standardization, we immediately note that the original geometric structure that elicited meaningful information about variation between treatments and replicates as well as the problematic streak of over-expressed liver genes is now gone. However, we confirm that these standardized litre plots corroborate the corresponding non-standardized litre plots we saw in Figure~\ref{litreClusterKeep} that these purple genes demonstrate the expected patterns of DEGs.
 \label{litreClusterKeep-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=0.7\columnwidth]{MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg}}
+\end{framed}
 \caption{Example litre plots from the 933 genes that were in the first cluster (Figure~\ref{lkClustersOrig}) from genes that remained as liver-specific DEGs even after TMM normalization. With standardization, we immediately note that the original geometric structure that elicited meaningful information about variation between treatments and replicates as well as the problematic streak of over-expressed liver genes is now gone. However, we confirm that these standardized litre plots corroborate the corresponding non-standardized litre plots we saw in Figure~\ref{litreClusterOrig} that these orange genes demonstrate the expected patterns of DEGs.
 \label{litreClusterOrig-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg}}
+\end{framed}
 \caption{\textit{Standardized} litre plots for the nine genes with the lowest FDR values out of the 529 genes that were in the first cluster (Figure~\ref{lkClustersRemove}) of genes that no longer remained as kidney-specific DEGs after TMM normalization. As with the corresponding non-standardized litre plots in Figure~\ref{litreClusterRemove}, we verify from an additional perspective that the red genes do not demonstrate the expected patterns of DEGs. The example red genes here are show much larger inconsistencies between replicates than what we saw with the purple (Figure~\ref{litreClusterKeep-St}) and orange (Figure~\ref{litreClusterOrig-St}) genes. This provides additional evidence that TMM normalization removing these genes from DEG status may be valid.
 \label{litreClusterRemove-St}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
+\begin{framed}
 \centerline{\includegraphics[width=\columnwidth]{MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg}}
+\end{framed}
 \caption{\textit{Standardized} litre plots for the nine genes with the lowest FDR values out of the 317 genes that were in the first cluster (Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. While non-standardized litre plots showed similar profiles between the red (Figure~\ref{litreClusterRemove}) and pink (Figure~\ref{litreClusterAdd}) genes, standardization amplifies the differences in a manner we would expect. Namely, we can now quickly determine that the pink profiles in this figure show patterns more akin to differential expression than the red profiles in Figure~\ref{litreClusterRemove-St}. That is, the overlaid pink points deviate more from the \textit{x=y} line in a tight cluster than the overlaid red points. At the same time, the overlaid pink points here show patterns less akin to differential expression than the purple (Figure~\ref{litreClusterKeep-St}) and orange (Figure~\ref{litreClusterOrig-St}) points. All together, the standardized litre plots place the pink gene profiles as an intermediate between the clean-looking purple and orange genes and the messy-looking red genes, which is to be expected if TMM normalization is the more appropriate technique.
 \label{litreClusterAdd-St}}
 \end{figure}
@@ -1511,7 +1585,8 @@ This file contains supplementary analyses that the reader might find useful, and
 
 This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in chapter 4.
 
-\begin{table}[H]
+\begin{table}
+  \centering
   \includegraphics[width=0.65\textwidth]{Images/mainEffectDEGs}
   \caption{Number of DEGs across three analysis pipelines for (A) the diet effect in our study, (B) the virus main effect in our study, and (C) the virus main effect in the Galbraith study. For the diet effects, ``C'' represents Chestnut diet and ``R'' represents Rockrose diet. For the virus effects, ``V'' represents virus-innoculated and ``C'' represents control non-innoculated. Green cells represent the level that showed a larger number of DEGs.}
   \label{tbl:mainEffectDEGs}
@@ -1554,91 +1629,120 @@ This file contains supplementary analyses that the reader might find useful, and
 \end{table}
 
 \begin{table}[H]
+\centering
   \includegraphics[width=0.65\textwidth]{Images/pairDEGs}
   \caption{Number of DEGs across three analysis pipelines for all six treatment pair combinations between the diet and virus factor. ``C'' represents Chestnut diet, ``R'' represents Rockrose diet, ``V'' represents virus-innoculated, and ``N'' represents control non-innoculated. Green cells represent the level that showed a larger number of DEGs.}
   \label{tbl:pairDEGs}
 \end{table}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/mdsPlots}
+\end{framed}
   \caption{MDS plots constructed from DESeq2 package for the Galbraith dataset for non-infected control ``C'' and virus treated ``T'' samples (A) and our dataset for the non-infected control ``N'' and virus treated ``V'' samples (B). the x-axis represents the principal component with the most variation and the y-axis repesents the principal component with the second-most variation.}
   \label{fig:mdsPlots}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/C_R_6.jpg}
+\end{framed}
   \caption{Parallel coordinate plots of the 1,914 DEGs after hiearchical clustering of size six between the Chestnut and Rockrose groups of our study. Here ``N'' represents non-infected control group, and ``V'' represents treatment of virus. We see from this plot that the DEG designations for this dataset do not appear as clean compared to what we saw in the Galbraith dataset in Figure \ref{fig:pcpGalbraith}.}
   \label{fig:pcpRutterDiet}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/litreClusterRutter}
+\end{framed}
   \caption{Example litre plots of the nine DEGs with the lowest FDR values from the 43 DEGs of our dataset. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. Most of the magenta points (representing the 144 combinations of samples between treatment groups for a given DEG) do not reflect the expected pattern as clearly compared to what we saw in the litre plots of the Galbraith data. They are not as clustered together (representing replicate inconsistency) and they sometimes overlap the \textit{x=y} line (representing lack of difference between treatment groups). This finding reflects what we saw in the messy looking parallel coordinate lines of Figure \ref{fig:pcpGalbraith.}}
   \label{fig:litreClusterRutter}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/litreCluster1}
+\end{framed}
   \caption{Example litre plots of the nine DEGs with the lowest FDR values from Cluster 1 (originally shown in Figure \ref{fig:pcpGalbraith}) of the Galbraith dataset. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. Most of the light orange points (representing the nine combinations of samples between treatment groups for a given DEG) deviate from the \textit{x=y} line in a cluster as expected.}
   \label{fig:litreCluster1}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/litreCluster2}
+\end{framed}
   \caption{Example litre plots of the nine DEGs with the lowest FDR values from Cluster 2 (originally shown in Figure \ref{fig:pcpGalbraith}) of the Galbraith dataset. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. Most of the dark orange points (representing all combinations of samples between treatment groups for a given DEG) deviate from the \textit{x=y} line in a cluster as expected. However, they are not as tightly clustered together compared to what we saw in the example litre plots of Cluster 1 (shown in Supplementary figure \ref{fig:litreCluster1}). As a result, what we see in these litre plots reflects what we saw in the parallel coordinate lines of Figure \ref{fig:pcpGalbraith}: The replicate consistency in the Cluster 2 DEGs is not as clean as that in the Cluster 1 DEGs, but is still relatively clean.}
   \label{fig:litreCluster2}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/GalbraithClust1SM}
+\end{framed}
   \caption{The 327 DEGs from the first cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as light orange dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots.}
   \label{fig:GalbraithClust1SM}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/GalbraithClust2SM}
+\end{framed}
   \caption{The 365 DEGs from the second cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as dark orange dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots. We also see again that the first replicate from the virus-treated sample (``T.1'') may be somewhat inconsistent in these DEGs, as its presence in the replicate scatterplots results in the DEGs unexpectedly deviating from the \textit{x=y} line and its presence in the treatment scatterplots results in the DEGs unexpectedly adhering to the \textit{x=y} line.}
   \label{fig:GalbraithClust2SM}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/GalbraithClust3SM}
+\end{framed}
   \caption{The 224 DEGs from the third cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as turquoise dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots.}
   \label{fig:GalbraithClust3SM}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/GalbraithClust4SM}
+\end{framed}
   \caption{The 103 DEGs from the fourth cluster of the Galbraith dataset (shown in Figure \ref{fig:pcpGalbraith}) superimposed as pink dots onto all genes as black dots in the form of a scatterplot matrix. The data has been standardized. ``C'' represents non-infected control samples and ``T'' represents virus-treated samples. We confirm that the DEGs mostly follow the expected structure, with their placement deviating from the \textit{x=y} line in the treatment scatterplots, but adhering to the \textit{x=y} line in the replicate scatterplots. We also see that the second replicate from the virus-treated sample (``T.2'') may be somewhat inconsistent in these DEGs, as its presence in the replicate scatterplots results in the DEGs unexpectedly deviating from the \textit{x=y} line and its presence in the treatment scatterplots results in the DEGs unexpectedly adhering to the \textit{x=y} line.}
   \label{fig:GalbraithClust4SM}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/RutterSM1}
+\end{framed}
   \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 1, 2, and 3 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
   \label{fig:RutterSM1}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/RutterSM2}
+\end{framed}
   \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 4, 5, and 6 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
   \label{fig:RutterSM2}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/RutterSM3}
+\end{framed}
   \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 7, 8, and 9 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
   \label{fig:RutterSM3}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/RutterSM4}
+\end{framed}
   \caption{The 43 virus-related DEGs from our dataset superimposed onto all genes in the form of a scatterplot matrix. Only replicates 10, 11, and 12 are shown from both treatment groups. The data has been standardized. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. We see that, compared to the scatterplot matrices from the Galbraith data, the 43 DEGs from this subset of six samples from our data do not paint as clear of a picture, somtimes unexpectedly deviating from the \textit{x=y} line in the replicate plots and sometimes unexpectedly adhering to the \textit{x=y} line in the treatment plots.}
   \label{fig:RutterSM4}
 \end{figure}
 
 \begin{figure}[H]
+\begin{framed}
   \includegraphics[width=\textwidth]{Images/GRVenn}
+\end{framed}
   \caption{Venn diagrams comparing the virus-related DEG overlaps between the Galbraith study (labeled as ``G'') and our study (labeled as ``R''). From left to right: Total virus-related DEGs (subplot A), virus-upregulated DEGs (subplot B), control-upregulated DEGs (subplot C). Both the total virus-related and virus-upregulated DEGs showed significant overlap between the studies (p-value < 2.2e-16) as per Fisher's Exact Test for Count Data. There was one gene that was virus-upregulated in the Galbraith study but control-upregulated in our study.}
   \label{fig:GRVenn}
 \end{figure}
