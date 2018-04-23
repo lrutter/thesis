@@ -4,65 +4,67 @@
 \contentsline {section}{\numberline {1.2}Problems to be addressed}{4}{section.1.2}
 \contentsline {section}{\numberline {1.3}Literature review}{7}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Visualization methods for genealogical data}{7}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Visualization methods for RNA-sequencing data}{9}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Overview of thesis research}{10}{section.1.4}
-\contentsline {chapter}{\chapternumberline {2}Visualization methods for genealogical datasets}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Example datasets}{12}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Soybean genealogy}{12}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Academic genealogy of statisticians}{13}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Genealogical input format}{14}{section.2.3}
-\contentsline {section}{\numberline {2.4}Generating a graphical object}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Plotting a shortest path}{16}{section.2.5}
-\contentsline {section}{\numberline {2.6}Superimposing shortest path on tree}{18}{section.2.6}
-\contentsline {section}{\numberline {2.7}Plotting ancestors and descendants by generation}{21}{section.2.7}
-\contentsline {section}{\numberline {2.8}Plotting distance matrix}{23}{section.2.8}
-\contentsline {section}{\numberline {2.9}Academic genealogy of statisticians}{24}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Interactive visualization of genealogical structure}{31}{subsection.2.9.1}
-\contentsline {section}{\numberline {2.10}Future avenues}{32}{section.2.10}
-\contentsline {section}{\numberline {2.11}Conclusions}{33}{section.2.11}
-\contentsline {section}{\numberline {2.12}Acknowledgments}{33}{section.2.12}
-\contentsline {chapter}{\chapternumberline {3}The case for visualization methods in RNA-sequencing data analysis}{34}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{34}{section.3.1}
-\contentsline {section}{\numberline {3.2}Parallel Coordinate Plots}{35}{section.3.2}
-\contentsline {section}{\numberline {3.3}Scatterplot matrices}{38}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Overview of scatterplot matrices}{38}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Assessing normalization with scatterplot matrices}{39}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Checking for common errors with scatterplot matrices}{41}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Finding unexpected patterns in scatterplot matrices}{43}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Assessing differential expression calls in scatterplot matrices}{46}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Litre plots}{46}{section.3.4}
-\contentsline {section}{\numberline {3.5}Closing case study}{50}{section.3.5}
-\contentsline {section}{\numberline {3.6}Discussion}{53}{section.3.6}
-\contentsline {chapter}{\chapternumberline {4}Software for visualization methods in RNA-sequencing data analysis}{55}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{55}{section.4.1}
-\contentsline {section}{\numberline {4.2}Implementation}{56}{section.4.2}
-\contentsline {section}{\numberline {4.3}Supported data types}{57}{section.4.3}
-\contentsline {section}{\numberline {4.4}Examples Methods}{57}{section.4.4}
-\contentsline {section}{\numberline {4.5}Discussion}{59}{section.4.5}
-\contentsline {chapter}{\chapternumberline {5}Gene expression responses to diet quality and viral infection in \textit {Apis mellifera}}{61}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{61}{section.5.1}
-\contentsline {section}{\numberline {5.2}Methods}{63}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Design of two-factor experiment}{64}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}RNA extraction}{64}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Gene expression}{65}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Comparison to previous studies on transcriptomic response to viral infection}{65}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Visualization}{66}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Gene Ontology}{66}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Probing resilience versus resistance}{68}{subsection.5.2.7}
-\contentsline {section}{\numberline {5.3}Results}{68}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{68}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{70}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison DEG results}{71}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{72}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{75}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Discussion}{75}{section.5.4}
-\contentsline {section}{\numberline {5.5}Future avenues}{77}{section.5.5}
-\contentsline {chapter}{\chapternumberline {6}Timeline}{80}{chapter.6}
-\contentsline {section}{\numberline {6.1}Completed}{80}{section.6.1}
-\contentsline {section}{\numberline {6.2}Scheduled deliverables}{80}{section.6.2}
-\contentsline {section}{\numberline {6.3}Other work}{80}{section.6.3}
-\contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 3}{81}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 4}{113}{chapter.8}
-\contentsline {chapter}{\chapternumberline {9}Supplementary material for Chapter 5}{134}{chapter.9}
-\contentsline {chapter}{Bibliography}{153}{section*.89}
+\contentsline {subsection}{\numberline {1.3.2}Visualization methods for RNA-sequencing data}{10}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Overview of thesis research}{11}{section.1.4}
+\contentsline {chapter}{\chapternumberline {2}Visualization methods for genealogical datasets}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Example datasets}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Soybean genealogy}{14}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Academic genealogy of statisticians}{15}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Genealogical input format}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Generating a graphical object}{17}{section.2.4}
+\contentsline {section}{\numberline {2.5}Plotting a shortest path}{18}{section.2.5}
+\contentsline {section}{\numberline {2.6}Superimposing shortest path on tree}{20}{section.2.6}
+\contentsline {section}{\numberline {2.7}Plotting ancestors and descendants by generation}{23}{section.2.7}
+\contentsline {section}{\numberline {2.8}Plotting distance matrix}{25}{section.2.8}
+\contentsline {section}{\numberline {2.9}Academic genealogy of statisticians}{26}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Interactive visualization of genealogical structure}{33}{subsection.2.9.1}
+\contentsline {section}{\numberline {2.10}Conclusions}{34}{section.2.10}
+\contentsline {section}{\numberline {2.11}Acknowledgments}{34}{section.2.11}
+\contentsline {chapter}{\chapternumberline {3}The case for visualization methods in RNA-sequencing data analysis}{36}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{36}{section.3.1}
+\contentsline {section}{\numberline {3.2}Parallel Coordinate Plots}{37}{section.3.2}
+\contentsline {section}{\numberline {3.3}Scatterplot matrices}{40}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Overview of scatterplot matrices}{40}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Assessing normalization with scatterplot matrices}{41}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Checking for common errors with scatterplot matrices}{43}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Finding unexpected patterns in scatterplot matrices}{45}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Assessing differential expression calls in scatterplot matrices}{48}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Litre plots}{48}{section.3.4}
+\contentsline {section}{\numberline {3.5}Closing case study}{52}{section.3.5}
+\contentsline {section}{\numberline {3.6}Discussion}{55}{section.3.6}
+\contentsline {section}{\numberline {3.7}Acknowledgments}{56}{section.3.7}
+\contentsline {chapter}{\chapternumberline {4}Software for visualization methods in RNA-sequencing data analysis}{57}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{57}{section.4.1}
+\contentsline {section}{\numberline {4.2}Implementation}{58}{section.4.2}
+\contentsline {section}{\numberline {4.3}Supported data types}{59}{section.4.3}
+\contentsline {section}{\numberline {4.4}Examples Methods}{59}{section.4.4}
+\contentsline {section}{\numberline {4.5}Discussion}{61}{section.4.5}
+\contentsline {section}{\numberline {4.6}Acknowledgments}{62}{section.4.6}
+\contentsline {chapter}{\chapternumberline {5}Gene expression responses to diet quality and viral infection in \textit {Apis mellifera}}{63}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{63}{section.5.1}
+\contentsline {section}{\numberline {5.2}Methods}{65}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Design of two-factor experiment}{66}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}RNA extraction}{66}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Gene expression}{67}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Comparison to previous studies on transcriptomic response to viral infection}{67}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Visualization}{68}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Gene Ontology}{68}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Probing resilience versus resistance}{70}{subsection.5.2.7}
+\contentsline {section}{\numberline {5.3}Results}{70}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{70}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{72}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison DEG results}{73}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{74}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{77}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Discussion}{77}{section.5.4}
+\contentsline {section}{\numberline {5.5}Acknowledgments}{79}{section.5.5}
+\contentsline {chapter}{\chapternumberline {6}Conclusions}{80}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contribution to genealogical data visualization}{80}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contribution to RNA-sequencing data visualization}{81}{section.6.2}
+\contentsline {section}{\numberline {6.3}Contribution to understanding how diet quality and viral innolcuation affect gene expression in honeybees}{82}{section.6.3}
+\contentsline {section}{\numberline {6.4}Future work}{83}{section.6.4}
+\contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 3}{84}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 4}{116}{chapter.8}
+\contentsline {chapter}{\chapternumberline {9}Supplementary material for Chapter 5}{137}{chapter.9}
+\contentsline {chapter}{Bibliography}{156}{section*.87}

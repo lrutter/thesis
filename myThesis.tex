@@ -127,7 +127,7 @@
 
 \vspace{2.5cm}
 
-{\LARGE Thesis Proposal}
+
 
 \vspace{1cm}
 
@@ -196,7 +196,7 @@ The problem with only applying traditional modeling approaches to data is that t
 
 Genealogical data has a standardized type of display known as a pedigree chart, which we introduce in Section \ref{sec:litReview} (\citealt{ped}). While this visual plot is useful for certain genealogical datasets, it is not useful for many genealogical datasets, particularly agricultural ones that are used for breeding purposes. We address this problem by introducing a new type of plot to display the paths between the ancestors and descendants constrained by generation for an individual of interest, which could otherwise not be accomplished with a pedigree chart. This new plot (and other plots) are introduced in Chapter \ref{sec:chapter1}.
 
-There are popular plotting tools for analyzing RNA-sequencing data, but there are less popular tools that could be more helpful for RNA-sequencing analysis. We strive to work on the following five uncommon plotting types that could be useful for better understanding RNA-sequencing data, and we show our work-in-progress toward these goals in Chapters \ref{sec:clustering} and \ref{sec:sigtest}:
+There are popular plotting tools for analyzing RNA-sequencing data, but there are less popular tools that could be more helpful for RNA-sequencing analysis. We strive to work on the following three uncommon plotting types that could be useful for better understanding RNA-sequencing data, and we show our accomplishments toward these goals in Chapters \ref{sec:chapter2}, \ref{sec:chapter3}, and \ref{sec:chapter4}:
 
 \clearpage
 
@@ -205,17 +205,21 @@ There are popular plotting tools for analyzing RNA-sequencing data, but there ar
 
 In gene expression data analysis, we are striving to find relative patterns. Side-by-side boxplots are often used for this purpose, but they can hide potential problems that could still be lurking in the data after normalization. This is because most RNA-sequencing normalization methods are conducted at the sample-level, and side-by-side boxplots do not show connections between the samples. Consequently, boxplots may deceive analysts to believe that the normalization succeeded in cases where alternative plots (such as parallel coordinate plots) would have otherwise indicated that the normalization was in fact unsuccessful due to the presence of inconsistencies (crossings) between replicates. For this reason, parallel coordinate plots (\citealt{origPCP}, \citealt{origPCP2}) are an essential visual tool when checking the initial normalization process of RNA-sequencing analysis. If the normalization is adequate, then the connections between replications should be flat, and we should only see crossings between treatment groups.
 
-The tools currently available for constructing parallel coordinate plots to assess RNA-sequencing data are severely limited: Namely, the large number of genes present can cause constraints in space and time. With one line being drawn for each gene, our resulting plots will have too many lines being drawn to even view patterns of interest in the first place. Moreover, the construction of these plots can be consuming in computation and time, often requiring analysts to wait for minutes before they can view the output. Even though popular tools to visualize parallel coordinate plots (such as the \code{ggparcoord} function in the \code{GGally} package) can be very useful for many datasets, they are not always helpful for large RNA-sequencing datasets (\citealt{ggally}). As a result, our goal is to develop a new approach that both quickly and meaningfully displays the key pieces of information for RNA-sequencing data with parallel coordinate plots. 
+The tools currently available for constructing parallel coordinate plots to assess RNA-sequencing data are severely limited: Namely, the large number of genes present can cause constraints in space and time. With one line being drawn for each gene, our resulting plots will have too many lines being drawn to even view patterns of interest in the first place. Moreover, the construction of these plots can be consuming in computation and time, often requiring analysts to wait for minutes before they can view the output. Even though popular tools to visualize parallel coordinate plots (such as the \code{ggparcoord} function in the \code{GGally} package) can be very useful for many datasets, they are not always helpful for large RNA-sequencing datasets (\citealt{ggally}).
+
+As a result, we developed new approaches that both quickly and meaningfully displays the key pieces of information for RNA-sequencing data with parallel coordinate plots. First, we applied parallel coordinate plots after hierarchical analysis to reduce overlapping issues. We introduce the use of these tools in Chapter~\ref{sec:chapter2} as a case study applied to real RNA-sequencing data. We also apply them again in Chapter~\ref{sec:chapter4} as part of our study of virus and diet quality effects on honeybee gene expression. Second, we created interactive capabilities for parallel coordinate plots, wherein users can select lines more efficiently and keep and/or delete lines that are not of use. Examples of this are shown in Chapter~\ref{sec:chapter3}.
 
 \item \textbf{Pairwise scatterplots}:
 
-We aim to develop visuals that can effectively plot replicates against each other. We can do this by generating pairwise scatterplots for replicates, using the \code{scatmat()} function of the \code{GGally} package (\citealt{ggally}). If the data is clean, then we would expect negligent differences between read counts across replicates. This would result in a scatterplot where the read counts from the two replicates fall along the x=y relationship. Deviations from this expectation would indicate a quality problem with the data.
+Visuals that can effectively plot replicates against each other are useful for RNA-sequencing analysis. We can do this by generating pairwise scatterplots for replicates, using the \code{scatmat()} function of the \code{GGally} package (\citealt{ggally}). If the data is clean, then we would expect negligent differences between read counts across replicates. This would result in a scatterplot where the read counts from the two replicates fall along the x=y relationship. Deviations from this expectation would indicate a quality problem with the data.
 
-With this second goal we face the same challenges that we did with the first goal: We have a plotting algorithm that is not tailored to deal with the vastly sized datasets like RNA-sequencing data. As a result, we again face space (overplotting) and time (computational speed) constraints, and our goal would be to tailor the scatterplot matrix to adapt to large amounts of data. In addition, we must now recognize that the few data points along the perimeter of the x=y relationship that we can see may be misleading. Hence, we would want to develop guidelines in terms of what denotes a high-quality dataset where read counts are similar between replicates and different between treatments. 
+In creating effective interactive scatterplot matrices, we were met with a similar challenge to the first goal: We have a plotting algorithm that is not tailored to deal with the vastly sized datasets like RNA-sequencing data. As a result, we again faced space (overplotting) and time (computational speed) constraints, and our goal was to tailor the scatterplot matrix to adapt to large amounts of data. In addition, we recognized that the few data points along the perimeter of the \textit{x=y} relationship that we can see may be misleading. Hence, we wanted to develop guidelines in terms of what denotes a high-quality dataset where read counts are similar between replicates and different between treatments. 
 
-\item \textbf{Replicate line plots}:
+We achieved these goals by rendering the scatterplot matrices interactive. We show examples of our default interactive scatterplot matrix in Chapter~\ref{sec:chapter2} using real RNA-sequencing data. We also show variations of the interactive scatterplot marix that can be thresholded by prediction interval, orthogonal distance to the \textit{x=y} line, and fold change in Chapter~\ref{sec:chapter3}. We also created versions of the scatterplot matrix wherein genes of interest (usually DEGs) can be superimposed to better understand how their variation compares to the variation in the overall dataset. Examples of this technique are shown in Chapter~\ref{sec:chapter2} and again in Chapter~\ref{sec:chapter4} as part of our study of virus and diet quality effects on honeybee gene expression.
 
-We aim to build upon a new type of plot for gene expression analysis called the replicate line plot, which was developed fairly recently (\citealt{jds}). This plot can be used to visually mine for genes that have small variability in replicates but large variability across treatments. While this plot has been developed and shown to be useful for two replicates, we would wish to expand upon this so that it can be used for more than two replicates. We show an example from the original study that introduced replicate line plots in Figure \ref{fig:porcupine} (\citealt{jds}).
+\item \textbf{Litre plots}:
+
+We introduce a new type of plot for gene expression analysis called the litre plot, which is built upon another plot developed fairly recently called the ``replicate line plot'' (\citealt{jds}). This plot can be used to visually mine for genes that have small variability in replicates but large variability across treatments. While this plot has been developed and shown to be useful for two replicates, we would wish to expand upon this so that it can be used for more than two replicates. We show an example from the original study that introduced ``replicate line plots'' in Figure \ref{fig:porcupine} (\citealt{jds}).
 
 \begin{figure}[H]
 \centering
@@ -226,13 +230,7 @@ We aim to build upon a new type of plot for gene expression analysis called the 
     \label{fig:porcupine}
 \end{figure}
 
-\item \textbf{Single gene plots}:
-
-We plan to develop plots that allow users to look in more detail at individual genes of interest. For instance, while a user may generate a subset of genes from a clustering analysis, they may wish to view the read count across the samples for each of these genes in a visual manner. This may allow a user to quickly sift through the subset of genes and visually determine which ones may truly be of interest.
-
-\item \textbf{Permutation testing plots}:
-
-We aim to develop permutation testing plots for differentially expressed genes. Even if a subset of genes may be deemed statistically significantly differentially expressed, we may wish to see what this might look like if we permuted. We could obtain confidence bands and see if the top differentially expressed genes are signal or noise.
+We demonstrate our new interactive litre plots in Chapter~\ref{sec:chapter2} using real RNA-sequencing data. We then demonstrate them again in Chapter~\ref{sec:chapter4} as part of our study of virus and diet quality effects on honeybee gene expression. This later example demonstrates how we updated and expanded the use of these plots to accommodate a situation where there are up to 12 replicates.
 
 \end{enumerate}
 
@@ -263,7 +261,7 @@ We demonstrate how the standardized pedigree charts in the \pkg{kinship2} packag
 
 In addition, popular graph drawing software such as \pkg{GraphViz} and \pkg{Cytoscape} can be used to visualize genealogical structures (\citealt{graphvizCit}, \citealt{cytoscapeCit}). Graphs are defined as objects with sets of nodes and edges, where sets indicate that their comprised elements cannot be repeated. In other words, graphical structures do not allow for repeated nodes, and hence, as is the case with the aforementioned \pkg{R} packages, these popular graph plotting software cannot precisely portray the genealogical dataset in cases of inter-generational breeding.
 
-We again illustrate this problem in Figure \ref{fig:Graph} with an example genealogy using popular graph drawing software like \pkg{GraphViz} and \pkg{Cytoscape}. Here, generation count is denoted by the vertical axis. As was shown in Figure \ref{fig:kinshipFig}, here too we superimpose a green node that has parents from two different generations. This green node is both a second and third generation individual, and should be displayed in both corresponding generation positions on the vertical axis. However, standard graph visualization tools only allow for a given node to be displayed once. As a result, this green node must be ambiguously positioned in either the second or third generation position; in the figure, it is denoted as a third generation individual. In Chapter 3, we will demonstrate \pkg{ggenealogy} plots that can remedy these problems.
+We again illustrate this problem in Figure \ref{fig:Graph} with an example genealogy using popular graph drawing software like \pkg{GraphViz} and \pkg{Cytoscape}. Here, generation count is denoted by the vertical axis. As was shown in Figure \ref{fig:kinshipFig}, here too we superimpose a green node that has parents from two different generations. This green node is both a second and third generation individual, and should be displayed in both corresponding generation positions on the vertical axis. However, standard graph visualization tools only allow for a given node to be displayed once. As a result, this green node must be ambiguously positioned in either the second or third generation position; in the figure, it is denoted as a third generation individual. In Chapter~\ref{sec:chapter1}, we will demonstrate \pkg{ggenealogy} plots that can remedy these problems.
 
 \begin{figure}[H]
     \begin{framed}
@@ -281,23 +279,23 @@ Previous studies have provided sound evidence that gene expression data is most 
 
 Moreover, they demonstrated that some of the most common plots for gene expression data are rife with problems, while some of the less popular plots are useful. In one example, they showed that heat maps are commonly-used, but they do not allow users to detect outlying genes. In contrast, scatterplots can allow for outlier detection. Furthermore, they introduced a new type of plot called the replicate line plot, which can be used to visually mine for genes that show low variability in read counts between replicates but high variability in read counts between treatments. The authors also showed the importance of interaction on plots for gene expression analysis; they used GGobi (\citealt{ggobi}, \citealt{ggobi2}, \citealt{ggobi3}) to generate direct manipulation and linking between various multivariate plots to display the data. Interactive plots for multivariate data could also be accomplished with the use of projections (\citealt{extra3}).
 
+Despite the availability of many ready-made testing software, reliable detection of differentially expressed genes (DEGs) in RNA-sequencing data is not a trivial task. While the data collection might be considered high-throughput, data analysis has intricacies that require careful human attention. In light of this, researchers should use effective and modern data analysis techniques, and verify and enhance the appropriateness of their models with visual feedback. There is a need to make it easier for researchers to use models and visuals in a complimentary fashion during RNA-seq data analysis.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overview of thesis research}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In Chapter \ref{sec:chapter1}, we introduce \textbf{\pkg{ggenealogy}} (\citealt{ggen}), a developing \pkg{R} software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We have tested the tools on a dataset with milestone cultivars of soybean varieties (\citealt{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\citealt{mgp}).
+In chapter~\ref{sec:chapter1}, we introduce \textbf{\pkg{ggenealogy}} (\citealt{ggen}), a published \pkg{R} software package that provides tools for searching through genealogical data, generating basic statistics on their graphical structures using parent and child connections, and displaying the results. The package allows users to draw the genealogy in relation to variables related to the nodes, and to determine and display the shortest path distances between the nodes. Production of pairwise distance matrices and genealogical diagrams constrained on generation are also available in the visualization toolkit. We have tested the tools on a dataset with milestone cultivars of soybean varieties (\citealt{soybean}) as well as on a web-based database of the academic genealogy of mathematicians (\citealt{mgp}).
 
-Susan VanderPlas began the original work for this package and developed most features in the \code{plotAncDes()} function. The software package has been available on the Comprehensive \pkg{R} Archive Network since March 2015 (\citealt{ggen}). In August 2015, a paper introducing the \pkg{ggenealogy} software package received a student paper competition award from the Statistical Computing and Graphics Section of the American Statistical Association. Currently, we are preparing to submit another paper describing the software package to the Journal of Statistical Software. We also aim to release a second version of the package as we have added interactive plotting tools that were not available in the first version.
+Susan VanderPlas began the original work for this package and developed most features in the \code{plotAncDes()} function. The software package has been available on the Comprehensive \pkg{R} Archive Network since March 2015 (\citealt{ggen}). In August 2015, a paper introducing the \pkg{ggenealogy} software package received a student paper competition award from the Statistical Computing and Graphics Section of the American Statistical Association. Our paper describing the software package has been accepted to the Journal of Statistical Software. In Decemer 2016, we released a second version of the package as we have added interactive plotting tools that were not available in the first version.
 
-In Chapter \ref{sec:clustering}, we show what we have accomplished toward developing visualization methods for clustering analysis of RNA-sequencing data. We use a soybean example dataset with treatments of iron-poor and iron-rich conditions. On the clustered data, we use both scatterplot matrices and parallel coordinate plots to determine which clusters are of interest. We also use individual gene plots to determine if there subsets of genes within clusters of interest that should be reconsidered.
+In chapter~\ref{sec:chapter2}, we use several public RNA-sequencing data sets to show that our visualization tools can detect normalization issues, DEG designation problems, and common analysis errors. We also show that our visual tools can identify genes of interest in ways undetectable with models. In this chapter, we propose that users slightly modify their approach to RNA-seq analysis by incorporating statistical graphics into their usual analysis pipelines. Specifically, we emphasize the use of scatterplot matrices, litre plots, and parallel coordinate plots.
 
-In Chapter \ref{sec:sigtest}, we demonstrate some of our work-in-progress toward developing visualization methods for significance testing of RNA-sequencing data. We use a paper wasp example dataset with treatments of antennal drumming and nutrition. We use individual transcript plots to determine if the top statistically-significantly differentially expressed transcripts appear to show differences in read counts across the treatments.
+In chapter~\ref{sec:chapter3}, we introduce \textbf{\pkg{bigPint}}, a software package we aim to publish on Bioconductor that provides the tools we demonstrated to be useful for RNA-seqeuncing analysis through extensive case studies in chapter~\ref{sec:chapter2}. Namely, the package provides users with easy-to-use methods to create scatterplot matrices, litre plots, and parallel coordinate plots, both in static and interactive formats. We discuss the technology behind creating the interactive features of our graphic techniques, including some of their unique capabilities to plot interactive foreground datasets onto static background datasets. Some of the interactive graphics are shown already as Shiny application links in chapter~\ref{sec:chapter2}. However, we also show new examples in chapter~\ref{sec:chapter3}. We briefly discuss the reference manual and how our software methods can be easily incorporable into popular RNA-sequencing analysis software (\citealt{deseq2}, \citealt{edger}, \citealt{limma}).
 
-In Chapter \ref{sec:timeline}, we tabulate the completed work, the scheduled deliverables for thesis completion, and other work performed outside of thesis work.
-
-
+In chapter~\ref{sec:chapter4}, we conduct a RNA-sequencing study on the effects of viral innoculation and diet quality on honeybee gene expression. Adam Dolezal began the original work and collected the bee mortality and physical data. We found that the diet quality effect had a much large transcriptomic response than the viral effect in terms of the number of DEGs. We also performed extensive visualization analysis methods using the graphics we developed and introduced in chapters~\ref{sec:chapter2} and ~\ref{sec:chapter3}. Through this process, we discovered that the data and even the DEGs did not appear clean in terms of replicate consistency and treatment differentiation. We compared our study to another study that also investigated the honeybee transcriptomic response to viral innoculation only it used honeybees that had 75\% genetic similarity as opposed to our honeybees that had 25\% genetic similarity (\citealt{galbraith}). We visually confirmed that their data and DEGs appeared much cleaner. By verifying the subsantial overlap in the DEG lists between our study and their study, we were able to place much higher confidence in the DEG results from our otherwise noisy data.
 
 %%%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
@@ -740,35 +738,13 @@ We could still improve upon Figure \ref{fig:plotCBNoText}. Even though we may be
     \label{fig:plotAnimate}
 \end{figure}
 
-\section{Future avenues}
-
-We have several avenues we could pursue to expand upon this work:
-
-\begin{enumerate}
-\item \textbf{Incorporation of the Shiny application}: The reactive programming could save users of \pkg{ggenealogy} the time of using command line for each change of input as well as the inefficiency of rerunning code. It could also enhance the interactivity. A Shiny application that uses certain \pkg{ggenealogy} functionality is already available for users who wish to explore the soybean genealogy; the data can be viewed at \url{http://shiny.soybase.org/CNV/}.
-
-\item \textbf{Expanding on variable types}: We could incorporate plotting tools that examine not only quantitative variables (such as our example variable of "year"), but also categorical variables associated with individuals in datasets.
-
-\item \textbf{Further eliminate text overlap}: The \pkg{ggenealogy} visualization tool \code{plotPathOnAll()} is suitable as a data exploration tool, but not always as a publication tool. This is because we still see textual overlap in datasets that are small enough to - in theory - be represented with all labels in a readable format (see Figure \ref{fig:plotTNBin6}). As such, we plan to add a feature to the package that allows users to manually fine-tune automated plots. For example, after comparing several bin sizes on the soybean genealogy, we determined that the bin size of 6 produced the minimal textual overlap, as is seen in Figure \ref{fig:plotTNBin6}. If we could subsequently fine-tune the vertical positions of the small fraction of text labels that remained overlapped after the automated \pkg{ggenealogy} function, then we could potentially remove all overlaps, and the plot could be used in presentations and publications.
-
-\item \textbf{Test on additional datasets}: We look forward to testing the \pkg{ggenealogy} package on additional genealogical data sets. Exploring several datasets with the software will allow us to fix remaining bugs, and provide us further insight into how to make our tools available for a wide range of data input formats. 
-\end{enumerate}
-
 \section{Conclusions}
 
 The \pkg{ggenealogy} package offers various plotting tools that can assist those studying genealogical lineages in the data exploration phases, as well as in preparing publication-suitable images. As each plot comes with its pros and cons, we recommended for users to explore several visualization tools. If users are simultaneously using similar packages, we in particular recommend using the \code{plotAncDes()} function. This plot allows users to view generation counts of a variety of interest in a manner that is not as readily available in similar software packages.
 
 \section{Acknowledgments}
 
-This project was an effort between Susan VanderPlas, Dianne Cook, Michelle A. Graham, and myself. Together, we  thank Drs. James E. Specht and Randy C. Shoemaker for helpful discussions of soybean genealogy. In addition, we are grateful for the financial support from the United Soybean Board (Project 1204), The North Central Soybean Research Program, the NSF Plant Genome Research Program (award number 0820642), and the USDA-ARS CRIS Project 3625-21220-005-00D. The USDA is an equal opportunity provider and employer. Mention of trade names or commercial products in this article is solely for the purpose of providing specific information and does not imply recommendation or endorsement by the U.S. Department of Agriculture.
-
-
-
-
-
-
-
-
+This project was an effort between Susan VanderPlas, Dianne Cook, Michelle A. Graham, and myself. Together, we thank Drs. James E. Specht and Randy C. Shoemaker for helpful discussions of soybean genealogy. In addition, we are grateful for the financial support from the United Soybean Board (Project 1204), The North Central Soybean Research Program, the NSF Plant Genome Research Program (award number 0820642), and the USDA-ARS CRIS Project 3625-21220-005-00D. The USDA is an equal opportunity provider and employer. Mention of trade names or commercial products in this article is solely for the purpose of providing specific information and does not imply recommendation or endorsement by the U.S. Department of Agriculture.
 
 
 %%%%%%%%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -927,7 +903,7 @@ Once the background of hexagons has been drawn to give us a sense of the distrib
 
 For the case of Figures~\ref{repDot} A and B, the nine overlaid points are superimposed in a manner we would expect from a differently expressed gene: They are located far from the \textit{x=y} line (difference between treatments) and are close to each other (similarity between replicates). In fact, the replicates in subplot B are so precise that the overlaid points almost entirely overlap each other. In contrast, Figures~\ref{repDot} C and D do not seem to show as much replicate consistency. Now, there seems to be a pattern in which one replicate from the P group is larger than (and visually distanced from) the other two replicates. In other words, litre plots are able to capture the pattern differences in the significant genes from Cluster 2 and 3 that we saw back in Figure~\ref{sbIRClustersSig}.
 
-Moreover, in the case of Figures~\ref{repDot} E and F, the nine overlaid points are not clearly superimposed in the distinct pattern we expect of significant genes. While subplot E shows a gene that has consistent replications, the difference between the treatment groups is so small that the overlaid points cluster around the \textit{x=y} line. Additionally, the gene displayed in subplot F shows inconsistent replications and consistent treatment groups, as the spread-out overlaid points center on the \textit{x=y} line. Despite these genes being deemed significant by the model, the litre plots call into question whether the genes from this cluster show an expected profile of differential expression. This is similar to the messy-looking parallel coordinate plots we saw from these genes in Cluster 4 back in Figure~\ref{sbIRClustersSig} and the messy-looking superimposition we saw from these genes in Cluster 4 onto the scatterplot matrix in Supplementary Figure \ref{fig:sbCNSwitchedSM}. As a result, litre plots can detect odd and questionable patterns in individual ``significant genes" that cannot be detected numerically through models. If this happens, the user may wish to further investigate these DEG calls.
+Moreover, in the case of Figures~\ref{repDot} E and F, the nine overlaid points are not clearly superimposed in the distinct pattern we expect of significant genes. While subplot E shows a gene that has consistent replications, the difference between the treatment groups is so small that the overlaid points cluster around the \textit{x=y} line. Additionally, the gene displayed in subplot F shows inconsistent replications and consistent treatment groups, as the spread-out overlaid points center on the \textit{x=y} line. Despite these genes being deemed significant by the model, the litre plots call into question whether the genes from this cluster show an expected profile of differential expression. This is similar to the messy-looking parallel coordinate plots we saw from these genes in Cluster 4 back in Figure~\ref{sbIRClustersSig} and the messy-looking superimposition we saw from these genes in Cluster 4 onto the scatterplot matrix in Supplementary Figure~\ref{sbCNSwitchedSM}. As a result, litre plots can detect odd and questionable patterns in individual ``significant genes" that cannot be detected numerically through models. If this happens, the user may wish to further investigate these DEG calls.
 
 The interactive litre plot for the Cluster 2 significant genes (Figure~\ref{repDot} A and B) is available at https://rnaseqvisualization.shinyapps.io/litreCluster2, the interactive litre plot for the Cluster 3 significant genes (Figure~\ref{repDot} C and D) is available at https://rnaseqvisualization.shinyapps.io/litreCluster3, and the interactive litre plot for the Cluster 4 significant genes (Figure~\ref{repDot} E and F) is available at https://rnaseqvisualization.shinyapps.io/litreCluster4. As can be verified in the interactive version of the litre plot, users are provided several input fields that tailor the plot functionality. For instance, the user may wish to quickly scroll through significant genes one by one in the order of lowest to highest FDR values. Please read the ``About" tab in the interactive links for more information.
 
@@ -967,13 +943,10 @@ In general, scientists might uncover surprising patterns lurking in their data w
 
 Modern data analysis is most reliable when models and visuals are used congruently. Unfortunately, the current culture around RNA-seq analysis de-emphasizes the importance of graphical tools, which, as we have shown, calls into question the soundness of results that come from RNA-seq studies. Solving this problem is simple and does not require scientists to drastically change their approach to RNA-seq analysis. Instead, scientists simply need to incorporate effective plotting tools during their usual analysis pipelines. We plan to serve a role in this solution by publishing a new \textsf{R} software package that includes the useful plotting techniques we introduced in this paper. To encourage scientists to use this resource, we aim to include a straight-forward vignette that demonstrates how to painlessly apply these graphical tools to RNA-seq data. It is our hope that such work will serve a small part in upgrading the RNA-seq analysis world into one that more wholistically extracts meaningful biological information using both models and visuals.
 
-\section*{Acknowledgements}
+\section{Acknowledgments}
 
-R \citep{R} was used to conduct analyses in this paper, and particularly packages ggplot2 \citep{ggplot2}, Shiny \citep{shiny}, plotly \citep{plotly}, and htmlwidgets were used to build the graphics. 
+This project was an effort between Dianne Cook and myself, as well as the research of Michelle Graham and Adrianne Moran Lauter, from which the iron-metabolism soybean dataset was shared. The work of Graham and Moran Lauter was financed by the United States Department of Agriculture, Agricultural Research Service (USDA-ARS) CRIS Project 5030-21220-005-00D and the Iowa Soybean Association.
 
-\section*{Funding}
-
-Research of Graham and Moran Lauter was financed by the United States Department of Agriculture, Agricultural Research Service (USDA-ARS) CRIS Project 5030-21220-005-00D and the Iowa Soybean Association.
 
 %%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1030,6 +1003,10 @@ We demonstrate another example of a visualization method in RNA-sequencing analy
 The plotting methods we offer in \pkg{bigPint} allow users to quickly and interactively examine genes of interest across the entire dataset. We integrate several technologies to achieve the useful and efficient functionality that allows for an interactive foreground and a static background. Some of the graphics we offer in this package are not used in popular RNA-sequencing packages, such as scatterplot matrics, parallel coordinate plots, and litre plots. See chapter~\ref{sec:chapter2} for a review of these visualization tools. We also offer interactive versions of graphics that are already popular in RNA-sequencing packages, such as the volcano plot.
 
 We plan to publish our software freely on Bioconductor, which provides open source software for bioinformatics. Our software can be used on Windows, MacOS, and Linux operating systems and will integrate neatly into popular RNA-sequencing analysis tools. The current version of our reference manual is posted as supplementary information in Section~\ref{sec:suppchapter3}. Analysis of large genomics data is relying more on sophisticated and interactive visualization techniques (\citealt{vizReview}) and we believe we will contribute to that promising trend by publishing our software.
+
+\section{Acknowledgments}
+
+This project was an effort between Dianne Cook and myself, along with helpful support and feedback from Roxane Legaie.
 
 %%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1215,89 +1192,44 @@ One of the goals of this study was to use our RNA-seq data to assess whether tra
 
 Overall, these data suggest complex transcriptomic responses to multiple stressors in honey bees. Diet has the potential for large and profound effects on transcriptional responses in honey bees, and differences in diet may set up the potential for both resistance and resilience to virus infection. Moreover, this study in general also demonstrated the possible benefits of using data visualizations and multiple datasets to address inherently messy biological data. For instance, by verifying the subsantial overlap in our DEG lists to those obtained in another study that addressed a similar question but in a more controlled manner, we were able to place much higher confidence in the differential gene expression results from our otherwise noisy data. We hope these results underline the need for researchers to use data visualization techniques to understand and interpret RNA-sequencing datasets.
 
+\section{Acknowledgments}
+
+This project was an effort between Adam Dolezal, Amy Toth, Dianne Cook and myself.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Future avenues}
+\chapter{Conclusions}
 
-We have several avenues we could pursue to expand upon this work:
+Data visualization of large biological datasets is an expanding field in recent years. There is growing recognition that as large and complex datasets become more accessible, effective tools to extract meaningful knowledge from them becomes more vital. There is also growing evidence that the most reliable results from analyzing such datasets comes from an analysis that incorporates traditional models and visualizations in an iterative fashion. The research in this dissertation has demonstrated useful contributions to large biological data visualization in, specifically in regards to genealogical and gene expression applications. 
 
-\begin{enumerate}
-\item \textbf{Strengthen normalization}: The MDS plot, scatterplot matrices, and parallel coordinate plots from clustering analysis did not appear as clean in the paper wasp data as they did for soybean data. One method we can approach is a more robust normalization process as outlined in the RUVseq package (\citealt{ruvseq}). Within this approach, there are three possible directions in which a handful of "negative control transcripts" must be used.
+\section{Contribution to genealogical data visualization}
 
-\begin{enumerate}
-\item \textbf{Housekeeping transcripts}: In this approach, we would use a small number of robust transcripts with known quantities that do not change much from one treatment to another. For the \textit{Polistes fuscatus} transcriptome, there are a small number of known transcripts for this purpose (such as actin, rp49, and S8), although their usefulness is dubious as their quantity can vary considerably across different experimental conditions.
-\item \textbf{Internal control transcripts}: In this approach, we obtain an "in-silico empirical" set of negative control transcripts by examining the properties of the transcripts within the data itself. This approach is ideal if we cannot obtain a set of negative control transcripts elsewhere.
-\item \textbf{Spike-in controls}: In this approach, a known concentration of RNA transcripts are applied. As such, they can be advantageous to endogenous controls. However, we have yet to determine if the RNA-sequencing for this data had employed spike-in controls. 
-\end{enumerate}
+Our most novel contribution to the visualization of large genealogical datasets is our plot that allows users to view the ancestors and descendants of a given variety with the horizontal axis constrained so that the further from the center that a variety is located, the more generations that variety is distanced from the centered variety of interest. This plotting technique is unique because most genealogical visualization software do not allow for labels to be repeated, which can cause conflicts when relationships are formed between generations and given individuals subsequently may contain multiple (ambiguous) generation count separations from other individuals in their lineage. We demonstrated the problem using a soybean dataset. Our plotting method that solved this problem \code{plotAncDes()} was shared and published in our open source software publication \pkg{ggenealogy}. Another useful contribution that we made to the visualization of large genealogical datasets is our plot that superimposes genealogical paths of interest across an entire lineage. We effectively constructed an algorithm that reduces the text overlap between the labels of such a plot. Again, our plotting method that mitigated this problem \code{plotPathOnAll()} was shared and published in our open source software publication \pkg{ggenealogy}. Both of these novel plotting techniques were discussion in chapter~\ref{sec:chapter1}.
 
-\item \textbf{Map to genome}: We have so far examined the transcript read counts after the reads were mapped to the transcriptome from the same species (\citealt{pw19}). We could also consider examining the genome read counts by mapping the reads to the genome of a similar species.
+\section{Contribution to RNA-sequencing data visualization}
 
-\item \textbf{Permutation testing}: Although the top differentially expressed transcripts between DU and DR looked promising (in Figure \ref{fig:degPW}), we will also develop permutation testing for this type of visual analysis of differentially expressed transcripts. Namely, we can create permutations where the sample names (DU.1, DU.2, ..., DR.6) are randomly assigned to columns in the data. After that, we can rerun the edgeR process on this falsely-named data, determine the new set of differentially expressed transcripts, and examine this new set visually with the same plots as in Figure \ref{fig:degPW}. At this point, we can create a lineup of the most statistically-significantly differentially expressed transcripts from the real dataset and from two permuted datasets. This would create a "triplet plot", where the location of the actual data plot is randomized amongst the two permuted data plots. If the actual data plot can be distinguished from the permuted data plots, then we have evidence that the differential expression we found was more due to treatment differences than other differences. This type of visualization inference has been successfully explored in previous work (\citealt{extra6}). To accomplish this, we plan on using the \pkg{nullabor} package (\citealt{nullabor}), which has been successfully used for RNA-sequencing visualization inference (\citealt{extra1}).
+We made several important contributions to the visualization of RNA-sequencing datasets. Chapter~\ref{sec:chapter2} served as a case in point regarding the need for effective visualization techniques in RNA-sequencing studies. Specifically, we provided several real-world examples where data visualization tools were able to detect issues with the data and/or the model that was applied that could be used to successfully redirect users to either clean the data or apply a new model. For instance, we demonstrated that our visual techniques could quickly indicate that a publicly-available dataset containing technical replicates of liver and kidney RNA samples required more than library size scaling and that it benefited from TMM normalization \citep{Marioni}. Likewise, we demonstrated that a publicly-available RNA-sequencing dataset of Saccharomyces cerevisiae (yeast) grown in YP-Glucose required between lane normalization and not just within lane normalization using our graphical methods \cite{Risso}. We plan to publish similar work to what was presented in chapter~\ref{sec:chapter2} and believe that our collection of easy-to-follow examples that underline the importance of using effective visualization tools when analyzing RNA-sequencing may play a small but important part in influencing scientists who perform RNA-sequencing studies to incorporate such practice within their usual analysis pipelines.
 
-\item \textbf{Render plotting interactive}: It would be useful to allow for the permutation testing visualization tools to have an interactive element. For example, users could quickly glance through the triplet plots of the top differentially expressed transcripts to discover if there are any transcripts that appear suspicious. Or, they could quickly rerun the permutation testing on a different set of treatment groups of interest.
+In chapter~\ref{sec:chapter3}, we also provided important contributions to the field of RNA-sequencing analysis because we discussed the technology behind the effective visualization tools that we created and demonstrated to have been of importance back in chapter~\ref{sec:chapter2}. One technology tool we introduced that is not common in data visualization for RNA-sequencing is the application of an interactive foreground superimposed onto a static background. We leveraged this relatively new technology to develop our plotting techniques to superimpose a gene of interest (usually a DEG from a model) onto a static background of all genes within the dataset. This technology allows users to quickly sift through a subset of genes (say a DEG list produced from a model) and determine how they overlay across the whole dataset, thereby assessing whether its replicate consistency and treatment variability seems reasonable for a DEG designation. We plan to publish a clear and intuitive vignette that explains how users can create and explore interactive scatterplot matrices, litre plots, and parallel coordinate plots easily into their usual analysis pipelines, especially because we created our software tools to be easily incorporable into popular RNA-sequencing analysis software (\citealt{deseq2}, \citealt{edger}, \citealt{limma}). We also plan to publish the software as an open source package called \pkg{bigPint} onto Bioconductor. We hope that such efforts will again serve a small but meaningful role in influencing scientists to use such visualization techniques during their usual RNA-sequencing analysis pipelines.
 
-\end{enumerate}
+As part of our work in chapter~\ref{sec:chapter4}, we performed detailed comparative visualization analyses that may be useful for biologists working with inherently messy RNA-sequencing data. Specifically, we examined honeybees from polyandrous colonies, while a previous study examined honeybees from single-drone colonies (\citealt{galbraith}). As a consequence, the honeybees in our study had about 25\% genetic identicalness, whereas the honeybees from the other study had about 75\% genetic identicalness (\citealt{sisters}). Using the graphical techniques we developed and introduced in chapters~\ref{sec:chapter2} and ~\ref{sec:chapter3}, we discovered that our DEGs did not appear clean in terms of replicate consistency and treatment differentiation, whereas the DEGs from the other study did. Despite the noticeable visual differences in the signal:to:noise ratios between the two studies, we found subsantial overlap in the DEG lists between our study and their study, and hence were able to place much higher confidence in the DEG results from our otherwise noisy data.
 
-The paper wasp data did not respond as well as the soybean data did to the visual tools for RNA-sequencing clustering analysis (which we did not explicitly show in this thesis proposal). This may be due to the fact that the soybean replicates were clones, whereas the wasp replicates were not clones. Moreover, the soybean data is more controlled than the wild paper wasps. It could also be due to us using transcript read counts for the paper wasp data, while we used gene read counts for the soybean data. While there is only negligible overlap between transcripts, there is no longer independence as multiple transcripts can map to the same gene.
+We believe our visualization methodology here that compared the two studies was unique and can be used as an example for scientists who work with datasets that may have low signal:to:noise ratios. In some cases, there are tradeoffs between controlled experimental designs and effective simulation of real-world observations: For example, while our dataset was less genetically controlled, it reflected the phenomenon we were studying given that honeybees are naturally polyandrous (\citealt{patriline}). 
 
-However, we have preliminary plotting tools for RNA-sequencing significance testing analysis. We could see that the top differentially expressed transcripts did appear as we would expect in Figure \ref{fig:degPW}. We can now expand upon this by creating interactive permutation testing visualizations of these differentially expressed transcripts.
+In contrast, the other study offered more genetic control, but did not reflect the typical honeybee genotypic variance seen in colonies seeing that single-drone colonies tend to be less healthy (\citealt{geneticDiverse}). In other words, while it is justifiable for us to use polyandrous colonies in our study to more accurately reflect most healthy colonies, we should accept that our signal:to:noise ratio may consequentely be low and may decide to compare our DEG lists with studies assessing the same variables under more controlled conditions, especially if we can quickly verify visually that their signal:to:noise ratio is respectfully higher. This careful technique that may result in more reliable results can be easily employed with our plotting tools, as we showed.
 
-\chapter{Timeline}
-\label{sec:timeline}
+\section{Contribution to understanding how diet quality and viral innolcuation affect gene expression in honeybees}
 
-\section{Completed}
+As far as we know, before our study in chapter~\ref{sec:chapter4}, there were few to no studies investigating honeybee gene expression patterns specifically related to monofloral diets, and few to no studies investigating honeybee gene expression patterns related to the combined effects of diet in any broad sense and viral innoculation in any broad sense. There is also scarce information about whether the protective effect of good diet in honeybees is due to direct effects on immune function (resistance), or if it is due to indirect effects of energy availability (resilience). We attempted to address this question through gene expression contrasts, and found a similar number of resistance (n = 125) and resilience (n = 122) related candidate genes, suggesting both processes may serve roles in the dietary buffering of honeybees from pathogenic infection. We also discovered that resilience candidate genes had functions related to carbohydrate metabolism, chitin metabolism, immune response, and regulation of transcription, whereas resistance candidate genes had functions related to several forms of metabolism (chitin and carbohydrate), regulation of transcription, and cell adhesion.
 
-\begin{tabular}{|p{3cm}|p{8cm}|p{3cm}|}
- \hline
- \textbf{Product} & \textbf{Description} & \textbf{Date} \\ 
- \hline
- R package & First release of \pkg{ggenealogy}, which provides visualization tools for genealogical datasets & March 2015 \\
- \hline
- Presentation & Presented \pkg{ggenealogy} at JSM & August 2015 \\
- \hline
- Award & Student paper award at ASA Statistical Computing and Graphics Section & August 2015 \\
- \hline
-\end{tabular}
+\section{Future work}
 
-\section{Scheduled deliverables}
+The \pkg{ggenealogy} package could be improved in several ways. First, we could employ Shiny applications. The reactive programming could save users of \pkg{ggenealogy} the time of using command line for each change of input as well as the inefficiency of rerunning code. It could also enhance the interactivity. A Shiny application that uses certain \pkg{ggenealogy} functionality is already available for users who wish to explore the soybean genealogy; the data can be viewed at \url{http://shiny.soybase.org/CNV/}. Second, we could incorporate plotting tools that examine not only quantitative variables (such as our example variable of "year"), but also categorical variables associated with individuals in datasets. Third, the \pkg{ggenealogy} visualization tool \code{plotPathOnAll()} is suitable as a data exploration tool, but not always as a publication tool. This is because we still see textual overlap in datasets that are small enough to - in theory - be represented with all labels in a readable format (see Figure \ref{fig:plotTNBin6}). As such, an addition of a feature to the package that allows users to manually fine-tune automated plots could be useful. Fourth, the \pkg{ggenealogy} package could tested on additional genealogical data sets. Exploring several datasets with the software would allow us to fix remaining bugs, and provide us further insight into how to make our tools available for a wide range of data input formats. 
 
-\begin{tabular}{|p{3cm}|p{8cm}|p{3cm}|}
- \hline
- \textbf{Product} & \textbf{Description} & \textbf{Date} \\ 
- \hline
- R package & Second release of \pkg{ggenealogy} package, which provides visualization tools for genealogical datasets & May 2016 \\
- \hline
- Paper & Submit \pkg{ggenealogy} paper to JSS & May 2016 \\
- \hline
- R package & First release of package that provides visualization tools for RNA-sequencing datasets & TBD \\
- \hline
- Paper & Submit paper about visualization tools for clustering analysis of RNA-sequencing & TBD \\
- \hline
- Paper & Submit paper about visualization tools for significance testing of RNA-sequencing & TBD \\
- \hline
-\end{tabular}
+The \pkg{bigPint} package could also be improved in several ways. First, the speed of the interactivity could be increased. As the number of samples and/or genes increases, the speed can become noticeably slower and can sometimes render the interactive plotting tools ineffective. Second, we still have issues of data overlapping which could be addressed through additional plotting techniques. Third, we could continue to explore examples of how these plotting techniques can lead to more reliable analyses and conclusions among RNA-sequencing studies. The development of additional examples could add more persuasion for scientists to employ visualization techniques in their usual analysis pipelines.
 
-\section{Other work}
-
-\begin{tabular}{|p{3cm}|p{8cm}|p{3cm}|}
- \hline
- \textbf{Product} & \textbf{Description} & \textbf{Date} \\ 
- \hline
- R package & First release of ePort package that generates electronic reports for instructors to evaluate student performance & July 2016 \\
- \hline
-\end{tabular}
-
-
-
-
-
-
-
-
-
-
+It may also be of interest to conduct additional comparisons between well-controlled but artifical and uncontrolled but realistic RNA-sequencing study designs, similar to what we did in chapter~\ref{sec:chapter4}. Given that many biologists choose to collect data that has less control in their experimental design in order to maintain generalizability of their results, it may be useful to better understand how the DEGs from such environmental designs appear and how often the DEG lists overlap between differing experimental designs. All of this can add confidence to the reliability of results from RNA-sequencing studies while also familiarizing scientists with visualization approaches for gene expression analysis.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1310,7 +1242,7 @@ This file contains supplementary analyses that the reader might find useful, and
 
 \begin{itemize}
 
-\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure \ref{fig:sbIRClustersSig} in chapter \ref{sec:chapter2} only showing significant genes, Figure~\ref{sbIRClusters} here shows all genes.
+\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2}. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure~\ref{sbIRClustersSig} in chapter \ref{sec:chapter2} only showing significant genes, Figure~\ref{sbIRClusters} here shows all genes.
 
 \item Figures~\ref{sbIRClusterSigSM1} through~\ref{sbIRClusterSigSM4} show scatterplot matrices of the significant genes in the iron-metabolism soybean dataset for each of the four clusters that resulted from hiearchical clustering analysis. They provide an additional and complementary perspective on these DEG calls from what we saw with the parallel coordinate plots in Figure~\ref{sbIRClusters}. 
 
@@ -1739,7 +1671,7 @@ This section contains supplementary analyses that the reader might find useful, 
 \begin{framed}
   \includegraphics[width=\textwidth]{Images/litreClusterRutter}
 \end{framed}
-  \caption{Example litre plots of the nine DEGs with the lowest FDR values from the 43 DEGs of our dataset. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. Most of the magenta points (representing the 144 combinations of samples between treatment groups for a given DEG) do not reflect the expected pattern as clearly compared to what we saw in the litre plots of the Galbraith data. They are not as clustered together (representing replicate inconsistency) and they sometimes overlap the \textit{x=y} line (representing lack of difference between treatment groups). This finding reflects what we saw in the messy looking parallel coordinate lines of Figure \ref{fig:pcpGalbraith.}}
+  \caption{Example litre plots of the nine DEGs with the lowest FDR values from the 43 DEGs of our dataset. ``N'' represents non-infected control samples and ``V'' represents virus-treated samples. Most of the magenta points (representing the 144 combinations of samples between treatment groups for a given DEG) do not reflect the expected pattern as clearly compared to what we saw in the litre plots of the Galbraith data. They are not as clustered together (representing replicate inconsistency) and they sometimes overlap the \textit{x=y} line (representing lack of difference between treatment groups). This finding reflects what we saw in the messy looking parallel coordinate lines of Figure \ref{fig:pcpGalbraith}.}
   \label{fig:litreClusterRutter}
 \end{figure}
 
