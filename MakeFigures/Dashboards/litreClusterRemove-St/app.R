@@ -9,6 +9,7 @@ library(data.table)
 library(RColorBrewer)
 library(Hmisc)
 library(shinycssloaders)
+library(EDASeq)
 
 options(spinner.color.background="#F5F5F5")
 pointColor = scales::seq_gradient_pal("firebrick2", "red4", "Lab")(seq(0,1,length.out=8))[1]
