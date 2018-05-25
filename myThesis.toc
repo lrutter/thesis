@@ -53,18 +53,18 @@
 \contentsline {subsection}{\numberline {5.2.7}Probing resilience versus resistance}{70}{subsection.5.2.7}
 \contentsline {section}{\numberline {5.3}Results}{70}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{70}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{72}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison DEG results}{73}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{74}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{77}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Discussion}{77}{section.5.4}
-\contentsline {section}{\numberline {5.5}Acknowledgments}{79}{section.5.5}
-\contentsline {chapter}{\chapternumberline {6}Conclusions}{80}{chapter.6}
-\contentsline {section}{\numberline {6.1}Contribution to genealogical data visualization}{80}{section.6.1}
-\contentsline {section}{\numberline {6.2}Contribution to RNA-sequencing data visualization}{81}{section.6.2}
-\contentsline {section}{\numberline {6.3}Contribution to understanding how diet quality and viral innolcuation affect gene expression in honeybees}{82}{section.6.3}
-\contentsline {section}{\numberline {6.4}Future work}{83}{section.6.4}
-\contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 3}{84}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 4}{116}{chapter.8}
-\contentsline {chapter}{\chapternumberline {9}Supplementary material for Chapter 5}{137}{chapter.9}
-\contentsline {chapter}{Bibliography}{156}{section*.87}
+\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{73}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison of DEG results}{74}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{75}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{78}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Discussion}{78}{section.5.4}
+\contentsline {section}{\numberline {5.5}Acknowledgments}{80}{section.5.5}
+\contentsline {chapter}{\chapternumberline {6}Conclusions}{81}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contribution to genealogical data visualization}{81}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contribution to RNA-sequencing data visualization}{82}{section.6.2}
+\contentsline {section}{\numberline {6.3}Contribution to understanding how diet quality and viral innolcuation affect gene expression in honeybees}{83}{section.6.3}
+\contentsline {section}{\numberline {6.4}Future work}{84}{section.6.4}
+\contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 3}{85}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 4}{117}{chapter.8}
+\contentsline {chapter}{\chapternumberline {9}Supplementary material for Chapter 5}{138}{chapter.9}
+\contentsline {chapter}{Bibliography}{157}{chapter*.87}
