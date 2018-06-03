@@ -50,13 +50,13 @@
 \contentsline {subsection}{\numberline {5.2.4}Comparison to previous studies on transcriptomic response to viral infection}{67}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Visualization}{68}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Gene Ontology}{68}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Probing resilience versus resistance}{70}{subsection.5.2.7}
+\contentsline {subsection}{\numberline {5.2.7}Probing tolerance versus resistance}{70}{subsection.5.2.7}
 \contentsline {section}{\numberline {5.3}Results}{70}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{70}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{73}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Pairwise comparison of DEG results}{74}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{75}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Resilience versus resistance}{78}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.5}Tolerance versus resistance}{78}{subsection.5.3.5}
 \contentsline {section}{\numberline {5.4}Discussion}{78}{section.5.4}
 \contentsline {section}{\numberline {5.5}Acknowledgments}{80}{section.5.5}
 \contentsline {chapter}{\chapternumberline {6}Conclusions}{81}{chapter.6}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 JUN 2018 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  3 JUN 2018 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3065,12 +3065,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1780.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1780.
 
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0F23B15E45F9AA4ED4558FB2875BFB84;5333.
+(rerunfilecheck)             Checksum: 08C5C6D967AEADDBD7EDD8DD69F3A768;5331.
  ) 
 Here is how much of TeX's memory you used:
  40661 strings out of 492649
  777688 string characters out of 6129622
- 1204041 words of memory out of 5000000
+ 1204039 words of memory out of 5000000
  43283 multiletter control sequences out of 15000+600000
  562204 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3103,7 +3103,7 @@ hvr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on myThesis.pdf (166 pages, 70124547 bytes).
+Output written on myThesis.pdf (166 pages, 70124521 bytes).
 PDF statistics:
  2593 PDF objects out of 2984 (max. 8388607)
  2096 compressed objects within 21 object streams
