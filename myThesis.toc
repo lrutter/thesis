@@ -50,19 +50,19 @@
 \contentsline {subsection}{\numberline {5.2.4}Comparison to previous studies on transcriptomic response to viral infection}{67}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Visualization}{68}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Gene Ontology}{68}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Probing tolerance versus resistance}{70}{subsection.5.2.7}
-\contentsline {section}{\numberline {5.3}Results}{70}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{70}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{73}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison of DEG results}{74}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{75}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Tolerance versus resistance}{78}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.2.7}Probing tolerance versus resistance}{68}{subsection.5.2.7}
+\contentsline {section}{\numberline {5.3}Results}{69}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Phenotypic results}{69}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Main effect DEG results}{71}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Pairwise comparison of DEG results}{72}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Comparison with Galbraith study}{73}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Tolerance versus resistance}{76}{subsection.5.3.5}
 \contentsline {section}{\numberline {5.4}Discussion}{78}{section.5.4}
 \contentsline {section}{\numberline {5.5}Acknowledgments}{80}{section.5.5}
 \contentsline {chapter}{\chapternumberline {6}Conclusions}{81}{chapter.6}
 \contentsline {section}{\numberline {6.1}Contribution to genealogical data visualization}{81}{section.6.1}
 \contentsline {section}{\numberline {6.2}Contribution to RNA-sequencing data visualization}{82}{section.6.2}
-\contentsline {section}{\numberline {6.3}Contribution to understanding how diet quality and viral innolcuation affect gene expression in honeybees}{83}{section.6.3}
+\contentsline {section}{\numberline {6.3}Contribution to understanding how diet quality and viral innolcuation affect gene expression in honey bees}{83}{section.6.3}
 \contentsline {section}{\numberline {6.4}Future work}{84}{section.6.4}
 \contentsline {chapter}{\chapternumberline {7}Supplementary material for Chapter 3}{85}{chapter.7}
 \contentsline {chapter}{\chapternumberline {8}Supplementary material for Chapter 4}{117}{chapter.8}
