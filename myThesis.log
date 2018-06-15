@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 JUN 2018 00:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 JUN 2018 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2249,11 +2249,11 @@ Package pdftex.def Info: Images/C_T_4.jpg  used on input line 1152.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]
-<Images/N_V_4.png, id=1469, 774.2526pt x 542.025pt>
+<Images/N_V_4.png, id=1469, 556.0775pt x 389.455pt>
 File: Images/N_V_4.png Graphic file (type png)
 <use Images/N_V_4.png>
 Package pdftex.def Info: Images/N_V_4.png  used on input line 1162.
-(pdftex.def)             Requested size: 407.99136pt x 285.61775pt.
+(pdftex.def)             Requested size: 407.99136pt x 285.74384pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2262,7 +2262,7 @@ Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
 [74 <./Images/C_T_4.jpg>]
-Underfull \vbox (badness 7832) has occurred while \output is active []
+Underfull \vbox (badness 7486) has occurred while \output is active []
 
  [75 <./Images/N_V_4.png>]
 <Images/revigo.png, id=1509, 380.1402pt x 702.9462pt>
@@ -2313,18 +2313,18 @@ Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 [83] [84] [85
 
 ]
-<MakeFigures/sbIRClusters.jpg, id=1656, 1003.75pt x 702.625pt>
+<MakeFigures/sbIRClusters.jpg, id=1671, 1003.75pt x 702.625pt>
 File: MakeFigures/sbIRClusters.jpg Graphic file (type jpg)
 <use MakeFigures/sbIRClusters.jpg>
-Package pdftex.def Info: MakeFigures/sbIRClusters.jpg  used on input line 1274.
+Package pdftex.def Info: MakeFigures/sbIRClusters.jpg  used on input line 1269.
 
 (pdftex.def)             Requested size: 407.99136pt x 285.60152pt.
  [86 <./MakeFigures/sbIRClusters.jpg>]
-<MakeFigures/sbIRClusterSigSM1.jpg, id=1661, 702.625pt x 702.625pt>
+<MakeFigures/sbIRClusterSigSM1.jpg, id=1676, 702.625pt x 702.625pt>
 File: MakeFigures/sbIRClusterSigSM1.jpg Graphic file (type jpg)
 <use MakeFigures/sbIRClusterSigSM1.jpg>
 Package pdftex.def Info: MakeFigures/sbIRClusterSigSM1.jpg  used on input line 
-1284.
+1279.
 (pdftex.def)             Requested size: 407.99136pt x 408.00523pt.
 
 
@@ -2336,11 +2336,11 @@ Underfull \vbox (badness 3323) has occurred while \output is active []
  [87
 
  <./MakeFigures/sbIRClusterSigSM1.jpg>]
-<MakeFigures/sbIRClusterSigSM2.jpg, id=1676, 702.625pt x 702.625pt>
+<MakeFigures/sbIRClusterSigSM2.jpg, id=1691, 702.625pt x 702.625pt>
 File: MakeFigures/sbIRClusterSigSM2.jpg Graphic file (type jpg)
 <use MakeFigures/sbIRClusterSigSM2.jpg>
 Package pdftex.def Info: MakeFigures/sbIRClusterSigSM2.jpg  used on input line 
-1292.
+1287.
 (pdftex.def)             Requested size: 407.99136pt x 408.00523pt.
 
 
@@ -2351,194 +2351,194 @@ Overfull \vbox (3.1685pt too high) has occurred while \output is active []
 
 
 [88 <./MakeFigures/sbIRClusterSigSM2.jpg>]
-<MakeFigures/sbIRClusterSigSM3.jpg, id=1692, 702.625pt x 702.625pt>
+<MakeFigures/sbIRClusterSigSM3.jpg, id=1707, 702.625pt x 702.625pt>
 File: MakeFigures/sbIRClusterSigSM3.jpg Graphic file (type jpg)
 <use MakeFigures/sbIRClusterSigSM3.jpg>
 Package pdftex.def Info: MakeFigures/sbIRClusterSigSM3.jpg  used on input line 
-1301.
+1296.
 (pdftex.def)             Requested size: 407.99136pt x 408.00523pt.
 
 
-LaTeX Warning: Float too large for page by 3.36852pt on input line 1305.
+LaTeX Warning: Float too large for page by 3.36852pt on input line 1300.
 
 [89 <./MakeFigures/sbIRClusterSigSM3.jpg>]
-<MakeFigures/sbIRClusterSigSM4.jpg, id=1708, 702.625pt x 702.625pt>
+<MakeFigures/sbIRClusterSigSM4.jpg, id=1723, 702.625pt x 702.625pt>
 File: MakeFigures/sbIRClusterSigSM4.jpg Graphic file (type jpg)
 <use MakeFigures/sbIRClusterSigSM4.jpg>
 Package pdftex.def Info: MakeFigures/sbIRClusterSigSM4.jpg  used on input line 
-1311.
+1306.
 (pdftex.def)             Requested size: 407.99136pt x 408.00523pt.
  [90
 
  <./MakeFigures/sbIRClusterSigSM4.jpg>]
-<MakeFigures/mdsSwitch.png, id=1725, 627.7854pt x 608.5134pt>
+<MakeFigures/mdsSwitch.png, id=1740, 627.7854pt x 608.5134pt>
 File: MakeFigures/mdsSwitch.png Graphic file (type png)
 <use MakeFigures/mdsSwitch.png>
-Package pdftex.def Info: MakeFigures/mdsSwitch.png  used on input line 1320.
+Package pdftex.def Info: MakeFigures/mdsSwitch.png  used on input line 1315.
 (pdftex.def)             Requested size: 298.75264pt x 289.57613pt.
  [91
 
  <./MakeFigures/mdsSwitch.png>]
-<MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg, id=1736, 849.8952pt x 
+<MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg, id=1751, 849.8952pt x 
 1164.0288pt>
 File: MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg Graphic file (type
  jpg)
 <use MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg
-  used on input line 1329.
+  used on input line 1324.
 (pdftex.def)             Requested size: 285.5927pt x 391.14653pt.
  [92
 
  <./MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1336--1337
+Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
 
  []
 
 [93
 
 ] [94] [95]
-<MakeFigures/lkClustersKeep.jpg, id=1817, 1003.75pt x 1806.75pt>
+<MakeFigures/lkClustersKeep.jpg, id=1832, 1003.75pt x 1806.75pt>
 File: MakeFigures/lkClustersKeep.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersKeep.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersKeep.jpg  used on input line 137
-8.
+3.
 (pdftex.def)             Requested size: 265.1919pt x 477.3529pt.
-<MakeFigures/lkClustersOrig.jpg, id=1818, 1003.75pt x 1806.75pt>
+<MakeFigures/lkClustersOrig.jpg, id=1833, 1003.75pt x 1806.75pt>
 File: MakeFigures/lkClustersOrig.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersOrig.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersOrig.jpg  used on input line 138
-7.
+2.
 (pdftex.def)             Requested size: 265.1919pt x 477.3529pt.
-<MakeFigures/lkClustersRemove.jpg, id=1819, 1003.75pt x 1806.75pt>
+<MakeFigures/lkClustersRemove.jpg, id=1834, 1003.75pt x 1806.75pt>
 File: MakeFigures/lkClustersRemove.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersRemove.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersRemove.jpg  used on input line 1
-396.
+391.
 (pdftex.def)             Requested size: 265.1919pt x 477.3529pt.
 
 
-LaTeX Warning: Float too large for page by 4.71616pt on input line 1400.
+LaTeX Warning: Float too large for page by 4.71616pt on input line 1395.
 
-<MakeFigures/lkClustersAdd.jpg, id=1820, 1003.75pt x 1806.75pt>
+<MakeFigures/lkClustersAdd.jpg, id=1835, 1003.75pt x 1806.75pt>
 File: MakeFigures/lkClustersAdd.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersAdd.jpg>
-Package pdftex.def Info: MakeFigures/lkClustersAdd.jpg  used on input line 1405
+Package pdftex.def Info: MakeFigures/lkClustersAdd.jpg  used on input line 1400
 .
 (pdftex.def)             Requested size: 265.1919pt x 477.3529pt.
-<MakeFigures/lkClustersKeepSM.jpg, id=1825, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersKeepSM.jpg, id=1840, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersKeepSM.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersKeepSM.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersKeepSM.jpg  used on input line 1
-414.
+409.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/lkClustersOrigSM.jpg, id=1828, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersOrigSM.jpg, id=1843, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersOrigSM.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersOrigSM.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersOrigSM.jpg  used on input line 1
-423.
+418.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/lkClustersRemoveSM.jpg, id=1831, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersRemoveSM.jpg, id=1846, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersRemoveSM.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersRemoveSM.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersRemoveSM.jpg  used on input line
- 1432.
+ 1427.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/lkClustersAddSM.jpg, id=1834, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersAddSM.jpg, id=1849, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersAddSM.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersAddSM.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersAddSM.jpg  used on input line 14
-41.
+36.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg, id=1839, 550.697
+<MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg, id=1854, 550.697
 4pt x 807.9786pt>
 File: MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg Graphic file
  (type jpg)
 <use MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterKeep/litreClusterKe
-ep.jpg  used on input line 1451.
+ep.jpg  used on input line 1446.
 (pdftex.def)             Requested size: 285.5927pt x 419.01706pt.
-<MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg, id=1842, 544.434
+<MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg, id=1857, 544.434
 pt x 805.5696pt>
 File: MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg Graphic file
  (type jpg)
 <use MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterOrig/litreClusterOr
-ig.jpg  used on input line 1460.
+ig.jpg  used on input line 1455.
 (pdftex.def)             Requested size: 285.5927pt x 422.5862pt.
-<MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg, id=1845, 543
+<MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg, id=1860, 543
 .4704pt x 805.5696pt>
 File: MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg Graphic 
 file (type jpg)
 <use MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterRemove/litreCluster
-Remove.jpg  used on input line 1469.
+Remove.jpg  used on input line 1464.
 (pdftex.def)             Requested size: 285.5927pt x 423.32372pt.
-<MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg, id=1848, 541.0614p
+<MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg, id=1863, 541.0614p
 t x 805.5696pt>
 File: MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg Graphic file (
 type jpg)
 <use MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd
-.jpg  used on input line 1478.
+.jpg  used on input line 1473.
 (pdftex.def)             Requested size: 285.5927pt x 425.22897pt.
-<MakeFigures/lkClustersKeepSM-St.jpg, id=1853, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersKeepSM-St.jpg, id=1868, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersKeepSM-St.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersKeepSM-St.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersKeepSM-St.jpg  used on input lin
-e 1487.
+e 1482.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/lkClustersOrigSM-St.jpg, id=1860, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersOrigSM-St.jpg, id=1875, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersOrigSM-St.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersOrigSM-St.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersOrigSM-St.jpg  used on input lin
-e 1496.
+e 1491.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/lkClustersRemoveSM-St.jpg, id=1867, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersRemoveSM-St.jpg, id=1882, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersRemoveSM-St.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersRemoveSM-St.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersRemoveSM-St.jpg  used on input l
-ine 1505.
+ine 1500.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/lkClustersAddSM-St.jpg, id=1872, 633.36626pt x 557.08125pt>
+<MakeFigures/lkClustersAddSM-St.jpg, id=1887, 633.36626pt x 557.08125pt>
 File: MakeFigures/lkClustersAddSM-St.jpg Graphic file (type jpg)
 <use MakeFigures/lkClustersAddSM-St.jpg>
 Package pdftex.def Info: MakeFigures/lkClustersAddSM-St.jpg  used on input line
- 1514.
+ 1509.
 (pdftex.def)             Requested size: 407.99136pt x 358.85988pt.
-<MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg, id=1883, 5
+<MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg, id=1898, 5
 66.115pt x 800.7516pt>
 File: MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg Graphi
 c file (type jpg)
 <use MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterKeep-St/litreCluste
-rKeep-St.jpg  used on input line 1523.
+rKeep-St.jpg  used on input line 1518.
 (pdftex.def)             Requested size: 285.5927pt x 403.96704pt.
-<MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg, id=1888, 5
+<MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg, id=1903, 5
 69.4876pt x 800.7516pt>
 File: MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg Graphi
 c file (type jpg)
 <use MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterOrig-St/litreCluste
-rOrig-St.jpg  used on input line 1532.
+rOrig-St.jpg  used on input line 1527.
 (pdftex.def)             Requested size: 285.5927pt x 401.57222pt.
-<MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg, id=189
-3, 873.5034pt x 1009.371pt>
+<MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg, id=190
+8, 873.5034pt x 1009.371pt>
 File: MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg Gr
 aphic file (type jpg)
 <use MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterRemove-St/litreClus
-terRemove-St.jpg  used on input line 1541.
+terRemove-St.jpg  used on input line 1536.
 (pdftex.def)             Requested size: 407.99136pt x 471.44731pt.
-<MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg, id=1902, 867
+<MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg, id=1917, 867
 .24pt x 980.463pt>
 File: MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg Graphic 
 file (type jpg)
 <use MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg>
 Package pdftex.def Info: MakeFigures/Dashboards/litreClusterAdd-St/litreCluster
-Add-St.jpg  used on input line 1550.
+Add-St.jpg  used on input line 1545.
 (pdftex.def)             Requested size: 407.99136pt x 461.2665pt.
 
-LaTeX Warning: Float too large for page by 15.82976pt on input line 1554.
+LaTeX Warning: Float too large for page by 15.82976pt on input line 1549.
 
 [96]
 
@@ -2569,10 +2569,10 @@ litreClusterKeep-St/litreClusterKeep-St.jpg>] [114 <./MakeFigures/Dashboards/li
 treClusterOrig-St/litreClusterOrig-St.jpg>] [115 <./MakeFigures/Dashboards/litr
 eClusterRemove-St/litreClusterRemove-St.jpg>] [116 <./MakeFigures/Dashboards/li
 treClusterAdd-St/litreClusterAdd-St.jpg>]
-<./scatMatOrth.jpg, id=2029, 954.56625pt x 726.715pt>
+<./scatMatOrth.jpg, id=2044, 954.56625pt x 726.715pt>
 File: ./scatMatOrth.jpg Graphic file (type jpg)
 <use ./scatMatOrth.jpg>
-Package pdftex.def Info: ./scatMatOrth.jpg  used on input line 1569.
+Package pdftex.def Info: ./scatMatOrth.jpg  used on input line 1564.
 (pdftex.def)             Requested size: 954.56393pt x 726.71321pt.
 <<scatMatOrth.mov>>
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2580,286 +2580,286 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [117
 
 ]
-<./scatMatFC.jpg, id=2046, 955.57pt x 728.7225pt>
+<./scatMatFC.jpg, id=2061, 955.57pt x 728.7225pt>
 File: ./scatMatFC.jpg Graphic file (type jpg)
 <use ./scatMatFC.jpg>
-Package pdftex.def Info: ./scatMatFC.jpg  used on input line 1578.
+Package pdftex.def Info: ./scatMatFC.jpg  used on input line 1573.
 (pdftex.def)             Requested size: 955.56767pt x 728.72072pt.
 <<scatMatFC.mov>>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [118 <./scatMatOrth.jpg>]
-<./pcpPlotlyMarkers.jpg, id=2065, 1089.06876pt x 676.5275pt>
+<./pcpPlotlyMarkers.jpg, id=2080, 1089.06876pt x 676.5275pt>
 File: ./pcpPlotlyMarkers.jpg Graphic file (type jpg)
 <use ./pcpPlotlyMarkers.jpg>
-Package pdftex.def Info: ./pcpPlotlyMarkers.jpg  used on input line 1587.
+Package pdftex.def Info: ./pcpPlotlyMarkers.jpg  used on input line 1582.
 (pdftex.def)             Requested size: 1089.0661pt x 676.52583pt.
 <<pcpPlotlyMarkers.mov>>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [119 <./scatMatFC.jpg>]
-<./pcpSeqSel.jpg, id=2086, 1118.1775pt x 706.64pt>
+<./pcpSeqSel.jpg, id=2101, 1118.1775pt x 706.64pt>
 File: ./pcpSeqSel.jpg Graphic file (type jpg)
 <use ./pcpSeqSel.jpg>
-Package pdftex.def Info: ./pcpSeqSel.jpg  used on input line 1596.
+Package pdftex.def Info: ./pcpSeqSel.jpg  used on input line 1591.
 (pdftex.def)             Requested size: 1118.17477pt x 706.63828pt.
 <<pcpSeqSel.mov>>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [120 <./pcpPlotlyMarkers.jpg>]
-<bigPintManual.pdf, id=2108, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2124, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf>
-Package pdftex.def Info: bigPintManual.pdf  used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf  used on input line 1599.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf>
-Package pdftex.def Info: bigPintManual.pdf  used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf  used on input line 1599.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<bigPintManual.pdf, id=2111, page=1, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2127, page=1, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 1>
-Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1599.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 1>
-Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [121 <./pcpSeqSel.jpg>]
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 1>
-Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 1>
-Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 1>
-Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page1 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [122 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2149, page=2, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2164, page=2, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 2>
-Package pdftex.def Info: bigPintManual.pdf , page2 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page2 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 2>
-Package pdftex.def Info: bigPintManual.pdf , page2 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page2 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 2>
-Package pdftex.def Info: bigPintManual.pdf , page2 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page2 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
 [123 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2162, page=3, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2177, page=3, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 3>
-Package pdftex.def Info: bigPintManual.pdf , page3 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page3 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 3>
-Package pdftex.def Info: bigPintManual.pdf , page3 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page3 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 3>
-Package pdftex.def Info: bigPintManual.pdf , page3 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page3 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [124 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2167, page=4, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2182, page=4, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 4>
-Package pdftex.def Info: bigPintManual.pdf , page4 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page4 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 4>
-Package pdftex.def Info: bigPintManual.pdf , page4 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page4 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 4>
-Package pdftex.def Info: bigPintManual.pdf , page4 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page4 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [125 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2172, page=5, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2187, page=5, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 5>
-Package pdftex.def Info: bigPintManual.pdf , page5 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page5 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 5>
-Package pdftex.def Info: bigPintManual.pdf , page5 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page5 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 5>
-Package pdftex.def Info: bigPintManual.pdf , page5 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page5 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [126 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2177, page=6, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2192, page=6, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 6>
-Package pdftex.def Info: bigPintManual.pdf , page6 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page6 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 6>
-Package pdftex.def Info: bigPintManual.pdf , page6 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page6 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 6>
-Package pdftex.def Info: bigPintManual.pdf , page6 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page6 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [127 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2183, page=7, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2198, page=7, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 7>
-Package pdftex.def Info: bigPintManual.pdf , page7 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page7 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 7>
-Package pdftex.def Info: bigPintManual.pdf , page7 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page7 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 7>
-Package pdftex.def Info: bigPintManual.pdf , page7 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page7 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [128 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2188, page=8, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2203, page=8, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 8>
-Package pdftex.def Info: bigPintManual.pdf , page8 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page8 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 8>
-Package pdftex.def Info: bigPintManual.pdf , page8 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page8 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 8>
-Package pdftex.def Info: bigPintManual.pdf , page8 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page8 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [129 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2193, page=9, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2208, page=9, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 9>
-Package pdftex.def Info: bigPintManual.pdf , page9 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page9 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 9>
-Package pdftex.def Info: bigPintManual.pdf , page9 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page9 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 9>
-Package pdftex.def Info: bigPintManual.pdf , page9 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page9 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [130 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2198, page=10, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2213, page=10, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 10>
-Package pdftex.def Info: bigPintManual.pdf , page10 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page10 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 10>
-Package pdftex.def Info: bigPintManual.pdf , page10 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page10 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 10>
-Package pdftex.def Info: bigPintManual.pdf , page10 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page10 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [131 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2203, page=11, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2218, page=11, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 11>
-Package pdftex.def Info: bigPintManual.pdf , page11 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page11 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 11>
-Package pdftex.def Info: bigPintManual.pdf , page11 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page11 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 11>
-Package pdftex.def Info: bigPintManual.pdf , page11 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page11 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [132 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2208, page=12, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2223, page=12, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 12>
-Package pdftex.def Info: bigPintManual.pdf , page12 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page12 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 12>
-Package pdftex.def Info: bigPintManual.pdf , page12 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page12 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 12>
-Package pdftex.def Info: bigPintManual.pdf , page12 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page12 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [133 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2214, page=13, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2229, page=13, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 13>
-Package pdftex.def Info: bigPintManual.pdf , page13 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page13 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 13>
-Package pdftex.def Info: bigPintManual.pdf , page13 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page13 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 13>
-Package pdftex.def Info: bigPintManual.pdf , page13 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page13 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [134 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2219, page=14, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2234, page=14, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 14>
-Package pdftex.def Info: bigPintManual.pdf , page14 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page14 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 14>
-Package pdftex.def Info: bigPintManual.pdf , page14 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page14 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 14>
-Package pdftex.def Info: bigPintManual.pdf , page14 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page14 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [135 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2224, page=15, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2239, page=15, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 15>
-Package pdftex.def Info: bigPintManual.pdf , page15 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page15 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 15>
-Package pdftex.def Info: bigPintManual.pdf , page15 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page15 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 15>
-Package pdftex.def Info: bigPintManual.pdf , page15 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page15 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [136 <./bigPintManual.pdf>]
-<bigPintManual.pdf, id=2229, page=16, 597.50829pt x 845.0471pt>
+<bigPintManual.pdf, id=2244, page=16, 597.50829pt x 845.0471pt>
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 16>
-Package pdftex.def Info: bigPintManual.pdf , page16 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page16 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 16>
-Package pdftex.def Info: bigPintManual.pdf , page16 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page16 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: bigPintManual.pdf Graphic file (type pdf)
 <use bigPintManual.pdf, page 16>
-Package pdftex.def Info: bigPintManual.pdf , page16 used on input line 1604.
+Package pdftex.def Info: bigPintManual.pdf , page16 used on input line 1599.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 
 [137 <./bigPintManual.pdf>]
-<Images/mainEffectDEGs.png, id=2241, 473.6094pt x 332.442pt>
+<Images/mainEffectDEGs.png, id=2256, 473.6094pt x 332.442pt>
 File: Images/mainEffectDEGs.png Graphic file (type png)
 <use Images/mainEffectDEGs.png>
-Package pdftex.def Info: Images/mainEffectDEGs.png  used on input line 1617.
+Package pdftex.def Info: Images/mainEffectDEGs.png  used on input line 1612.
 (pdftex.def)             Requested size: 277.41176pt x 194.72887pt.
-<Images/ChestnutPathways.png, id=2242, 722.7pt x 702.4644pt>
+<Images/ChestnutPathways.png, id=2257, 722.7pt x 702.4644pt>
 File: Images/ChestnutPathways.png Graphic file (type png)
 <use Images/ChestnutPathways.png>
-Package pdftex.def Info: Images/ChestnutPathways.png  used on input line 1623.
+Package pdftex.def Info: Images/ChestnutPathways.png  used on input line 1618.
 (pdftex.def)             Requested size: 426.79135pt x 414.847pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2869,50 +2869,50 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  <./Images/mainEffectDEGs.png>]
 File: Images/ChestnutPathways.png Graphic file (type png)
 <use Images/ChestnutPathways.png>
-Package pdftex.def Info: Images/ChestnutPathways.png  used on input line 1629.
+Package pdftex.def Info: Images/ChestnutPathways.png  used on input line 1624.
 (pdftex.def)             Requested size: 426.79135pt x 414.847pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [139 <./Images/ChestnutPathways.png>]
-<Images/NCNRNCPathways.png, id=2254, 722.7pt x 439.4016pt>
+<Images/NCNRNCPathways.png, id=2269, 722.7pt x 439.4016pt>
 File: Images/NCNRNCPathways.png Graphic file (type png)
 <use Images/NCNRNCPathways.png>
-Package pdftex.def Info: Images/NCNRNCPathways.png  used on input line 1635.
+Package pdftex.def Info: Images/NCNRNCPathways.png  used on input line 1630.
 (pdftex.def)             Requested size: 426.79135pt x 259.49277pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [140]
-<Images/NCNRNRPathways.png, id=2259, 722.7pt x 105.0324pt>
+<Images/NCNRNRPathways.png, id=2275, 722.7pt x 105.0324pt>
 File: Images/NCNRNRPathways.png Graphic file (type png)
 <use Images/NCNRNRPathways.png>
-Package pdftex.def Info: Images/NCNRNRPathways.png  used on input line 1641.
+Package pdftex.def Info: Images/NCNRNRPathways.png  used on input line 1636.
 (pdftex.def)             Requested size: 426.79135pt x 62.02786pt.
-<Images/VCVRVCPathways.png, id=2260, 722.7pt x 95.3964pt>
+<Images/VCVRVCPathways.png, id=2276, 722.7pt x 95.3964pt>
 File: Images/VCVRVCPathways.png Graphic file (type png)
 <use Images/VCVRVCPathways.png>
-Package pdftex.def Info: Images/VCVRVCPathways.png  used on input line 1647.
+Package pdftex.def Info: Images/VCVRVCPathways.png  used on input line 1642.
 (pdftex.def)             Requested size: 426.79135pt x 56.33722pt.
-<Images/VCVRVRPathways.png, id=2261, 722.7pt x 48.18pt>
+<Images/VCVRVRPathways.png, id=2277, 722.7pt x 48.18pt>
 File: Images/VCVRVRPathways.png Graphic file (type png)
 <use Images/VCVRVRPathways.png>
-Package pdftex.def Info: Images/VCVRVRPathways.png  used on input line 1653.
+Package pdftex.def Info: Images/VCVRVRPathways.png  used on input line 1648.
 (pdftex.def)             Requested size: 426.79135pt x 28.45313pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [141 <./Images/NCNRNCPathways.png> <./Images/NCNRNRPathways.png> <./Images/VCV
 RVCPathways.png>]
-<Images/pairDEGs.png, id=2269, 436.9926pt x 676.4472pt>
+<Images/pairDEGs.png, id=2285, 436.9926pt x 676.4472pt>
 File: Images/pairDEGs.png Graphic file (type png)
 <use Images/pairDEGs.png>
-Package pdftex.def Info: Images/pairDEGs.png  used on input line 1660.
+Package pdftex.def Info: Images/pairDEGs.png  used on input line 1655.
 (pdftex.def)             Requested size: 277.41176pt x 429.43599pt.
-<Images/mdsPlots.png, id=2270, 595.023pt x 847.0044pt>
+<Images/mdsPlots.png, id=2286, 595.023pt x 847.0044pt>
 File: Images/mdsPlots.png Graphic file (type png)
 <use Images/mdsPlots.png>
-Package pdftex.def Info: Images/mdsPlots.png  used on input line 1667.
+Package pdftex.def Info: Images/mdsPlots.png  used on input line 1662.
 (pdftex.def)             Requested size: 407.99136pt x 580.78903pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2922,119 +2922,119 @@ Overfull \vbox (26.55225pt too high) has occurred while \output is active []
 
 
 [143 <./Images/mdsPlots.png>]
-<Images/C_R_6.jpg, id=2283, 1003.75pt x 1053.9375pt>
+<Images/C_R_6.jpg, id=2298, 493.845pt x 513.41812pt>
 File: Images/C_R_6.jpg Graphic file (type jpg)
 <use Images/C_R_6.jpg>
-Package pdftex.def Info: Images/C_R_6.jpg  used on input line 1675.
-(pdftex.def)             Requested size: 407.99136pt x 428.40228pt.
-<Images/litreClusterRutter.png, id=2286, 657.657pt x 674.0382pt>
+Package pdftex.def Info: Images/C_R_6.jpg  used on input line 1670.
+(pdftex.def)             Requested size: 407.99136pt x 424.15489pt.
+<Images/litreClusterRutter.png, id=2301, 657.657pt x 674.0382pt>
 File: Images/litreClusterRutter.png Graphic file (type png)
 <use Images/litreClusterRutter.png>
-Package pdftex.def Info: Images/litreClusterRutter.png  used on input line 1683
+Package pdftex.def Info: Images/litreClusterRutter.png  used on input line 1678
 .
 (pdftex.def)             Requested size: 407.99136pt x 418.16676pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [144 <./Images/C_R_6.jpg>]
-<Images/litreCluster1.png, id=2293, 657.1752pt x 672.5928pt>
+<Images/litreCluster1.png, id=2309, 657.1752pt x 672.5928pt>
 File: Images/litreCluster1.png Graphic file (type png)
 <use Images/litreCluster1.png>
-Package pdftex.def Info: Images/litreCluster1.png  used on input line 1691.
+Package pdftex.def Info: Images/litreCluster1.png  used on input line 1686.
 (pdftex.def)             Requested size: 407.99136pt x 417.56769pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [145 <./Images/litreClusterRutter.png>]
-<Images/litreCluster2.png, id=2302, 667.7748pt x 683.6742pt>
+<Images/litreCluster2.png, id=2318, 667.7748pt x 683.6742pt>
 File: Images/litreCluster2.png Graphic file (type png)
 <use Images/litreCluster2.png>
-Package pdftex.def Info: Images/litreCluster2.png  used on input line 1699.
+Package pdftex.def Info: Images/litreCluster2.png  used on input line 1694.
 (pdftex.def)             Requested size: 407.99136pt x 417.71872pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [146 <./Images/litreCluster1.png>]
-<Images/GalbraithClust1SM.png, id=2314, 571.13374pt x 557.08125pt>
+<Images/GalbraithClust1SM.png, id=2330, 571.13374pt x 557.08125pt>
 File: Images/GalbraithClust1SM.png Graphic file (type png)
 <use Images/GalbraithClust1SM.png>
-Package pdftex.def Info: Images/GalbraithClust1SM.png  used on input line 1707.
+Package pdftex.def Info: Images/GalbraithClust1SM.png  used on input line 1702.
 
 (pdftex.def)             Requested size: 407.99136pt x 397.95306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [147 <./Images/litreCluster2.png>]
-<Images/GalbraithClust2SM.png, id=2322, 571.13374pt x 557.08125pt>
+<Images/GalbraithClust2SM.png, id=2338, 571.13374pt x 557.08125pt>
 File: Images/GalbraithClust2SM.png Graphic file (type png)
 <use Images/GalbraithClust2SM.png>
-Package pdftex.def Info: Images/GalbraithClust2SM.png  used on input line 1715.
+Package pdftex.def Info: Images/GalbraithClust2SM.png  used on input line 1710.
 
 (pdftex.def)             Requested size: 407.99136pt x 397.95306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [148 <./Images/GalbraithClust1SM.png>]
-<Images/GalbraithClust3SM.png, id=2330, 571.13374pt x 557.08125pt>
+<Images/GalbraithClust3SM.png, id=2346, 571.13374pt x 557.08125pt>
 File: Images/GalbraithClust3SM.png Graphic file (type png)
 <use Images/GalbraithClust3SM.png>
-Package pdftex.def Info: Images/GalbraithClust3SM.png  used on input line 1723.
+Package pdftex.def Info: Images/GalbraithClust3SM.png  used on input line 1718.
 
 (pdftex.def)             Requested size: 407.99136pt x 397.95306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [149 <./Images/GalbraithClust2SM.png>]
-<Images/GalbraithClust4SM.png, id=2338, 571.13374pt x 557.08125pt>
+<Images/GalbraithClust4SM.png, id=2354, 571.13374pt x 557.08125pt>
 File: Images/GalbraithClust4SM.png Graphic file (type png)
 <use Images/GalbraithClust4SM.png>
-Package pdftex.def Info: Images/GalbraithClust4SM.png  used on input line 1731.
+Package pdftex.def Info: Images/GalbraithClust4SM.png  used on input line 1726.
 
 (pdftex.def)             Requested size: 407.99136pt x 397.95306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [150 <./Images/GalbraithClust3SM.png>]
-<Images/RutterSM1.png, id=2346, 565.11125pt x 557.08125pt>
+<Images/RutterSM1.png, id=2362, 565.11125pt x 557.08125pt>
 File: Images/RutterSM1.png Graphic file (type png)
 <use Images/RutterSM1.png>
-Package pdftex.def Info: Images/RutterSM1.png  used on input line 1739.
+Package pdftex.def Info: Images/RutterSM1.png  used on input line 1734.
 (pdftex.def)             Requested size: 407.99136pt x 402.20325pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [151 <./Images/GalbraithClust4SM.png>]
-<Images/RutterSM2.png, id=2353, 565.11125pt x 557.08125pt>
+<Images/RutterSM2.png, id=2369, 565.11125pt x 557.08125pt>
 File: Images/RutterSM2.png Graphic file (type png)
 <use Images/RutterSM2.png>
-Package pdftex.def Info: Images/RutterSM2.png  used on input line 1747.
+Package pdftex.def Info: Images/RutterSM2.png  used on input line 1742.
 (pdftex.def)             Requested size: 407.99136pt x 402.20325pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [152 <./Images/RutterSM1.png>]
-<Images/RutterSM3.png, id=2359, 565.11125pt x 557.08125pt>
+<Images/RutterSM3.png, id=2375, 565.11125pt x 557.08125pt>
 File: Images/RutterSM3.png Graphic file (type png)
 <use Images/RutterSM3.png>
-Package pdftex.def Info: Images/RutterSM3.png  used on input line 1755.
+Package pdftex.def Info: Images/RutterSM3.png  used on input line 1750.
 (pdftex.def)             Requested size: 407.99136pt x 402.20325pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [153 <./Images/RutterSM2.png>]
-<Images/RutterSM4.png, id=2365, 565.11125pt x 557.08125pt>
+<Images/RutterSM4.png, id=2381, 565.11125pt x 557.08125pt>
 File: Images/RutterSM4.png Graphic file (type png)
 <use Images/RutterSM4.png>
-Package pdftex.def Info: Images/RutterSM4.png  used on input line 1763.
+Package pdftex.def Info: Images/RutterSM4.png  used on input line 1758.
 (pdftex.def)             Requested size: 407.99136pt x 402.20325pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [154 <./Images/RutterSM3.png>]
-<Images/GRVenn.png, id=2371, 677.4108pt x 190.311pt>
+<Images/GRVenn.png, id=2387, 677.4108pt x 190.311pt>
 File: Images/GRVenn.png Graphic file (type png)
 <use Images/GRVenn.png>
-Package pdftex.def Info: Images/GRVenn.png  used on input line 1771.
+Package pdftex.def Info: Images/GRVenn.png  used on input line 1766.
 (pdftex.def)             Requested size: 407.99136pt x 114.62015pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3043,34 +3043,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 7
 
 ] [158]
-[159] [160] [161] [162]
+[159] [160] [161] [162] [163]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 618.
- [163] [164] [165])
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 623.
+ [164] [165])
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1782.
+(in both cases you will find help in the memoir manual). on input line 1777.
 
 [166]
 \tf@toc=\write8
 \openout8 = `myThesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1782.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1782.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1777.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1777.
  (./myThesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1782.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1782.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1777.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1777.
 
 Package rerunfilecheck Info: File `myThesis.out' has not changed.
 (rerunfilecheck)             Checksum: 68BD7907F6B96C20E4460734574BD0C6;5332.
  ) 
 Here is how much of TeX's memory you used:
- 40689 strings out of 492649
- 778087 string characters out of 6129622
- 1204501 words of memory out of 5000000
- 43304 multiletter control sequences out of 15000+600000
+ 40701 strings out of 492649
+ 778266 string characters out of 6129622
+ 1204708 words of memory out of 5000000
+ 43313 multiletter control sequences out of 15000+600000
  562204 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,18n,85p,10369b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3102,10 +3102,10 @@ hvr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on myThesis.pdf (166 pages, 70128201 bytes).
+Output written on myThesis.pdf (166 pages, 70333854 bytes).
 PDF statistics:
- 2625 PDF objects out of 2984 (max. 8388607)
- 2127 compressed objects within 22 object streams
- 460 named destinations out of 1000 (max. 500000)
+ 2642 PDF objects out of 2984 (max. 8388607)
+ 2143 compressed objects within 22 object streams
+ 463 named destinations out of 1000 (max. 500000)
  25465 words of extra memory for PDF output out of 29859 (max. 10000000)
 
