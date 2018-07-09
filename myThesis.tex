@@ -1058,7 +1058,7 @@ While our study examines honey bees from polyandrous colonies, the Galbraith stu
 
 \subsection{Visualization}
 
-We used various visualization tools as part of our analysis. First, we used popular tools (like the MDS plot) from the DESeq2 package. Second, we used multivariate visualization tools from our work-in-progress package called bigPint. Specifically, we used parallel coordinate plots, litre plots, and scatterplot matrices to assess the variability between the replicates and the treatments in our data and in the DEG outputs from applied models. We also used these plotting techniques to assess for normalization problems and other common problems in RNA-seq analysis pipelines. Third, we used visual inference techniques to assess the signal:to:noise ratio in the datasets and to assess the suitability of the DEG calls. 
+We used an array visualization tools as part of our analysis. We first used popular tools (like the MDS plot) from the DESeq2 package. After that, we used multivariate visualization tools from our work-in-progress package called bigPint. Specifically, we used parallel coordinate plots, litre plots, and scatterplot matrices to assess the variability between the replicates and the treatments in our data and in the DEG outputs from applied models. We also used these plotting techniques to assess for normalization problems and other common problems in RNA-seq analysis pipelines.
 
 \subsection{Gene Ontology}
 
@@ -1147,7 +1147,6 @@ We see that the 1,019 DEGs from the Galbraith dataset form relatively clean-look
 
 \begin{figure}[H]
 \centering
-% ../VirusHoneyBee/DESeq2/ClusterStandard/Clustering_data_FDR_05/
 \begin{framed}
   \includegraphics[width=\textwidth]{Images/C_T_4.jpg}
   \end{framed}
@@ -1157,7 +1156,6 @@ We see that the 1,019 DEGs from the Galbraith dataset form relatively clean-look
 
 \begin{figure}[H]
 \centering
-% /../N_V/DESeq2/ClusterStandard/Clustering_data_FDR_05
 \begin{framed}
   \includegraphics[width=\textwidth]{Images/N_V_4.png}
   \end{framed}
@@ -1173,7 +1171,9 @@ Despite the virus-related DEGs (n = 1,019) from the Galbraith dataset displaying
 
 \subsection{Tolerance versus resistance}
 
-Using the contrasts specified in Table \ref{tbl:contrasts}, we discovered 122 ``tolerance'' candidate genes and 125 ``resistance'' candidate genes. Within our 122 ``tolerance'' gene ontologies, we found functions related to metabolism (such as carbohydrate metabolism, fructose metabolism, and chitin metabolism). However, we also discovered gene ontologies related to RNA polymerase II transcription, immune response, and regulation of response to reactive oxygen species (Figure \ref{fig:revigo}A). Within our 125 ``resistance'' gene ontologies, we found functions related to metabolism (such as carboyhydrate metabolism, chitin metabolism, oligosaccharide biosynthesis, and general metabolism) (Figure \ref{fig:revigo}B).
+Using the contrasts specified in Table \ref{tbl:contrasts}, we discovered 122 ``tolerance'' candidate genes and 125 ``resistance'' candidate genes. We again used parallel coordinate lines superimposed onto boxplots to visualize these candidate genes. To reduce overlapping of parallel coordinate lines, we again used hierarchical clustering techniques to separate DEGs into common patterns. Perhaps unsurprisingly, we still see a substantial amount of noise (inconsistency between replicates) in our resulting candidate genes (Figures \ref{fig:tolerance} and \ref{fig:resistance}). However, the broad patterns we expect to see still emerge: For example, based on the contrasts we created to obtain the `tolerance'' candidate genes, we expect them to display larger count values in the ``NC'' group compared to the ``VC'' group and larger count values in the ``NR'' group compared to the ``VR'' group. Indeed, we see this pattern in the associated parallel coordinate plots (Figure \ref{fig:tolerance}). Likewise, based on the contrasts we created to obtain the `resistance'' candidate genes, we still expect them to display larger count values in the ``VC'' group compared to the ``VR'' group, but we no longer expect to see a difference between the ``NC'' and ``NR'' groups. We do generally see these expected patterns in the associated parallel coordinate plots: While there are large outliers in the ``NC'' group, the ``NR'' replicates are no longer typically below a standardized count of zero (Figure \ref{fig:resistance}). The genes in Cluster 3 in particular may follow the expected pattern the most distinctively (Figure \ref{fig:resistance}).
+
+Within our 122 ``tolerance'' gene ontologies, we found functions related to metabolism (such as carbohydrate metabolism, fructose metabolism, and chitin metabolism). However, we also discovered gene ontologies related to RNA polymerase II transcription, immune response, and regulation of response to reactive oxygen species (Figure \ref{fig:revigo}A). Within our 125 ``resistance'' gene ontologies, we found functions related to metabolism (such as carboyhydrate metabolism, chitin metabolism, oligosaccharide biosynthesis, and general metabolism) (Figure \ref{fig:revigo}B).
 
 \begin{figure}[H]
   \centering
@@ -1669,7 +1669,7 @@ This section contains supplementary analyses that the reader might find useful, 
 \begin{framed}
   \includegraphics[width=\textwidth]{Images/C_R_6.jpg}
 \end{framed}
-  \caption{Parallel coordinate plots of the 1,914 DEGs after hiearchical clustering of size six between the Chestnut and Rockrose groups of our study. Here ``N'' represents non-infected control group, and ``V'' represents treatment of virus. We see from this plot that the DEG designations for this dataset do not appear as clean compared to what we saw in the Galbraith dataset in Figure \ref{fig:pcpGalbraith}.}
+  \caption{Parallel coordinate plots of the 1,914 DEGs after hiearchical clustering of size six between the Chestnut and Rockrose groups of our study. Here ``N'' represents non-infected control group, and ``V'' represents treatment of virus. The vertical red line indicates the distinction between treatment groups. We see from this plot that the DEG designations for this dataset do not appear as clean compared to what we saw in the Galbraith dataset in Figure \ref{fig:pcpGalbraith}.}
   \label{fig:pcpRutterDiet}
 \end{figure}
 
@@ -1768,6 +1768,41 @@ This section contains supplementary analyses that the reader might find useful, 
   \caption{Venn diagrams comparing the virus-related DEG overlaps between the Galbraith study (labeled as ``G'') and our study (labeled as ``R''). From left to right: Total virus-related DEGs (subplot A), virus-upregulated DEGs (subplot B), control-upregulated DEGs (subplot C). Both the total virus-related and virus-upregulated DEGs showed significant overlap between the studies (p-value < 2.2e-16) as per Fisher's Exact Test for Count Data. There was one gene that was virus-upregulated in the Galbraith study but control-upregulated in our study.}
   \label{fig:GRVenn}
 \end{figure}
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+\centering
+\begin{framed}
+  \includegraphics[width=\textwidth]{Images/tolerance.png}
+  \end{framed}
+  \caption{Parallel coordinate plots of the 122 DEGs after hiearchical clustering of size four between the ``tolerance'' candidate genes. Here ``N'' represents non-infected control group, ``V'' represents treatment of virus, ``C'' represents high-quality Chestnut diet, and ``R'' represents low-quality Rockrose diet. The vertical red line indicates the distinction between treatment groups. We see there is considerable noise in the data (non-level replicate values), but that the general patterns of the DEGs follow what we expect based on our ``tolerance'' contrast.
+  }
+  \label{fig:tolerance}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{framed}
+  \includegraphics[width=\textwidth]{Images/resistance.png}
+  \end{framed}
+  \caption{Parallel coordinate plots of the 125 DEGs after hiearchical clustering of size four between the ``resistance'' candidate genes. Here ``N'' represents non-infected control group, ``V'' represents treatment of virus, ``C'' represents high-quality Chestnut diet, and ``R'' represents low-quality Rockrose diet. The vertical red line indicates the distinction between treatment groups. We see there is considerable noise in the data (non-level replicate values), but that the general patterns of the DEGs follow what we expect based on our ``resistance'' contrasts.
+  
+  }
+  \label{fig:resistance}
+\end{figure}
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
