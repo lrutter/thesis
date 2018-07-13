@@ -114,7 +114,9 @@
 \newcommand{\R}{{\normalfont\textsf{R }}{}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
-
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
 \begin{document}
 
 \sloppy
@@ -755,7 +757,7 @@ This project was an effort between Susan VanderPlas, Dianne Cook, Michelle A. Gr
 
 \section{Introduction}
 
-RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive alternative to transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly \citep{Robertson} and detection of alternative splicing processes \citep{Anders2012, Pan}. Coupled with its high resolution and sensitivity, RNA-seq will likely revolutionize our understanding of the intricacies of eukaryotic transcriptomes \citep{Wang, Zhao}.
+RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive form of transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly \citep{Robertson} and detection of alternative splicing processes \citep{Anders2012, Pan}. Coupled with its high resolution and sensitivity, RNA-seq has begun to revolutionize our understanding of the intricacies of eukaryotic transcriptomes \citep{Wang, Zhao}.
 
 RNA-seq data is multivariate data, and its basic form is a matrix containing mapped read counts for \textit{n} rows of genes and \textit{p} columns of samples. These mapped read counts provide estimations of the gene expression levels across samples. Researchers typically conduct RNA-seq studies to identify differentially expressed genes (DEGs) between treatment groups. In most popular RNA-seq analysis packages, this objective is approached with models, such as the negative binomial model \citep{Anders2010, Trapnell2012, Trapnell2013, Robinson} and linear regression models \citep{Law}.
 
@@ -1769,20 +1771,12 @@ This section contains supplementary analyses that the reader might find useful, 
   \label{fig:GRVenn}
 \end{figure}
 
-
-
-
-
-
-
-
 \begin{figure}[H]
 \centering
 \begin{framed}
   \includegraphics[width=\textwidth]{Images/tolerance.png}
   \end{framed}
-  \caption{Parallel coordinate plots of the 122 DEGs after hiearchical clustering of size four between the ``tolerance'' candidate genes. Here ``N'' represents non-infected control group, ``V'' represents treatment of virus, ``C'' represents high-quality Chestnut diet, and ``R'' represents low-quality Rockrose diet. The vertical red line indicates the distinction between treatment groups. We see there is considerable noise in the data (non-level replicate values), but that the general patterns of the DEGs follow what we expect based on our ``tolerance'' contrast.
-  }
+  \caption{Parallel coordinate plots of the 122 DEGs after hiearchical clustering of size four between the ``tolerance'' candidate genes. Here ``N'' represents non-infected control group, ``V'' represents treatment of virus, ``C'' represents high-quality Chestnut diet, and ``R'' represents low-quality Rockrose diet. The vertical red line indicates the distinction between treatment groups. We see there is considerable noise in the data (non-level replicate values), but that the general patterns of the DEGs follow what we expect based on our ``tolerance'' contrast.}
   \label{fig:tolerance}
 \end{figure}
 
@@ -1791,16 +1785,9 @@ This section contains supplementary analyses that the reader might find useful, 
 \begin{framed}
   \includegraphics[width=\textwidth]{Images/resistance.png}
   \end{framed}
-  \caption{Parallel coordinate plots of the 125 DEGs after hiearchical clustering of size four between the ``resistance'' candidate genes. Here ``N'' represents non-infected control group, ``V'' represents treatment of virus, ``C'' represents high-quality Chestnut diet, and ``R'' represents low-quality Rockrose diet. The vertical red line indicates the distinction between treatment groups. We see there is considerable noise in the data (non-level replicate values), but that the general patterns of the DEGs follow what we expect based on our ``resistance'' contrasts.
-  
-  }
+  \caption{Parallel coordinate plots of the 125 DEGs after hiearchical clustering of size four between the ``resistance'' candidate genes. Here ``N'' represents non-infected control group, ``V'' represents treatment of virus, ``C'' represents high-quality Chestnut diet, and ``R'' represents low-quality Rockrose diet. The vertical red line indicates the distinction between treatment groups. We see there is considerable noise in the data (non-level replicate values), but that the general patterns of the DEGs follow what we expect based on our ``resistance'' contrasts.}
   \label{fig:resistance}
 \end{figure}
-
-
-
-
-
 
 
 
